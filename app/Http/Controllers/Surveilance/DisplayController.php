@@ -11,9 +11,9 @@ class DisplayController extends Controller
 {
     function listIP()
     {
-       $surveilancesIP = surveilance::all(); 
+       $surveilanceIP = surveilance::where('user_id',Auth::user()->id)->get(); 
 
-       return view(surveilance.dashboard,['surveilanceIP'=>$surveilancesIP]);
+       return view('Surveilances.dashboard',['surveilanceIP'=>$surveilanceIP]);
 
 
 

@@ -23,9 +23,7 @@ Route::get('/register-surveilance', function () {
     return view('surveilance.register-surveilance');
 });
 Route::post('surveilance','Surveilance\DisplayController@store');
-Route::get('/surveilance', function () {
-    return view('surveilance.dashboard');
-});
+Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
 
 Route::get('/etricia', function () {
     return view('etricia.etricia');
