@@ -51,7 +51,7 @@ Iristracker | Etricia
                       </tr>
                     </tbody>
                   </table>
-                  <iframe frameborder="0" height="1200" width="100%" marginwidth="0%" scrolling="no" src="http://192.168.8.100:1880/ui/"></iframe>
+                  <iframe frameborder="0" height="1200" width="100%" marginwidth="0%" scrolling="no" src={{Auth::user()->serverip}}></iframe>
                 </div>
               </div>
             </div>

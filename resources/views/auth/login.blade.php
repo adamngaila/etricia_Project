@@ -1,15 +1,28 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <div class="row">
+       <div class="col-sm-2 col-md-2 col-lg-3"></div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+        <div class="col-sm-8 col-md-8 col-lg-6">
+
+            <div class="text-center mb-3">
+                {{--<img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">--}}
+
+                <h1 class="h3 mb-3 font-weight-normal">{{ __('Login') }}</h1>
+                <p>
+                    Login to your account...
+                </p>
+            </div>
+            @if('1' !== '1')
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+            @endif
+            <form method="POST" action="{{ route('login') }}">
                         @csrf
+                          <section class="registration-section" id="registration-section-three">
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -64,6 +77,7 @@
                                 @endif
                             </div>
                         </div>
+                    </section>
                     </form>
                 </div>
             </div>

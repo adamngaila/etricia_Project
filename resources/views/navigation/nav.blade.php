@@ -5,6 +5,7 @@
         <a href="http://www.blackscience.herokuapp.com" class="simple-text logo-normal">
         {{ Auth::user()->name }}
         </a>
+
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
@@ -35,12 +36,25 @@
           </li>
         
          
-          <li class="active-pro">
-            <a href="/">
-              <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-              <p>Logout</p>
-            </a>
-          </li>
+        <li class="nav-item dropdown"> 
+                                <a class ="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                  <i class="now-ui-icons sport_user-run"></i>
+                                  <p>
+                                  Log out <span class="d-lg-none d-md-block"></span>
+                                    </p>
+                                </a>
+                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
         </ul>
       </div>
     </div>

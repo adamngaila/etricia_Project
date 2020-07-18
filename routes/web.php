@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/register-surveilance', function () {
-    return view('surveilance.register-surveilance');
+    return view('Surveilance.register-surveilance');
 });
 Route::post('surveilance','Surveilance\DisplayController@store');
 Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
