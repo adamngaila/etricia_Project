@@ -30,8 +30,15 @@
           </li>
           <li>
             <a href="./etricia">
-              <i class="now-ui-icons design_bullet-list-67"></i>
+              <i class="now-ui-icons media-2_sound-wave"></i>
               <p>Etricia</p>
+            </a>
+          </li>
+           </li>
+          <li>
+            <a href="./forums">
+              <i class="now-ui-icons business_globe"></i>
+              <p>Forum</p>
             </a>
           </li>
         

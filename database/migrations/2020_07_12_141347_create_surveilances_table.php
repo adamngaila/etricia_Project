@@ -15,7 +15,7 @@ class CreateSurveilancesTable extends Migration
     {
         Schema::create('surveilances', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id')->index();
+             $table->integer('user_id')->unsigned();
             $table->string('packageCode');
             $table->integer('cam_numbers');
             $table->String('cam1_adress')->nullable();

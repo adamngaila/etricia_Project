@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body backgroudcolour='Dark'>
     <div id="app">
@@ -76,5 +77,8 @@
             @yield('content')
         </main>
     </div>
+    @yield('js')
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
