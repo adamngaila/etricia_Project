@@ -14,7 +14,14 @@ class CreateUserPackagesTable extends Migration
     public function up()
     {
         Schema::create('user_packages', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->integer('user_id');
+             $table->integer('powerpack_id')->nullable();
+             $table->integer('surveilance_id')->nullable();
+            $table->string('adress');
+            $table->string('package');
+            $table->string('packagecode');
+            $table->string('packageuses');
             $table->timestamps();
         });
     }

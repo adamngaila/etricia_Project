@@ -37,13 +37,13 @@ Blackscience | {{ Auth::user()->name }}
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>First Name</label>
+                        <label>Name</label>
                         <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->name }}>
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Last Name</label>
+                        <label> Package </label>
                         <input type="text" class="form-control"disabled="" placeholder="Last Name" value=" ">
                       </div>
                     </div>
@@ -51,7 +51,7 @@ Blackscience | {{ Auth::user()->name }}
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <labelPhone</label>
+                        <label>Phone</label>
                         <input type="text" class="form-control" disabled="" placeholder="Home Address" value={{ Auth::user()->phone }}>
                       </div>
                     </div>
@@ -59,14 +59,14 @@ Blackscience | {{ Auth::user()->name }}
                   <div class="row">
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
-                        <label>City</label>
-                        <input type="text" class="form-control" disabled="" placeholder="City" value={{ Auth::user()->name }}>
+                        <label>City/Region</label>
+                        <input type="text" class="form-control" disabled="" placeholder="City" value={{ Auth::user()->region }}>
                       </div>
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
-                        <label>Country</label>
-                        <input type="text" class="form-control" disabled=""  placeholder="Country" value="Andrew">
+                        <label>Location</label>
+                        <input type="text" class="form-control" disabled=""  placeholder="location" value={{ Auth::user()->location }}>
                       </div>
                     </div>
                     <div class="col-md-4 pl-1">
@@ -91,22 +91,24 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="../assets/img/bg5.jpg" alt= {{ Auth::user()->name }}>
+                <img src="images/front3.jpg" alt="...">
               </div>
               <div class="card-body">
+                
                 <div class="author">
                   <a href="#">
-                    <img class="avatar border-gray" src="../assets/img/mike.jpg" alt={{ Auth::user()->name }}>
+                    <img class="avatar border-gray" src= {{ Auth::user()->image }} alt={{ Auth::user()->name }}>
                     <h5 class="title">{{ Auth::user()->name }}</h5>
                   </a>
                   <p class="description">
                   {{ Auth::user()->name }}
                   </p>
                 </div>
+                
                 <p class="description text-center">
-                  "Lamborghini Mercy <br>
-                  Your chick she so thirsty <br>
-                  I'm in that two seat Lambo"
+                  " <br>
+                  I am a user of etricia product <br>
+                  "
                 </p>
               </div>
               <hr>

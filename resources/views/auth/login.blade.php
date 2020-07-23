@@ -75,6 +75,9 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                                 <a class="pull-right" style="color: #FFFFFF;" href="{{ route('register') }}">
+                    {{ __('I dont have an Aaccount') }}
+                </a>
                             </div>
                         </div>
                     </section>

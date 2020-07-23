@@ -18,7 +18,7 @@
             A simple danger alert—check it out!
         </div>
         @endif
-        <form method="POST" action="{{ route('register') }}">
+        <form method="POST" action="{{ route('register') }}" >
 
           @csrf
           <section class="registration-section" id="registration-section-one">
@@ -153,6 +153,16 @@
                 
             </div>
         </div>
+           <!--div class="form-group row">
+                <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Profile image') }}</label>
+                <div class="col-md-6">
+                <input type="file" id="image" name="image" 
+                class="form-control"
+                placeholder="{{ __(' choose image') }}"
+                required autofocus>
+                 </div>
+            </div-->
+
 
 
             <div class="form-label-group">
@@ -170,54 +180,28 @@
                 {{ __('Stage 2: package registration') }}
             </div>
 
-            <div class="mb-3">
-                <hr>
-                <span class="mb-1">{{ __('User package types') }}: &nbsp; &nbsp;</span>
-
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input"
-                    type="radio"
-                    name="package"
-                    id="package1"
-                    value="etricia1">
-                    <label class="form-check-label" for="package1">{{ __('Powerpack only') }}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input"
-                    type="radio"
-                    name="package"
-                    id="package2"
-                    value="etricia2">
-                    <label class="form-check-label" for="package2">{{ __('Powerpack & Surveilance') }}</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input"
-                    type="radio"
-                    name="package"
-                    id="package3"
-                    value="etricia3">
-                    <label class="form-check-label" for="package3">{{ __('Powerpack,Surveilance & IOT') }}</label>
-                </div>
-            </div>
-
-
-            <div class="form-label-group">
-                <input type="text" id="packagecode" name="packagecode" 
-                class="form-control"value="{{ old('packagecode') }}" required autocomplete="packagecode" autofocus
-                >
-                <label for="location">{{ __('Package Serialcode') }}</label>
+              <div class="form-label-group">
+                <select id="package" class="form-control" name="package">
+                    
+                    <option selected>etricia</option>
+                    <option>etricia plus</option>
+                    <option>etricia pro</option>
+                  
+                </select>
+               
+                <label for="packageuses">{{ __('Package type') }}</label>
             </div>
 
          
             <div class="form-label-group">
-                <input type="text" id="serverip" name="serverip" 
+                <input type="text" id="packagecode" name="packagecode" 
                 class="form-control"
-                value="https://"
+                
                 maxlength="70"
-                placeholder="{{ __('registration.phone_number') }}"
+                placeholder="{{ __('####') }}"
                 required autofocus>
 
-                <label for="serverip">{{ __('Package adress') }}</label>
+                <label for="serverip">{{ __('Package code') }}</label>
             </div>
 
             <div class="form-label-group">
@@ -251,48 +235,48 @@
 
            
             <div class="form-label-group">
-                <input type="text" id="camera1_adress" name="camera1_adress" 
+                <input type="text" id="cam1_adress" name="cam1_adress" 
                 class="form-control"
                 value="https://"
                 maxlength="70"
                 placeholder="{{ __('camera1 adress') }}"
                 required autofocus>
 
-                <label for="camera1_adress">{{ __('Camera1 IP adress') }}</label>
+                <label for="cam1_adress">{{ __('Camera1 IP adress') }}</label>
             </div>
 
            
             <div class="form-label-group">
-                <input type="text" id="camera2_adress" name="camera2_adress" 
+                <input type="text" id="cam2_adress" name="cam2_adress" 
                 class="form-control"
                 value="https://"
                 maxlength="70"
                 placeholder="{{ __('camera2 adress') }}"
                 required autofocus>
 
-                <label for="camera2_adress">{{ __('Camera2 IP adress') }}</label>
+                <label for="cam2_adress">{{ __('Camera2 IP adress') }}</label>
             </div>
            
             <div class="form-label-group">
-                <input type="text" id="camera3_adress" name="camera3_adress" 
+                <input type="text" id="cam3_adress" name="cam3_adress" 
                 class="form-control"
                 value="https://"
                 maxlength="70"
                 placeholder="{{ __('camera 3 adress') }}"
                 required autofocus>
 
-                <label for="camera3_adress">{{ __('Camera3 IP adress') }}</label>
+                <label for="cam3_adress">{{ __('Camera3 IP adress') }}</label>
             </div>
 
             <div class="form-label-group">
-                <input type="text" id="powerpack_adress" name="powerpack_adress" 
+                <input type="text" id="IPadress" name="IPadress" 
                 class="form-control"
                 value="https://"
                 maxlength="70"
                 placeholder="{{ __('Powerpack Adress') }}"
                 required autofocus>
 
-                <label for="powerpack_adress">{{ __('Powerpack IP adress') }}</label>
+                <label for="IPadress">{{ __('Powerpack IP adress') }}</label>
             </div>
 
             <div class="form-label-group">

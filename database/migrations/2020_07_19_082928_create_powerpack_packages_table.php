@@ -14,7 +14,12 @@ class CreatePowerpackPackagesTable extends Migration
     public function up()
     {
         Schema::create('powerpack_packages', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->string('package');
+            $table->string('packagecode');
+            $table->string('package_uses');
+            $table->string('IPadress');
             $table->timestamps();
         });
     }

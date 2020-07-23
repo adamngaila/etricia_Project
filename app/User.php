@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name','phone','serverip', 'email', 'password'
+        'name','phone','serverip', 'email', 'password','region','location'
     ];
 
     /**
@@ -40,6 +40,16 @@ class User extends Authenticatable
     public function surveilance()
     {
         return $this->hasOne(surveilance::class);
+
+    }
+     public function powerpack()
+    {
+        return $this->hasOne(powerpackPackage::class);
+
+    }
+     public function userpackage()
+    {
+        return $this->hasOne(UserPackage::class);
 
     }
 }
