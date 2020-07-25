@@ -62,7 +62,7 @@ class RegisterController extends Controller
             'serverip' => ['required', 'string', 'max:355'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'package' => ['required', 'string', 'min:12', 'max:12'],
+            //'package' => ['required', 'string', 'min:12', 'max:12'],
              // 'region' => ['required', 'string'],
            //  'location' => ['required', 'string'],
             //'image' => [ 'file','max:5000'],
@@ -108,7 +108,7 @@ class RegisterController extends Controller
 
 
 
- $powerpackInputs = [
+        $powerpackInputs = [
                         'user_id' => $user->id,
                         'package' => $data['package'],
                         'packagecode' => $data['packagecode'],
@@ -122,7 +122,7 @@ class RegisterController extends Controller
                 $user->powerpack()->save($powerpack);
 
 
-      $UserPackageInputs = [
+        $UserPackageInputs = [
                         'user_id' => $user->id,
                        // 'iot_id' => $iot->id,
                         'powerpack_id' => $powerpack->id,
@@ -137,7 +137,7 @@ class RegisterController extends Controller
                     
                 ];
                 $userPackage = UserPackage::create( $UserPackageInputs);
-                    $user->userpackage()->save($powerpack);
+                    $user->userpackage()->save($userPackage);
 
 
         return $user;
