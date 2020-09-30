@@ -37,3 +37,7 @@ Route::group(['middleware'=>['auth','profile']],function(){
         return view('Profile.userprofile');
     });
 });
+
+//etricia
+Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+

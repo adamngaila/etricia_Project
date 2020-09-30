@@ -51,46 +51,179 @@ Iristracker | Etricia
                       </tr>
                     </tbody>
                   </table>
-                  <iframe frameborder="0" height="1200" width="100%" marginwidth="0%" scrolling="no" src={{Auth::user()->serverip}}></iframe>
+                  <div class="col-md-13 ml-auto mr-auto">
+            <div class="card card-chart" style="background:#00BFFF;">
+              <div class="card-header bg-blue">
+              <h5 class="card-title" style="color:white; font-family:Courier;"><center>ETRICIA READINGS</center></h5>
+                
+              </div>
+           
+            </div>
+          </div>
+          <div class="row">
+                  <div class="col-md-6">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">VOLTAGE READINGS</h2>
+                
+              </div>
+           
+              <canvas id="S1chart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+                
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">CURRENT READINGS</h2>
+                
+              </div>
+           
+              <canvas id="Currentchart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+                
+              
+            </div>
+          </div>
+                </div>
+                <div class="row">
+      
+          <div class="col-md-12">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">TEMPERATURE</h2>
+                
+              </div>
+           
+                <canvas id="Temperaturechart"></canvas>
+                
+              
+            </div>
+          </div>
+          </div>
+
+
                 </div>
               </div>
             </div>
           </div>
         </div>
+    
+      
 @endsection
 
 @section('scripts')
-<script type="text/javascript">
-	var db = firebase.firestore();
-	var washa = document.getElementById("switchON");
-	var zima = document.getElementById("swichOFF");
-	window.alert("is working");
-	zima.addEventListener("click",function(){
-		window.alert("is working");
-		db.collection("powerpack").get().then((querySnapsort)=>{
-	querySnapsort.forEach((doc)=>{
-		console.log(`${doc.id}=>${doc.data()}`)
-	});
-})
-	});
 
-	washa.addEventListener("click",function(){
-		window.alert("is working");
-	});
-		db.collection("powerpack").onSnapshot(function(Snapsort){
-			Snapsort.docChanges().forEach(function(change){
-				if(change.type==="modified"){
-					console.log("status: ",change.doc.data());
-				}
-			});
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.min.js"></script>
 
-		});
+<script>
+var ctx = document.getElementById("S1chart");
+  var myChart = new Chart(ctx, {
+    cache: false,
+    type: 'line',
+    data: {
+      labels:[],
+      datasets: [{
+        label: 'Voltage',
+        data:[],
+        borderWidth: 3
+      }]
+    },
+     options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  });
 
+  var currentChart = document.getElementById("Currentchart");
+  var curChart = new Chart(currentChart, {
+    cache: false,
+    type: 'bar',
+    data: {
+      labels:[],
+      datasets: [{
+        label: 'Current (A)',
+        data:[],
+        borderWidth: 3
+      }]
+    },
+     options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  });
 
+  var tempchart = document.getElementById("Temperaturechart");
+  var joto = new Chart(tempchart, {
+    cache: false,
+    type: 'line',
+    data: {
+      labels:[],
+      datasets: [{
+        label: 'Temperature (C)',
+        data:[],
+        borderWidth: 3
+      }]
+    },
+     options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+  });
+  var updateChart = function() {
+    $.ajax({
+      url: "{{route('voltcharts')}}",
+      type: 'get',
+      dataType: 'json',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+      
+         response.forEach(function(data){
+          myChart.data.labels.push(data.created_at);
+          myChart.data.datasets[0].data.push(data.volts);
+          curChart.data.labels.push(data.created_at);
+          curChart.data.datasets[0].data.push(data.current);
+          joto.data.labels.push(data.created_at);
+          joto.data.datasets[0].data.push(data.Temperature);
+          //var earnings = data.bei;
 
-	
-	
+        //$("#earnings").text(earnings);
+        //console.log(earnings);
+      
 
-
+        myChart.update();
+        curChart.update();
+        joto.update();
+      });
+             },
+      error: function(response){
+        console.log(response);
+      }
+    });
+    //renderChart(data, labels);<canvas id="lineChartExampleWithNumbersAndGrid" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+  }
+  
+  updateChart();
+  setInterval(() => {
+    updateCha();
+  }, 100000);
 </script>
+
 @endsection
