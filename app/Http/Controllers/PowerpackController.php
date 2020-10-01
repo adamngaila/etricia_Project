@@ -28,6 +28,16 @@ class PowerpackController extends Controller
         
     }
 
+    public function FetchDescription()
+    {
+        $query_id = Auth::user()->id;
+        $result = \DB::table('powerpack_packages')
+                            ->join('powerpack_parameters','powerpack_packages.packagecode','=','powerpack_parameters.packagecode')
+                            ->select('powerpack_packages.*','powerpack_parameters.*')
+                            ->where('user_id',$query_id)->get();
+
+    }
+
 
 
 }

@@ -30,7 +30,11 @@ protected function redirectTo(){
     if(Auth::user()->usertype=='admin'){
         return 'profile';
 
-    }else{
+    }elseif(Auth::user()->usertype=='super'){
+        return 'admin_dashboard';
+
+    }
+    else{
         return'/';
 
     }

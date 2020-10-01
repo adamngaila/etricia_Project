@@ -1,4 +1,5 @@
-<div class="logo">
+
+    <div class="logo">
         <a href="http://www.blackscience.herokuapp.com" class="simple-text logo-mini">
          BLS
         </a>
@@ -10,22 +11,22 @@
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
         <li>
-            <a href="./profile">
+            <a href="{{route('admin_dashboard')}}">
               <i class="now-ui-icons users_single-02"></i>
-              <p>Profile</p>
+              <p>dashboard</p>
             </a>
           </li>
           <li>
             <a href="./surveilance">
               <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Surveilance</p>
+              <p>Customers</p>
             </a>
           </li>
           
           <li>
             <a href="./map">
               <i class="now-ui-icons location_map-big"></i>
-              <p>GPS tracker</p>
+              <p>Products</p>
             </a>
           </li>
           <li>
@@ -65,8 +66,3 @@
         </ul>
       </div>
     </div>
-    
-
-    @if( (Auth::user()->usertype) =="super")
-
-    @endif

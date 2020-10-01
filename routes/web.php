@@ -36,6 +36,10 @@ Route::group(['middleware'=>['auth','profile']],function(){
     Route::get('/profile', function () {
         return view('Profile.userprofile');
     });
+   // Route::get('/admin_dashboard', 'SuperController@index')->name('admin_dashboard');
+   Route::get('/admin_dashboard', function () {
+    return view('admin.admin_dashboard');
+})->name('admin_dashboard');
 });
 
 //etricia

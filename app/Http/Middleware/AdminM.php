@@ -17,7 +17,12 @@ class AdminM
     {
         if(Auth::user()->usertype == 'admin'){
             return $next($request); 
-        }else{
+        }
+        elseif(Auth::user()->usertype == 'super'){
+           // return redirect('admin_dashboard'); 
+           return $next($request); 
+        }
+        else{
             return redirect('/home')->with('Status','Karibu Blackscience technologies');
 
         }
