@@ -28,13 +28,18 @@ Iristracker | Etricia
                     <tbody>
                       <tr>
                         <td>Components</td>
-                        <td class="text-center">144 lithium cells</td>
+                        <td class="text-center">{{$result->description}}</td>
                         <td class="text-center">all active </td>
+                      </tr>
+                      <tr>
+                        <td>Number of cells</td>
+                        <td class="text-center">Number of cells</td>
+                        <td class="text-center">{{$result->cell_number}}</td>
                       </tr>
                       <tr>
                         <td>Capacity</td>
                         <td class="text-center">Power output</td>
-                        <td class="text-center">1kw</td>
+                        <td class="text-center">{{$result->capacity}}</td>
                       </tr>
                       
                       <tr>

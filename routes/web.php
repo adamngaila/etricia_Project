@@ -26,7 +26,14 @@ Route::post('surveilance','Surveilance\DisplayController@store');
 Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
 
 Route::get('/etricia', function () {
-    return view('etricia.etricia');
+    $query_id = Auth::user()->id;
+    $result = \DB::table('powerpack_packages')
+                        ->join('powerpack_parameters','powerpack_packages.packagecode','=','powerpack_parameters.packagecode')
+                        ->join('etricia_directories','powerpack_packages.packagecode','=','etricia_directories.packagecode')
+                        ->select('powerpack_packages.*','powerpack_parameters.*','etricia_directories.*')
+                        ->where('user_id',$query_id)->first();
+                        //return dd($result);
+   return view('etricia.etricia')->with("result",$result);
 });
 
 Route::get('/map', function () {
@@ -49,6 +56,7 @@ Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
 //Admin
 
 Route::get('/add_etricia', function () {
+    
     return view('admin.products.etricia.create');
 })->name('add_etricia');
 Route::post('/store_etricia', 'SuperController@StoreEtricia')->name('store_etricia');

@@ -33,9 +33,10 @@ class PowerpackController extends Controller
         $query_id = Auth::user()->id;
         $result = \DB::table('powerpack_packages')
                             ->join('powerpack_parameters','powerpack_packages.packagecode','=','powerpack_parameters.packagecode')
+                            ->join('etricia_directories','powerpack_packages.packagecode','=','etricia_directories.packagecode')
                             ->select('powerpack_packages.*','powerpack_parameters.*')
-                            ->where('user_id',$query_id)->get();
-
+                            ->where('user_id',$query_id)->get();                         
+         return redirect('/etricia')->with('result',$result);
     }
 
  
