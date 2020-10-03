@@ -23,19 +23,20 @@
             </a>
           </li>
           
-          <li>
-            <a href="./map">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Products</p>
-            </a>
+          <li class="nav-item dropdown">
+          <a class ="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
+                  <i class="now-ui-icons location_world"></i>
+                <p> Products</p>         
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="{{route('super_etricia')}}">Etricia</a>
+                  <a class="dropdown-item" href="#">Surveilance</a>
+                  <a class="dropdown-item" href="#">Iris tracker</a>
+                </div>
+              
           </li>
-          <li>
-            <a href="./etricia">
-              <i class="now-ui-icons media-2_sound-wave"></i>
-              <p>Etricia</p>
-            </a>
-          </li>
-           </li>
+         
+          
           <li>
             <a href="./forums">
               <i class="now-ui-icons business_globe"></i>
