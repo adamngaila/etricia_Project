@@ -12,25 +12,25 @@
         <ul class="nav">
         <li>
             <a href="{{route('admin_dashboard')}}">
-              <i class="now-ui-icons users_single-02"></i>
+              <i class="now-ui-icons business_chart-pie-36"></i>
               <p>dashboard</p>
             </a>
           </li>
           <li>
             <a href="./surveilance">
-              <i class="now-ui-icons ui-1_bell-53"></i>
+              <i class="now-ui-icons users_single-02"></i>
               <p>Customers</p>
             </a>
           </li>
           
           <li class="nav-item dropdown">
           <a class ="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" v-pre>
-                  <i class="now-ui-icons location_world"></i>
+                  <i class="now-ui-icons design_vector"></i>
                 <p> Products</p>         
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <a class="dropdown-item" href="{{route('super_etricia')}}">Etricia</a>
-                  <a class="dropdown-item" href="#">Surveilance</a>
+                  <a class="dropdown-item" href="">Surveilance</a>
                   <a class="dropdown-item" href="#">Iris tracker</a>
                 </div>
               

@@ -17,7 +17,7 @@ class CreatePowerpackPackagesTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('package');
-            $table->string('packagecode');
+            $table->string('packagecode')->unique();
             $table->string('package_uses');
             $table->string('IPadress')->nullable();
             $table->timestamps();

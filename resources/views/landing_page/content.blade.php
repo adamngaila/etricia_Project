@@ -352,15 +352,15 @@
                 $faqData = [
                     'What is etricia?' => 'Etricia is blah blah blaaaaah.',
 
-                    'How do I get started with mauzosheet?' => 'You can get started with either our Free or Plus Plan
-                     with just a few <a href="/register">clicks here</a>. Everyone who signs up to Mauzosheet will
+                    'How do I get started with Etricia?' => 'You can get started with either our Free or Plus Plan
+                     with just a few <a href="/register">clicks here</a>. Everyone who signs up to Etricia will
                      automatically receive a 30-day free trial of Plus Plan. At the end of your free trial, you can
                      select which plan works best for you. To get started with Premium, contact our sales team.',
 
-                     'Can I transfer my existing inventory?' => 'Yes, you are able to bulk import your existing
-                     inventory to mauzosheet.',
+                     'Can I upgrade my package?' => 'Yes, you are able to upgrafe your existing
+                     package',
 
-                     'How do I switch from my current solution?' => 'Signing up for mauzosheet for free and add your inventory.
+                     'How do I switch from my current solution?' => 'Signing up for Etricia for free and add your inventory.
                      There are no hidden fees or long term contracts. And if you need help, Mauzosheet Support Team is
                      here for you.'
                 ];

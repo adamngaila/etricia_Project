@@ -12,9 +12,11 @@ Iristracker | gps tracker
               </div>
               <div class="card-body ">
               <div class="card">
-<div class="card-header"> Combined All Table
-
-<button class="btn btn-success  btn-rounded pull-right "  type="button"> <i class="fas fa-plus"></i>Add new</button>
+<div class="card-header"> Etricia product
+<form action="{{route('add_etricia')}}" method = 'get'>
+@csrf
+<button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-plus"></i>Add new</button>
+</form>
 
 </div>
 <div class="card-body">
@@ -26,19 +28,20 @@ Iristracker | gps tracker
 <th>manufacturing date</th>
 <th>capacity</th>
 <th>no of cells</th>
-<th>Status</th>
+<th>selling price</th>
 </tr>
 </thead>
 <tbody>
+@foreach($EtriciaProduct as $etricia)
 <tr>
-<td>Vishnu Serghei</td>
-<td>2012/01/01</td>
-<td>Member</td>
-<td>2012/01/01</td>
-<td>Member</td>
-<td><span class="badge badge-success">Active</span></td>
+<td>{{$etricia->packagecode}}</td>
+<td>{{$etricia->description}}</td>
+<td>{{$etricia->production_date}}</td>
+<td>{{$etricia->capacity}}</td>
+<td>{{$etricia->cell_number}}</td>
+<td><span class="badge badge-success">{{$etricia->selling_price}}</span></td>
 </tr>
-
+@endforeach
 </tbody>
 </table>
 <nav>

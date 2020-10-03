@@ -15,7 +15,7 @@ class CreateEtriciaDirectoriesTable extends Migration
     {
         Schema::create('etricia_directories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('packagecode');
+            $table->string('packagecode')->unique();
             $table->string('serial_no');
             $table->string('capacity');
             $table->double('cell_number');
