@@ -65,7 +65,7 @@ Route::get('/add_etricia', function () {
     
     return view('admin.products.etricia.create');
 })->name('add_etricia');
-Route::post('/store_etricia', 'SuperController@StoreEtricia')->name('store_etricia');
+Route::get('/store_etricia', 'SuperController@StoreEtricia')->name('store_etricia');
 //Route::post('/super_etricia', 'SuperController@EtriciaRetrieve')->name('super_etricia');
 
 Route::get('/super_etricia', function (){
