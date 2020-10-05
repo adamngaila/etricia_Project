@@ -38,7 +38,7 @@ Route::get('/etricia', function () {
     if($result != null){
    return view('etricia.etricia')->with("result",$result);
 }else{
-     return view('Profile.userprofile');
+     return dd($result);
 }
 });
 
