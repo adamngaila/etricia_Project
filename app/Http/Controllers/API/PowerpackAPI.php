@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\API;
 use App\PowerpackParameters;
-use App\PowerpackControls;
+use App\PowerpackControlls;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,13 +12,13 @@ class PowerpackAPI extends Controller
     //
     public function save(Request $request)
     {
-        $parameter = new PowerpackParameters();
-        $paramete->packagecode = $request->input("packagecode");
-        $paramete->volts = $request->input("volts");
-        $paramete->current = $request->input("current");
-        $paramete->Temperature = $request->input("Temperature");
-        $parameter->save();
+        $paramete = new PowerpackParameters();
+        $paramete->packagecode = $request->post("packagecode");
+        $paramete->volts = $request->post("volts");
+        $paramete->current = $request->post("current");
+        $paramete->Temperature = $request->post("Temperature");
+        $paramete->save();
 
-        return json_encode($parameter);  
+        return (123);  
     }
 }
