@@ -18,5 +18,7 @@ class PowerpackAPI extends Controller
         $paramete->current = $request->input("current");
         $paramete->Temperature = $request->input("Temperature");
         $parameter->save();
+
+        return json_encode($parameter);  
     }
 }
