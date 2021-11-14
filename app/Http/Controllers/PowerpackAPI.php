@@ -12,13 +12,14 @@ class PowerpackAPI extends Controller
     //
     public function save(Request $request)
     {
-        $parameter = new PowerpackParameters;
+       /* $parameter = new PowerpackParameters;
         $paramete->packagecode = $request->input("packagecode");
         $paramete->volts = $request->input("volts");
         $paramete->current = $request->input("current");
         $paramete->Temperature = $request->input("Temperature");
         $parameter->save();
 
-        return json_encode($parameter);  
+        return json_encode($parameter);  */
+        echo "working";
     }
 }

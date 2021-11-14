@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //Route::post('/registration/', 'RegistrationController@store');
 Route::post('/SaveParams',"API\PowerpackAPI@save");
+Route::post('/add_user',"API\userAPI@AddUser");
+Route::get('/login_user',"API\userAPI@loginAuth");
