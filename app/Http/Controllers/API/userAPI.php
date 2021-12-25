@@ -53,13 +53,14 @@ class userAPI extends Controller
              $details->email=$request->input("email");
              $details->password= Hash::make($request->input("password"));
              $details->location=$request->input("location");
-              $details->language=$request->input("language");
+              //$details->language=$request->input("language");
                $details->region=$request->input("region");
 
          $details->save();
         
 
-            return $details->createToken($request->input('device_name'))->plainTextToken;
+            $response = $details->createToken($request->input('device_name'))->plainTextToken;
+            return response($response,201);
 
     }
 
