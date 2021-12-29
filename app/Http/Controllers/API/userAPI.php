@@ -59,16 +59,13 @@ class userAPI extends Controller
                $details->region=$request->input("region");
 
          $details->save();
-        
-<<<<<<< HEAD
-
-            $token = $details->createToken($request->input('device_name'))->plainTextToken;
-=======
-$token = $details->createToken($request->input('device_name'))->plainTextToken;
->>>>>>> f66918b924c2fac4e2b2b7a4c9a969d8debc4894
-            $response = ['use'=>$details,
-            'token'=>$token,];
+          $response = ['use'=>$details];
             return response($response,201);
+    }
+        
+
+            
+
     }
 
 
@@ -96,10 +93,14 @@ $token = $details->createToken($request->input('device_name'))->plainTextToken;
                 throw ValidationException::withMessages([
                     'email'=>['The provided credentials are incorrect. Taarifa ulizoingiza sio sahii']);
             
-         }
+         }else{
+            $token = $user->createToken($request->input('device_name'))->plainTextToken;
 
-         return $user->createToken($request->device_name)->plainTextToken;
-         
+            $response = ['user'=>$user,
+            'token'=>$token,];
+            return response($response,201);
+
+         }
      /*this function is to allow user to log in
 
         if( Auth::user()->email==$request->input("email")
