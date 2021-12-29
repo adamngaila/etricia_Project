@@ -91,7 +91,7 @@ class userAPI extends Controller
          {
             
                 throw ValidationException::withMessages([
-                    'email'=>['The provided credentials are incorrect. Taarifa ulizoingiza sio sahii']);
+                    'email'=>['The provided credentials are incorrect. Taarifa ulizoingiza sio sahii']]);
             
          }else{
             $token = $user->createToken($request->input('device_name'))->plainTextToken;
