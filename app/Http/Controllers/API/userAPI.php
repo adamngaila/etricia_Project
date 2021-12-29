@@ -84,7 +84,7 @@ class userAPI extends Controller
 
         ]);
 
-        $user = User::where('email', $request->email )->orWhere('email', $request->serverip)->first();
+        $user = User::where('email', $request->email )->orWhere('serverip', $request->email)->first();
          
 
          if(!$user || !Hash::check($request->password, $user->password))
