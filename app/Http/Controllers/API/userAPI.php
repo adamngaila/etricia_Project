@@ -87,9 +87,13 @@ class userAPI extends Controller
         $user = User::where('email', $request->email )->orWhere('email', $request->serverip)->first();
          
 
-         if(!$user || !Hash::check($request->password, $user->password)
+         if(!$user || !Hash::check($request->password, $user->password))
          {
-            return response("Wrong credentials. Taarifa sio sahii",200);
+            
+                throw ValidationException::withMessages([
+
+                    'email'=>['The provided credentials are incorrect. Taarifa ulizoingiza sio sahii']
+                ]);
             
          }else{
             $token = $user->createToken($request->input('device_name'))->plainTextToken;
