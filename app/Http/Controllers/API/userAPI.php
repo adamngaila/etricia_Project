@@ -60,12 +60,15 @@ class userAPI extends Controller
 
          $details->save();
         
+<<<<<<< HEAD
 
             $token = $details->createToken($request->input('device_name'))->plainTextToken;
+=======
+$token = $details->createToken($request->input('device_name'))->plainTextToken;
+>>>>>>> f66918b924c2fac4e2b2b7a4c9a969d8debc4894
             $response = ['use'=>$details,
             'token'=>$token,];
             return response($response,201);
-
     }
 
 
