@@ -89,8 +89,7 @@ class userAPI extends Controller
 
          if(!$user || !Hash::check($request->password, $user->password)
          {
-            throw ValidationException::withMessages([
-            'packagecode' => ['The provided package code is incorrect. Packcode sio sahihi'],]);
+            return response("Wrong credentials. Taarifa sio sahii",200);
             
          }else{
             $token = $user->createToken($request->input('device_name'))->plainTextToken;
