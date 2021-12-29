@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('usertype')->default("admin");
-            $table->string('serverip');
+            $table->string('serverip')->unique();
             $table->string('status')->default("Active");
             $table->string('email')->unique();
 

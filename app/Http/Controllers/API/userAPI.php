@@ -19,7 +19,7 @@ class userAPI extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'phone' => ['required', 'string', 'max:10','min:10'],
-            'serverip' => ['required', 'string', 'max:355'],
+            'serverip' => ['required', 'string', 'max:355','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             //'package' => ['required', 'string', 'min:12', 'max:12'],
@@ -40,13 +40,15 @@ class userAPI extends Controller
         $details = new User();
 
         $EDirectory = EtriciaDirectory::where('packagecode', $request->packagecode)->first();
+        
 
           
            if(! $EDirectory){
         throw ValidationException::withMessages([
-            'packagecode' => ['The provided package code is incorrect.'],
+            'packagecode' => ['The provided package code is incorrect. Packcode sio sahihi'],
         ]);
     } else{
+
         $details->name=$request->input("name");
              $details->phone=$request->input("phone");
             $details->serverip=$request->input("packagecode");//packagecode
@@ -76,6 +78,25 @@ class userAPI extends Controller
 
    public function login(Request $request)
    {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required'
+
+        ]);
+
+        $user = User::where('email', $request->email )->orWhere('email', $request->serverip)->first();
+         
+
+         if(!$user || !Hash::check($request->password, $user->password)
+         {
+            
+                throw ValidationException::withMessages([
+                    'email'=>['The provided credentials are incorrect. Taarifa ulizoingiza sio sahii']);
+            
+         }
+
+         return $user->createToken($request->device_name)->plainTextToken;
+         
      /*this function is to allow user to log in
 
         if( Auth::user()->email==$request->input("email")
