@@ -27,4 +27,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/SaveParams',"API\PowerpackAPI@save");
 Route::post('/add_user',"API\userAPI@AddUser");
 Route::post('/login_user',"API\userAPI@login");
-Route::post('/logout_user',"API\userAPI@Logout");
+Route::middleware('auth:airlock')->post('/logout_user', function (Request $request) {
+    $request->user()->tokens()->delete();
+
+    return response('Loggedout', 200);
+});
