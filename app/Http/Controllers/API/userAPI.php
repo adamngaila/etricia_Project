@@ -123,4 +123,11 @@ class userAPI extends Controller
         }*/
 
    }
+   public function Logout(Request $request)
+   {
+         $request->user()->tokens()->delete();
+
+    return response('Loggedout', 200);
+
+   }
 }

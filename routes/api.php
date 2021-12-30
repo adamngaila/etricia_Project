@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\User;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +16,9 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::middleware('auth:airlock')->get('/token_user', function (Request $request) {
+    return $request->user();
+});
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -20,3 +27,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/SaveParams',"API\PowerpackAPI@save");
 Route::post('/add_user',"API\userAPI@AddUser");
 Route::post('/login_user',"API\userAPI@login");
+Route::post('/logout_user',"API\userAPI@Logout");
