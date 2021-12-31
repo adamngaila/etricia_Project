@@ -21,4 +21,14 @@ class PowerpackAPI extends Controller
        return response($response,201);
 
     }
+    public function PackParametersView(Request $request)
+    {
+       $ETParams = PowerpackParameters::where('packagecode', $request->code)->get();
+
+        $response = ['parameters'=>$ETParams];
+
+       return response($response,201);
+
+
+    }
 }
