@@ -3,23 +3,22 @@
 namespace App\Http\Controllers\API;
 use App\PowerpackParameters;
 use App\PowerpackControlls;
-
+use App\User;
+use Auth;
+use App\powerpackPackage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class PowerpackAPI extends Controller
 {
     //
-    public function save(Request $request)
+    public function ProfileShow(Request $request)
     {
-       $paramete = new PowerpackParameters();
-        $paramete->packagecode = $request->input("packagecode");
-        $paramete->volts = $request->input("volts");
-        $paramete->current = $request->input("current");
-        $paramete->Temperature = $request->input("Temperature");
-        $paramete->save();
+       $profile = \DB::table('users')->join('etricia_directories','users.serverip','=','etricia_directories.packagecode')->select('etricia_directories.*','users.*')->where('users.serverip','=',$$request->input("code"))->first();
+       $response = ['profile'=>$profile];
 
-        return json_encode($paramete); 
+       return response($response,201);
 
     }
 }

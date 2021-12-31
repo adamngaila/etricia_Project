@@ -32,3 +32,4 @@ Route::middleware('auth:airlock')->post('/logout_user', function (Request $reque
 
     return response('Loggedout', 200);
 });
+Route::get('/profile_user',"API\PowerpackAPI@ProfileShow");
