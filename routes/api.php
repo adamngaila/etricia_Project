@@ -25,7 +25,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //Route::post('/registration/', 'RegistrationController@store');
 Route::post('/SaveParams',"API\PowerpackAPI@save");
-Route::get('/profile_user',"API\PowerpackAPI@ProfileShow");
+Route::post('/profile_user',"API\PowerpackAPI@ProfileShow");
+Route::get('/qrcode_user',"API\PowerpackAPI@ProfileShow");
 Route::post('/add_user',"API\userAPI@AddUser");
 Route::post('/login_user',"API\userAPI@login");
 Route::middleware('auth:airlock')->post('/logout_user', function (Request $request) {
