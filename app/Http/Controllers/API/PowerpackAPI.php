@@ -15,7 +15,7 @@ class PowerpackAPI extends Controller
     //
     public function ProfileShow(Request $request)
     {
-       $profile = \DB::table('users')->join('etricia_directories','users.serverip','=','etricia_directories.packagecode')->select('etricia_directories.*','users.*')->where('users.serverip','=',$$request->input("code"))->first();
+       $profile = \DB::table('users')->join('etricia_directories','users.serverip','=','etricia_directories.packagecode')->select('etricia_directories.*','users.*')->where('users.serverip','=',$request->input("code"))->first();
        $response = ['profile'=>$profile];
 
        return response($response,201);
