@@ -25,9 +25,9 @@ class PowerpackAPI extends Controller
     {
        $ETParams = PowerpackParameters::where('packagecode', $request->code)->get();
 
-        $response = ['parameters'=>json_encode($ETParams)];
+        $response = json_encode($ETParams);
 
-       return response($response,201);
+       return ($response);
 
 
     }
