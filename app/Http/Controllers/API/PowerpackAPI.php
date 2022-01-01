@@ -25,12 +25,12 @@ class PowerpackAPI extends Controller
     { 
       $CurrentParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('current');
 
-      $Time = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('created_at');
+      $Time = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('id');
 
        $VoltParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('volts');
 
        $TempParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('Temperature');
-       
+
        $AvgAmps = PowerpackParameters::where('packagecode', $request->code)->avg('current');
        $AvgVolts = PowerpackParameters::where('packagecode', $request->code)->avg('volts');
 
