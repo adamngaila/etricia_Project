@@ -22,13 +22,28 @@ class PowerpackAPI extends Controller
 
     }
     public function PackParametersView(Request $request)
-    {
-       $ETParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->get();
+    { 
+      $CurrentParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('current');
 
-        $response = json_encode($ETParams);
+      $Time = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('created_at');
 
-       return ($response);
+       $VoltParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('volts');
 
+       $TempParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('Temperature');
+       
+       $AvgAmps = PowerpackParameters::where('packagecode', $request->code)->avg('current');
+       $AvgVolts = PowerpackParameters::where('packagecode', $request->code)->avg('volts');
+
+        $response = [
+         'amps'=> $CurrentParams,
+         'volts' => $VoltParams,
+         'temp' => $TempParams,
+         'avgAmps' => $AvgAmps,
+         'AvgVolts' => $AvgVolts,
+         'created_at' => $Time,
+               ];
+
+       return response($response,201);
 
     }
 }
