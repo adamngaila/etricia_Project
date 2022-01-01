@@ -23,7 +23,7 @@ class PowerpackAPI extends Controller
     }
     public function PackParametersView(Request $request)
     {
-       $ETParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('created_at','desc')->take(3)->get();
+       $ETParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('created_at','asc')->take(3)->get();
 
         $response = json_encode($ETParams);
 
