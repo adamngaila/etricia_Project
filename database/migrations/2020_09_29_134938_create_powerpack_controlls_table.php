@@ -16,10 +16,10 @@ class CreatePowerpackControllsTable extends Migration
         Schema::create('powerpack_controlls', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('packagecode');
-            $table->string('fan')->nullable();
+            $table->string('Lock')->nullable();
             $table->string('relay_1')->nullable();
             $table->string('relay_2')->nullable();
-            $table->string('relay_3')->nullable();
+            $table->string('MasterControl')->nullable();
             $table->timestamps();
         });
     }

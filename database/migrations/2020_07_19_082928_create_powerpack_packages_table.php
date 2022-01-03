@@ -19,7 +19,7 @@ class CreatePowerpackPackagesTable extends Migration
             $table->string('package');
             $table->string('packagecode')->unique();
             $table->string('package_uses');
-            $table->string('IPadress')->nullable();
+            $table->string('PackageStatus')->nullable();
             $table->timestamps();
         });
     }
