@@ -8,6 +8,6 @@ class PowerpackParameters extends Model
 {
     //
     protected $fillable = [
-        'packagecode','volts','current','Temperature'
+        'packagecode','volts','current','Temperature','power','consumption'
     ];
 }
