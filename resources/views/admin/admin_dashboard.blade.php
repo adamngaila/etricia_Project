@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Iristracker | gps tracker
+Etricia | Admin Dashboard
 @endsection
 @section('content')
 <div class="row">
@@ -10,7 +10,7 @@ Iristracker | gps tracker
                 Google Maps
               </div>
               <div class="card-body ">
-                <div id="map" class="map"></div>
+                @include('admin.charts')
               </div>
             </div>
           </div>

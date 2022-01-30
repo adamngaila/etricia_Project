@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Iristracker | gps tracker
+Etricia | Etrica Registry
 @endsection
 @section('content')
 <div class="row">

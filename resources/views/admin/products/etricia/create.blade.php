@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('title')
-Iristracker | gps tracker
+Etricia | Add Pack
 @endsection
 @section('content')
 <div class="row">
