@@ -1,5 +1,5 @@
 <!-- Home -->
-<section class="px-6"style="background-image: url(images/HomeHeader.jpg); background-repeat: no-repeat; background-size: cover;  background-color: dark;">
+<section class="px-6"style="background-image: url(images/hb.png); background-repeat: no-repeat; background-size: cover;  background-color: dark;">
 
     <div class="row justify-content-lg-between align-items-lg-center py-5">
          
