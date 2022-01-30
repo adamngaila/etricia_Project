@@ -97,7 +97,7 @@ class RegisterController extends Controller
                 'password' => Hash::make($data['password']),
                 'location' => $data['location'],
                 'region' => $data['region'],
-                'language' => $data['language'],
+                //'language' => $data['language'],
                 //'image' => $data['image']->store('uploads','public'),
                 
             ]);
@@ -112,7 +112,7 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'region' => $data['region'],
             //'image' => $data['image']->store('uploads','public'),
-            'language' => $data['language'],
+            //'language' => $data['language'],
             
         ]);
       //  $this->storeImage($data);
