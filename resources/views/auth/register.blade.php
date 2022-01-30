@@ -219,7 +219,7 @@
                 <label for="packageuses">{{ __('Uses/Purpose') }}</label>
             </div>
 
-            <button class="btn btn-outline-dark" type="button" id="previous-button-one">
+            <button class="btn btn-outline-white" type="button" id="previous-button-one">
                 {{ __('previous') }} &nbsp; <em class="fa fa-arrow-circle-o-left"></em>
             </button>
 
