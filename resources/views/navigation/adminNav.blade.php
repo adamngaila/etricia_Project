@@ -17,7 +17,7 @@
             </a>
           </li>
           <li>
-            <a href="./surveilance">
+            <a href="{{route('admin_dashboard')}}">
               <i class="now-ui-icons users_single-02"></i>
               <p>Customers</p>
             </a>
@@ -29,7 +29,7 @@
                 <p> Products</p>         
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{route('super_etricia')}}">Etricia</a>
+                  <a class="dropdown-item" href="{{route('super_etricia')}}">Batter Pack</a>
                   <a class="dropdown-item" href="">Surveilance</a>
                   <a class="dropdown-item" href="#">Iris tracker</a>
                 </div>
