@@ -12,12 +12,7 @@ Etricia | Admin Dashboard
               <div class="card-body ">
                 <div class="card">
         <div class="card-header border-bottom-0" >
-            {!! Form::open([
-                'method' => 'GET',
- 
-                'role' => 'form',
-                'class' => 'mb-0'
-            ]) !!}
+            
                <div class="container-fluid">
 
           <!-- Page Heading -->
@@ -184,13 +179,11 @@ Etricia | Admin Dashboard
   </div>
 
 
-    {!! Form::close() !!}
         </div>
       </div>
               </div>
             </div>
           </div>
-        </div>
 @endsection
 @section('scripts')
 
