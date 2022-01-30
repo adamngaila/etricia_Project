@@ -3,18 +3,22 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-     
-        use App\iotPackage;
-        use App\UserPackage;
-        use App\powerpackPackage;
-        use App\surveilance;
-       // use Carbon\Carbon;
-     //   use Illuminate\Http\Request;
+
+use App\Providers\RouteServiceProvider;
+use App\iotPackage;
+use App\UserPackage;
+use App\powerpackPackage;
+use App\surveilance;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
       //  use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -79,6 +83,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+         DB::beginTransaction();
+
         if($data['name']=="Root"){
             if($data['email']=="root@etricia.com")
             {
@@ -91,6 +97,7 @@ class RegisterController extends Controller
                 'password' => Hash::make($data['password']),
                 'location' => $data['location'],
                 'region' => $data['region'],
+                'language' => $data['language'],
                 //'image' => $data['image']->store('uploads','public'),
                 
             ]);
@@ -105,6 +112,7 @@ class RegisterController extends Controller
             'location' => $data['location'],
             'region' => $data['region'],
             //'image' => $data['image']->store('uploads','public'),
+            'language' => $data['language'],
             
         ]);
       //  $this->storeImage($data);
