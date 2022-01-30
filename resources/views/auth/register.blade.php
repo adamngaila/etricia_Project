@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group row">
-                <label for="serverip" class="col-md-4 col-form-label text-md-right">{{ __('Server IP') }}</label>
+                <label for="serverip" class="col-md-4 col-form-label text-md-right">{{ __('Pack Code') }}</label>
 
                 <div class="col-md-6">
                     <input id="serverip" type="text" class="form-control @error('serverip') is-invalid @enderror" name="serverip" value="{{ old('serverip') }}" required autocomplete="serverip" autofocus>
@@ -183,9 +183,9 @@
               <div class="form-label-group">
                 <select id="package" class="form-control" name="package">
                     
-                    <option selected>etricia</option>
+                    <option selected>etricia Service</option>
                     <option>etricia plus</option>
-                    <option>etricia pro</option>
+                    
                   
                 </select>
                
@@ -230,64 +230,64 @@
 
         <section class="registration-section d-none" id="registration-section-three">
             <div class="text-center mb-2 text-muted">
-                {{ __('Stage 3: Devices registration') }}
+                {{ __('Stage 3: Devices registration and GPRS setup') }}
             </div>
 
            
             <div class="form-label-group">
                 <input type="text" id="cam1_adress" name="cam1_adress" 
                 class="form-control"
-                value="https://"
+                value="+255"
                 maxlength="70"
                 placeholder="{{ __('camera1 adress') }}"
                 required autofocus>
 
-                <label for="cam1_adress">{{ __('Camera1 IP adress') }}</label>
+                <label for="cam1_adress">{{ __('Etricia Phone no') }}</label>
             </div>
 
            
             <div class="form-label-group">
                 <input type="text" id="cam2_adress" name="cam2_adress" 
                 class="form-control"
-                value="https://"
+                value="Airtel"
                 maxlength="70"
                 placeholder="{{ __('camera2 adress') }}"
                 required autofocus>
 
-                <label for="cam2_adress">{{ __('Camera2 IP adress') }}</label>
+                <label for="cam2_adress">{{ __('Service provider') }}</label>
             </div>
            
             <div class="form-label-group">
                 <input type="text" id="cam3_adress" name="cam3_adress" 
                 class="form-control"
-                value="https://"
+                value="Internet"
                 maxlength="70"
                 placeholder="{{ __('camera 3 adress') }}"
                 required autofocus>
 
-                <label for="cam3_adress">{{ __('Camera3 IP adress') }}</label>
+                <label for="cam3_adress">{{ __('Service Provider VPN') }}</label>
             </div>
 
             <div class="form-label-group">
                 <input type="text" id="IPadress" name="IPadress" 
                 class="form-control"
-                value="https://"
+                value=" "
                 maxlength="70"
                 placeholder="{{ __('Powerpack Adress') }}"
                 required autofocus>
 
-                <label for="IPadress">{{ __('Powerpack IP adress') }}</label>
+                <label for="IPadress">{{ __('User Name') }}</label>
             </div>
 
             <div class="form-label-group">
                 <input type="text" id="iot_adress" name="iot_adress" 
                 class="form-control"
-                value="https://"
+                value=" "
                 maxlength="70"
                 placeholder="{{ __('iot_adress') }}"
                 required autofocus>
 
-                <label for="iot_adress">{{ __('IOT channel adress') }}</label>
+                <label for="iot_adress">{{ __('Service Provider Password') }}</label>
             </div>
 
             <button class="btn btn-outline-dark" type="button" id="previous-button-two">
