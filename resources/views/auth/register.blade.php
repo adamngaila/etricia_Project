@@ -105,6 +105,15 @@
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                 </div>
             </div>
+            <div class="form-group row">
+                <label for="language" class="col-md-4 col-form-label text-md-right">{{ __('Language') }}</label>
+                <div class="col-md-6">
+                <input type="text" id="language" name="language" 
+                class="form-control"
+                placeholder="{{ __('English') }}"
+                required autofocus>
+                 </div>
+            </div>
              <div class="form-group row">
                 <label for="location" class="col-md-4 col-form-label text-md-right">{{ __('location') }}</label>
                 <div class="col-md-6">
@@ -219,7 +228,7 @@
                 <label for="packageuses">{{ __('Uses/Purpose') }}</label>
             </div>
 
-            <button class="btn btn-outline-white" type="button" id="previous-button-one">
+            <button class="btn btn-outline-dark" type="button" id="previous-button-one">
                 {{ __('previous') }} &nbsp; <em class="fa fa-arrow-circle-o-left"></em>
             </button>
 
