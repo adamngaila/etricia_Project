@@ -56,8 +56,9 @@ class PowerpackAPI extends Controller
         $paramete->volts = $request->input("volts");
         $paramete->current = $request->input("current");
         $paramete->Temperature = $request->input("Temperature");
-         $paramete->Temperature = $request->input("power");
-          $paramete->Temperature = $request->input("consumption");
+         $paramete->power = $request->input("power");
+          $paramete->consumption = $request->input("consumption");
+          $paramete->ChargeLevel = $request->input("ChargeLevel");
         $parameter->save();
 
         //save billing record

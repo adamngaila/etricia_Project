@@ -21,6 +21,7 @@ class CreatePowerpackParametersTable extends Migration
             $table->double('Temperature')->nullable();
             $table->double('power')->nullable();
             $table->double('consumption')->nullable();
+             $table->string('ChargeLevel')->nullable();
             $table->timestamps();
         });
     }
