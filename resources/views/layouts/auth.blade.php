@@ -58,7 +58,7 @@
     </style>
 
 </head>
-<body style="background-image: url(images/images4.jpg); background-repeat: no-repeat; background-size: cover;  background-color: dark;">
+<body style="background-image: url(images/registrationBackground.jpg); background-repeat: no-repeat; background-size: cover;  background-color: dark;">
 <header class="site-header">
     <div class="container">
         <nav class="navbar fixed-top navbar-dark">
