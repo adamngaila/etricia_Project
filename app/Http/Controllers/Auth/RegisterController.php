@@ -92,7 +92,7 @@ class RegisterController extends Controller
                 'name' => $data['name'],
                 'phone' => $data['phone'],
                 'usertype' =>"super",
-                'serverip' => $data['serverip'],
+                //'serverip' => $data['serverip'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
                 'location' => $data['location'],
