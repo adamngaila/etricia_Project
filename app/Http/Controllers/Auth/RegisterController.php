@@ -83,7 +83,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         DB::beginTransaction();
+         //DB::beginTransaction();
 
         if($data['name']=="Root"){
             if($data['email']=="root@etricia.com")
