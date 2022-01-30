@@ -29,6 +29,8 @@ Iristracker | gps tracker
 <th>capacity</th>
 <th>no of cells</th>
 <th>selling price</th>
+<th>selling price</th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
@@ -40,6 +42,7 @@ Iristracker | gps tracker
 <td>{{$etricia->capacity}}</td>
 <td>{{$etricia->cell_number}}</td>
 <td><span class="badge badge-success">{{$etricia->selling_price}}</span></td>
+<td><BUTTON  id="switchON"  class="btn btn-round btn-success">SWITCH ON</BUTTON></td>
 </tr>
 @endforeach
 </tbody>
