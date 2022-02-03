@@ -24,7 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 //Route::post('/registration/', 'RegistrationController@store');
-Route::get('/SaveParams',"API\PowerpackAPI@saveParams");
+Route::post('/SaveParams',"API\PowerpackAPI@saveParams");
 Route::post('/profile_user',"API\PowerpackAPI@ProfileShow");
 Route::post('/pack_params',"API\PowerpackAPI@PackParametersView");
 Route::get('/qrcode_user',"API\PowerpackAPI@ProfileShow");

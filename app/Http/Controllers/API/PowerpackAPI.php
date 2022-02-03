@@ -52,13 +52,13 @@ class PowerpackAPI extends Controller
     {
       //saving to parameters table
        $parameter = new PowerpackParameters;
-        $paramete->packagecode = $request->input("packagecode");
-        $paramete->volts = $request->input("volts");
-        $paramete->current = $request->input("current");
-        $paramete->Temperature = $request->input("Temperature");
-         $paramete->power = $request->input("power");
-          $paramete->consumption = $request->input("consumption");
-          $paramete->ChargeLevel = $request->input("ChargeLevel");
+        $parameter->packagecode = $request->input("packagecode");
+        $parameter->volts = $request->input("volts");
+        $parameter->current = $request->input("current");
+        $parameter->Temperature = $request->input("Temperature");
+         $parameter->power = $request->input("power");
+          $parameter->consumption = $request->input("consumption");
+          $parameter->ChargeLevel = $request->input("ChargeLevel");
         $parameter->save();
 
         //save billing record
