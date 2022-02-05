@@ -126,9 +126,10 @@ class RegisterController extends Controller
                 ];
                 $CutomerAccount = CustomerAccount::create($CutomerAccountInputs);
 
-
         $uses = $data['packageuses'];
          $unitcost = 0;
+         /*
+
          if($data['package'] == "etricia Service" )
         {
         if($uses == "Home" )
@@ -151,7 +152,7 @@ class RegisterController extends Controller
         {
             $unitcost = 700;
         }
-        }    
+        }    */
 
          powerpackPackage::where('packagecode',$data['packagecode'])->update([
             'package'=>$data['package'],
