@@ -162,15 +162,7 @@
                 
             </div>
         </div>
-           <!--div class="form-group row">
-                <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Profile image') }}</label>
-                <div class="col-md-6">
-                <input type="file" id="image" name="image" 
-                class="form-control"
-                placeholder="{{ __(' choose image') }}"
-                required autofocus>
-                 </div>
-            </div-->
+          
 
 
 
