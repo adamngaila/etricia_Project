@@ -152,7 +152,7 @@ class RegisterController extends Controller
         {
             $unitcost = 700;
         }
-        }    */
+        }    
 
          powerpackPackage::where('packagecode',$data['packagecode'])->update([
             'package'=>$data['package'],
@@ -161,7 +161,7 @@ class RegisterController extends Controller
              'ServiceProvider' =>$data['ServiceProvider'],
              'APN'=>$data['apn'],
               'unit_cost'=> $unitcost, 
-         ]); 
+         ]); */
           // all good
             DB::commit();
      
