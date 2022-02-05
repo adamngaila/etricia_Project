@@ -10,5 +10,5 @@ class powerpackPackage extends Model
         'packagecode', 'package','package_uses','PackPhone','ServiceProvider','APN','unit_cost','ChargeLevel','PackageStatus','Temperature',
     ];
 
-    }
+    
 }
