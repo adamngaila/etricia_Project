@@ -83,7 +83,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         //DB::beginTransaction();
+         DB::beginTransaction();
+    try {
 
         if($data['name']=="Root"){
             if($data['email']=="root@etricia.com")
@@ -117,13 +118,14 @@ class RegisterController extends Controller
         ]);
       //  $this->storeImage($data);
 
-        $CstomerAccountInputs = [                 
+        $CutomerAccountInputs = [                 
                         'CustomerName' =>$data['name'],
                         'Email' =>$data['email'],
                         'PackCode' => $data['packagecode'],
                          
                 ];
-                $CstomerAccount = CustomerAccount::create($CstomerAccountInputs);
+                $CutomerAccount = CustomerAccount::create($CutomerAccountInputs);
+
 
         $uses = $data['packageuses'];
          $unitcost = 0;
@@ -159,11 +161,24 @@ class RegisterController extends Controller
              'APN'=>$data['apn'],
               'unit_cost'=> $unitcost, 
          ]); 
+          // all good
+            DB::commit();
+     
+     } catch (Exception $e) {
+            // something went wrong
+            DB::rollback();
+        }
+        if (empty($user)) {
+            // something went wrong
+            DB::rollback();
+
+            // TODO: Notify MauzoSheet Team of a failed registration
+        }
+
+        return $user;
 
                     
-       $response = [$user,$CstomerAccount];
-
-         return response($response,201);
+      
         //return $Surveilance;
         //return $powerpack;
        // return $UserPackage;
