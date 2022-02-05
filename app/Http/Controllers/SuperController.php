@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\EtriciaDirectory;
+use App\powerpackPackage;
+use App\PowerpackControlls;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
@@ -23,6 +25,8 @@ class SuperController extends Controller
         ]);
 
         $new_etricia = new EtriciaDirectory;
+        $package = new powerpackPackage;
+        $control = new PowerpackControlls;
 
         $new_etricia->packagecode = $request->input('packagecode');
         $new_etricia->serial_no = $request->input('serial_no');
@@ -34,6 +38,14 @@ class SuperController extends Controller
         $new_etricia->production_date = $request->input('production_date');
 
         $new_etricia->save();
+
+         $package->packagecode = $request->input('packagecode');
+          $package->save();
+
+            $control->packagecode = $request->input('packagecode');
+          $control->save();
+
+
 
         return redirect("/super_etricia");
 

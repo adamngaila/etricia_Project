@@ -5,8 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 
 use App\Providers\RouteServiceProvider;
+use App\CustomerAccount;
 use App\iotPackage;
-use App\UserPackage;
 use App\powerpackPackage;
 use App\surveilance;
 use Carbon\Carbon;
@@ -106,7 +106,7 @@ class RegisterController extends Controller
         $user =  User::create([
             'name' => $data['name'],
             'phone' => $data['phone'],
-            'serverip' => $data['serverip'],
+            'serverip' => $data['packagecode'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'location' => $data['location'],
@@ -117,55 +117,53 @@ class RegisterController extends Controller
         ]);
       //  $this->storeImage($data);
 
-        $surveilanceInputs = [
-                        'user_id' => $user->id,
-                        'package' => $data['package'],
-                        'packagecode' => $data['packagecode'],
-                         'package_uses' => $data['packageuses'],
-                          'cam1_adress' => $data['cam1_adress'],
-                          'cam2_adress' => $data['cam2_adress'],
-                          'cam3_adress' => $data['cam3_adress'],
+        $CstomerAccountInputs = [                 
+                        'CustomerName' =>$data['name'],
+                        'Email' =>$data['email'],
+                        'PackCode' => $data['packagecode'],
+                         
+                ];
+                $CstomerAccount = CustomerAccount::create($CstomerAccountInputs);
+
+        $uses = $data['packageuses'];
+         $unitcost = 0;
+         if($data['package'] == "etricia Service" )
+        {
+        if($uses == "Home" )
+        {
+            $unitcost == 300;
+        }
+         if($uses == "Office" )
+        {
+            $unitcost = 500;
+        }
+         if($uses == "Farm" )
+        {
+            $unitcost = 400;
+        }
+         if($uses == "Shop" )
+        {
+            $unitcost = 450;
+        }
+        if($uses == "Industry" )
+        {
+            $unitcost = 700;
+        }
+        }    
+
+         powerpackPackage::where('packagecode',$data['packagecode'])->update([
+            'package'=>$data['package'],
+            'package_uses'=>$uses,
+            'PackPhone'=>$data['PackPhone'],
+             'ServiceProvider' =>$data['ServiceProvider'],
+             'APN'=>$data['apn'],
+              'unit_cost'=> $unitcost, 
+         ]); 
 
                     
-                ];
-                $Surveilance = surveilance::create($surveilanceInputs);
-                $user->surveilance()->save($Surveilance);
+       $response = [$user,$CstomerAccount];
 
-
-
-        $powerpackInputs = [
-                        'user_id' => $user->id,
-                        'package' => $data['package'],
-                        'packagecode' => $data['packagecode'],
-                         'package_uses' =>  $data['packageuses'],
-                          'IPaddress' => $user->serverip,
-
-
-                    
-                ];
-                $powerpack = powerpackPackage::create( $powerpackInputs);
-                $user->powerpack()->save($powerpack);
-
-
-        $UserPackageInputs = [
-                        'user_id' => $user->id,
-                       // 'iot_id' => $iot->id,
-                        'powerpack_id' => $powerpack->id,
-                        'surveilance_id' =>$Surveilance->id, 
-                       
-                         'adress' => $user->serverip,
-                         'package' => $data['package'],
-                         'packagecode' => $data['packagecode'],
-                         'packageuses' => $data['packageuses'],
-
-
-                    
-                ];
-                $userPackage = UserPackage::create( $UserPackageInputs);
-                    $user->userpackage()->save($userPackage);
-
-
-        return $user;
+         return response($response,201);
         //return $Surveilance;
         //return $powerpack;
        // return $UserPackage;

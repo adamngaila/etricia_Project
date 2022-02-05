@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class powerpackPackage extends Model
 {
     protected $fillable = [
-        'user_id', 'package','packagecode','package_uses','IPadress'
+        'packagecode', 'package','package_uses','ChargeLevel','PackageStatus','Temperature',
     ];
 public function user()
     {

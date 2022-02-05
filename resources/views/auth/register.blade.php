@@ -55,19 +55,6 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="serverip" class="col-md-4 col-form-label text-md-right">{{ __('Pack Code') }}</label>
-
-                <div class="col-md-6">
-                    <input id="serverip" type="text" class="form-control @error('serverip') is-invalid @enderror" name="serverip" value="{{ old('serverip') }}" required autocomplete="serverip" autofocus>
-
-                    @error('serverip')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                    @enderror
-                </div>
-            </div>
 
 
             <div class="form-group row">
@@ -210,7 +197,7 @@
                 placeholder="{{ __('####') }}"
                 required autofocus>
 
-                <label for="serverip">{{ __('Package code') }}</label>
+                <label for="packagecode">{{ __('Package code') }}</label>
             </div>
 
             <div class="form-label-group">
@@ -219,10 +206,9 @@
                     <option selected>Home</option>
                     <option>Office</option>
                     <option>Farm</option>
-                    <option>Manufacturing</option>
-                    <option>Home and shop</option>
-                    <option>Home and farm</option>
-                    <option>Others</option>
+                    <option>Industry</option>
+                    <option>Shop</option>
+
                 </select>
                
                 <label for="packageuses">{{ __('Uses/Purpose') }}</label>
@@ -244,37 +230,37 @@
 
            
             <div class="form-label-group">
-                <input type="text" id="cam1_adress" name="cam1_adress" 
+                <input type="text" id="PackPhone" name="PackPhone" 
                 class="form-control"
                 value="+255"
                 maxlength="70"
-                placeholder="{{ __('camera1 adress') }}"
+                placeholder="{{ __(' PackPhone') }}"
                 required autofocus>
 
-                <label for="cam1_adress">{{ __('Etricia Phone no') }}</label>
+                <label for="PackPhone">{{ __('Etricia Phone no') }}</label>
             </div>
 
            
             <div class="form-label-group">
-                <input type="text" id="cam2_adress" name="cam2_adress" 
+                <input type="text" id="ServiceProvider" name="ServiceProvider" 
                 class="form-control"
                 value="Airtel"
                 maxlength="70"
-                placeholder="{{ __('camera2 adress') }}"
+                placeholder="{{ __('ServiceProvider') }}"
                 required autofocus>
 
-                <label for="cam2_adress">{{ __('Service provider') }}</label>
+                <label for="ServiceProvider">{{ __('Service provider') }}</label>
             </div>
            
             <div class="form-label-group">
-                <input type="text" id="cam3_adress" name="cam3_adress" 
+                <input type="text" id="apn" name="apn" 
                 class="form-control"
-                value="Internet"
+                value="internet"
                 maxlength="70"
-                placeholder="{{ __('camera 3 adress') }}"
+                placeholder="{{ __('apn') }}"
                 required autofocus>
 
-                <label for="cam3_adress">{{ __('Service Provider VPN') }}</label>
+                <label for="apn">{{ __('Service Provider APN') }}</label>
             </div>
 
             <div class="form-label-group">

@@ -15,11 +15,16 @@ class CreatePowerpackPackagesTable extends Migration
     {
         Schema::create('powerpack_packages', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->string('package');
             $table->string('packagecode')->unique();
-            $table->string('package_uses');
+            $table->string('package')->nullable();
+            $table->string('package_uses')->nullable();
+            $table->string('PackPhone')->nullable();
+            $table->string('APN')->nullable();
+            $table->string('unit_cost')->nullable();
+            $table->string('ChargeLevel')->nullable();
             $table->string('PackageStatus')->nullable();
+            $table->string('Temperature')->nullable();
+            $table->double('unit_cost')->nullable();
             $table->timestamps();
         });
     }

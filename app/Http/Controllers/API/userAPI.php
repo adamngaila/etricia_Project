@@ -57,6 +57,52 @@ class userAPI extends Controller
              $details->location=$request->input("location");
               //$details->language=$request->input("language");
                $details->region=$request->input("region");
+               /*
+                $CstomerAccountInputs = [                 
+                        'CustomerName' =>$data['name'],
+                        'Email' =>$data['email'],
+                        'PackCode' => $data['packagecode'],
+                         
+                ];
+                $CstomerAccount = CustomerAccount::create($CstomerAccountInputs);
+
+        $uses = $data['packageuses'];
+         $unitcost = 0;
+         if($data['package'] == "etricia Service" )
+        {
+        if($uses == "Home" )
+        {
+            $unitcost == 300;
+        }
+         if($uses == "Office" )
+        {
+            $unitcost = 500;
+        }
+         if($uses == "Farm" )
+        {
+            $unitcost = 400;
+        }
+         if($uses == "Shop" )
+        {
+            $unitcost = 450;
+        }
+        if($uses == "Industry" )
+        {
+            $unitcost = 700;
+        }
+        }    
+
+         powerpackPackage::where('packagecode',$data['packagecode'])->update([
+            'package'=>$data['package'],
+            'package_uses'=>$uses,
+            'PackPhone'=>$data['PackPhone'],
+             'ServiceProvider' =>$data['ServiceProvider'],
+             'APN'=>$data['apn'],
+              'unit_cost'=> $unitcost, 
+         ]); 
+
+
+               */
 
          $details->save();
           $response = ['use'=>$details];

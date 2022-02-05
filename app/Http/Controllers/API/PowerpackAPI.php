@@ -82,7 +82,7 @@ class PowerpackAPI extends Controller
          CustomerAccount::where('PackCode',$request->packagecode)->update([
             'TotalCost'=> $cost_consumption, 
             'TotalConsumption'=>$total_cons,
-             'Balance' =>$balance]);
+             'Balance' =>$balance]); 
 
          $response = [
             'parameters'=>$parameter,
