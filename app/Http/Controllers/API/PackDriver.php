@@ -35,9 +35,9 @@ class PackDriver extends Controller
     public function StatusCheck(Request $request)
     {
         powerpackPackage::where('packagecode',request->input("packagecode"))->update([
-            'ChargeLevel'=>request->input("ChargeLevel"),
-            'PackageStatus'=>request->input("PackageStatus"),
-            'Temperature'=>request->input("Temperature"),
+            'ChargeLevel'=>$request->input("ChargeLevel"),
+            'PackageStatus'=>$request->input("PackageStatus"),
+            'Temperature'=>$request->input("Temperature"),
          ]); 
         return response('statusUpdatesOk',201);
 

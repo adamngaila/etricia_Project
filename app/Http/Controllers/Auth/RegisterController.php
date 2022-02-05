@@ -8,10 +8,9 @@ use App\Providers\RouteServiceProvider;
 use App\CustomerAccount;
 use App\iotPackage;
 use App\powerpackPackage;
-use App\surveilance;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-      //  use Illuminate\Http\Response;
+use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -81,52 +80,53 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(Request $data)
     {
+        $user = new User;
+
          //DB::beginTransaction();
     try {
 
-        if($data['name']=="Root"){
-            if($data['email']=="root@etricia.com")
+        if($data->input('name')=="Root"){
+            if($data->input('email')=="root@etricia.com")
             {
-            $user =  User::create([
-                'name' => $data['name'],
-                'phone' => $data['phone'],
-                'usertype' =>"super",
+            $user->name => $data->input('name'),
+                 $user->phone => $data->input('phone'),
+               $user->usertype =>"super",
                 //'serverip' => $data['serverip'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-                'location' => $data['location'],
-                'region' => $data['region'],
+                 $user->email => $data->input('email'),
+                 $user->password => Hash::make($data->input('password')),
+                 $user->location => $data->input('location'),
+                 $user->region => $data->input('region'),
                 //'language' => $data['language'],
                 //'image' => $data['image']->store('uploads','public'),
-                
-            ]);
+                $user->save();
+            
         }
         }
-        $user =  User::create([
-            'name' => $data['name'],
-            'phone' => $data['phone'],
-            'serverip' => $data['packagecode'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'location' => $data['location'],
-            'region' => $data['region'],
+      
+             $user->name => $data->input('name'),
+             $user->phone => $data->input('phone'),
+             $user->serverip => $data->input('packagecode'),
+             $user->email =>$data->input('email'),
+             $user->password => Hash::make($data->input('password')),
+             $user->location => $data->input('location'),
+             $user->region => $data->input('region'),
             //'image' => $data['image']->store('uploads','public'),
             //'language' => $data['language'],
-            
-        ]);
+             $user->save();
+      
       //  $this->storeImage($data);
 
-      /*
+      
   $CutomerAccountInputs = [                 
-                        'CustomerName' =>$data['name'],
-                        'Email' =>$data['email'],
-                        'PackCode' => $data['packagecode'],
+                        'CustomerName' =>$data->input('name'),
+                        'Email' =>$data->input('email'),
+                        'PackCode' => $data->input('packagecode'),
                          
                 ];
                 $CutomerAccount = CustomerAccount::create($CutomerAccountInputs);
-
+/*
         $uses = $data['packageuses'];
          $unitcost = 0;
          
@@ -161,9 +161,9 @@ class RegisterController extends Controller
              'ServiceProvider' =>$data['ServiceProvider'],
              'APN'=>$data['apn'],
               'unit_cost'=> $unitcost, 
-         ]); */
+         ]); 
           // all good
-          //  DB::commit();
+          //  DB::commit();*/
      
      } catch (Exception $e) {
             // something went wrong

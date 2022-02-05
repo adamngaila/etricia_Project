@@ -19,7 +19,6 @@
         </div>
       @endif
     <form method="POST" action="{{ route('register') }}">
-
           @csrf
           <section class="registration-section" id="registration-section-one">
             <div class="text-center mb-2 text-muted">
