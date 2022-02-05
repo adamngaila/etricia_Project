@@ -40,7 +40,6 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/login';
-
     /**
      * Create a new controller instance.
      *
@@ -80,53 +79,54 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(Request $data)
+    protected function create(array $data)
     {
         $user = new User;
 
          //DB::beginTransaction();
     try {
 
-        if($data->input('name')=="Root"){
-            if($data->input('email')=="root@etricia.com")
+      
+        if($data['name']=="Root"){
+            if($data['email']=="root@etricia.com")
             {
-            $user->name => $data->input('name'),
-                 $user->phone => $data->input('phone'),
-               $user->usertype =>"super",
+            $user =  User::create([
+                'name' => $data['name'],
+                'phone' => $data['phone'],
+                'usertype' =>"super",
                 //'serverip' => $data['serverip'],
-                 $user->email => $data->input('email'),
-                 $user->password => Hash::make($data->input('password')),
-                 $user->location => $data->input('location'),
-                 $user->region => $data->input('region'),
-                //'language' => $data['language'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'location' => $data['location'],
+                'region' => $data['region'],
                 //'image' => $data['image']->store('uploads','public'),
-                $user->save();
-            
+                
+            ]);
         }
         }
-      
-             $user->name => $data->input('name'),
-             $user->phone => $data->input('phone'),
-             $user->serverip => $data->input('packagecode'),
-             $user->email =>$data->input('email'),
-             $user->password => Hash::make($data->input('password')),
-             $user->location => $data->input('location'),
-             $user->region => $data->input('region'),
+        
+      $user =  User::create([
+            'name' => $data['name'],
+            'phone' => $data['phone'],
+            'serverip' => $data['serverip'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'location' => $data['location'],
+            'region' => $data['region'],
             //'image' => $data['image']->store('uploads','public'),
-            //'language' => $data['language'],
-             $user->save();
-      
+            
+        ]);
       //  $this->storeImage($data);
 
       
   $CutomerAccountInputs = [                 
-                        'CustomerName' =>$data->input('name'),
-                        'Email' =>$data->input('email'),
-                        'PackCode' => $data->input('packagecode'),
+                        'CustomerName' =>$user->name,
+                        'Email' =>$user->email,
+                        'PackCode' => $data['packagecode'],
                          
                 ];
-                $CutomerAccount = CustomerAccount::create($CutomerAccountInputs);
-/*
+        CustomerAccount::create($CutomerAccountInputs);
+
         $uses = $data['packageuses'];
          $unitcost = 0;
          
@@ -163,7 +163,7 @@ class RegisterController extends Controller
               'unit_cost'=> $unitcost, 
          ]); 
           // all good
-          //  DB::commit();*/
+          //  DB::commit();
      
      } catch (Exception $e) {
             // something went wrong

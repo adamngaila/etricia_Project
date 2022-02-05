@@ -70,6 +70,7 @@
                 </div>
             </div>
 
+
             <div class="form-group row">
                 <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -89,6 +90,19 @@
 
                 <div class="col-md-6">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="serverip" class="col-md-4 col-form-label text-md-right">{{ __('Pack code') }}</label>
+
+                <div class="col-md-6">
+                    <input id="serverip" type="text" class="form-control @error('serverip') is-invalid @enderror" name="serverip" value="{{ old('serverip') }}" required autocomplete="serverip" autofocus>
+
+                    @error('serverip')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
             </div>
             <div class="form-group row">
@@ -187,15 +201,15 @@
                 <label for="packageuses">{{ __('Package type') }}</label>
             </div>
 
-         
-            <div class="form-group row">
-                <label for="packagecode" class="col-md-4 col-form-label text-md-right">{{ __('package code') }}</label>
-                <div class="col-md-6">
+           <div class="form-label-group">
                 <input type="text" id="packagecode" name="packagecode" 
                 class="form-control"
-                placeholder="{{ __('packagecode') }}"
+                
+                maxlength="70"
+                placeholder="{{ __('####') }}"
                 required autofocus>
-                 </div>
+
+                <label for="serverip">{{ __('Package code') }}</label>
             </div>
 
             <div class="form-label-group">
