@@ -118,7 +118,8 @@ class RegisterController extends Controller
         ]);
       //  $this->storeImage($data);
 
-        $CutomerAccountInputs = [                 
+      /*
+  $CutomerAccountInputs = [                 
                         'CustomerName' =>$data['name'],
                         'Email' =>$data['email'],
                         'PackCode' => $data['packagecode'],
@@ -128,8 +129,7 @@ class RegisterController extends Controller
 
         $uses = $data['packageuses'];
          $unitcost = 0;
-         /*
-
+         
          if($data['package'] == "etricia Service" )
         {
         if($uses == "Home" )
