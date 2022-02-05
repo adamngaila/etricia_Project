@@ -118,7 +118,7 @@ class RegisterController extends Controller
         ]);
       //  $this->storeImage($data);
 
-      /*
+      
   $CutomerAccountInputs = [                 
                         'CustomerName' =>$data['name'],
                         'Email' =>$data['email'],
@@ -161,7 +161,7 @@ class RegisterController extends Controller
              'ServiceProvider' =>$data['ServiceProvider'],
              'APN'=>$data['apn'],
               'unit_cost'=> $unitcost, 
-         ]); */
+         ]); 
           // all good
             DB::commit();
      
