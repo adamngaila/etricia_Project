@@ -17,6 +17,3 @@ Etricia | Admin Dashboard
           </div>
 @endsection
 
-@section('scripts')
-
-@endsection

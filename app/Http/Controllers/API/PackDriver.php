@@ -26,13 +26,20 @@ class PackDriver extends Controller
           $diagnosis->RTC = $request->input("RTC_status");
           $diagnosis->Switch = $request->input("Switch");
 
+          $diagnosis->save();
 
-
-
+          $response = ['faults'=>$diagnosis];
+            return response($response,201);
 
     }
     public function StatusCheck(Request $request)
     {
+        powerpackPackage::where('packagecode',request->input("packagecode"))->update([
+            'ChargeLevel'=>request->input("ChargeLevel"),
+            'PackageStatus'=>request->input("PackageStatus"),
+            'Temperature'=>request->input("Temperature"),
+         ]); 
+        return response('statusUpdatesOk',201);
 
     }
     public function PackControll(Request $request)
