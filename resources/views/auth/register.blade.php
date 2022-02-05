@@ -189,15 +189,14 @@
             </div>
 
          
-            <div class="form-label-group">
+            <div class="form-group row">
+                <label for="packagecode" class="col-md-4 col-form-label text-md-right">{{ __('package code') }}</label>
+                <div class="col-md-6">
                 <input type="text" id="packagecode" name="packagecode" 
                 class="form-control"
-                
-                maxlength="70"
-                placeholder="{{ __('####') }}"
+                placeholder="{{ __('packagecode') }}"
                 required autofocus>
-
-                <label for="packagecode">{{ __('Package code') }}</label>
+                 </div>
             </div>
 
             <div class="form-label-group">

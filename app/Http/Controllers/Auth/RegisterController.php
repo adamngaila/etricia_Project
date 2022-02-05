@@ -83,7 +83,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-         DB::beginTransaction();
+         //DB::beginTransaction();
     try {
 
         if($data['name']=="Root"){
@@ -163,7 +163,7 @@ class RegisterController extends Controller
               'unit_cost'=> $unitcost, 
          ]); */
           // all good
-            DB::commit();
+          //  DB::commit();
      
      } catch (Exception $e) {
             // something went wrong
