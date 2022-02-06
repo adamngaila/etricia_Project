@@ -29,7 +29,7 @@ class PackDriver extends Controller
           $diagnosis->save();
 
           $response = ['faults'=>$diagnosis];
-            return response("on",200);
+            return $response;
 
     }
     public function StatusCheck(Request $request)
