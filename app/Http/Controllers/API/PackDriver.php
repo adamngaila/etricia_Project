@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 use App\PowerpackParameters;
 use App\PowerpackControlls;
 use App\User;
-use App\powerpackPackage;
+//use App\powerpackPackage;
 use App\PackDiagnosisLogs;
 use App\CustomerAccount;
 use Auth;
