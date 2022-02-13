@@ -24,7 +24,6 @@ class CreatePowerpackPackagesTable extends Migration
             $table->string('ChargeLevel')->nullable();
             $table->string('PackageStatus')->nullable();
             $table->string('Temperature')->nullable();
-            $table->double('unit_cost')->nullable();
             $table->timestamps();
         });
     }

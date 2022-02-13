@@ -42,8 +42,44 @@ class PackDriver extends Controller
         return response('statusUpdatesOk',201);
 
     }
-    public function PackControll(Request $request)
+    public function PackUserControll(Request $request)
     {
-        
+        /*
+            api/switch_control?packagecode for switching
+            api/Lock_control?packagecode for locking
+            api/admin_pack_control?packagecode= for admin
+            api/pack_charge_control?packagecode= for charging 
+            values are = ON and OFF for all controls
+        */
+    }
+        public function PackAdminControll(Request $request)
+    {
+        /*
+            api/switch_control?packagecode for switching
+            api/Lock_control?packagecode for locking
+            api/admin_pack_control?packagecode= for admin
+            api/pack_charge_control?packagecode= for charging 
+            values are = ON and OFF for all controls
+        */
+    }
+        public function PackLockControll(Request $request)
+    {
+        /*
+            api/switch_control?packagecode for switching
+            api/Lock_control?packagecode for locking
+            api/admin_pack_control?packagecode= for admin
+            api/pack_charge_control?packagecode= for charging 
+            values are = ON and OFF for all controls
+        */
+    }
+        public function PackControll(Request $request)
+    {
+        /*
+            api/switch_control?packagecode for switching
+            api/Lock_control?packagecode for locking
+            api/admin_pack_control?packagecode= for admin
+            api/pack_charge_control?packagecode= for charging 
+            values are = ON and OFF for all controls
+        */
     }
 }
