@@ -42,16 +42,7 @@ class PackDriver extends Controller
         return response('statusUpdatesOk',201);
 
     }
-    public function PackUserControll(Request $request)
-    {
-        /*
-            api/switch_control?packagecode for switching
-            api/Lock_control?packagecode for locking
-            api/admin_pack_control?packagecode= for admin
-            api/pack_charge_control?packagecode= for charging 
-            values are = ON and OFF for all controls
-        */
-    }
+    
         public function PackAdminControll(Request $request)
     {
         /*
@@ -61,6 +52,8 @@ class PackDriver extends Controller
             api/pack_charge_control?packagecode= for charging 
             values are = ON and OFF for all controls
         */
+            $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('MasterControl');
+             return response($switch,201);
     }
         public function PackLockControll(Request $request)
     {
@@ -71,8 +64,11 @@ class PackDriver extends Controller
             api/pack_charge_control?packagecode= for charging 
             values are = ON and OFF for all controls
         */
+             $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('Lock');
+             return response($switch,201);
+
     }
-        public function PackControll(Request $request)
+        public function PackUserControll(Request $request)
     {
         /*
             api/switch_control?packagecode for switching
@@ -81,5 +77,8 @@ class PackDriver extends Controller
             api/pack_charge_control?packagecode= for charging 
             values are = ON and OFF for all controls
         */
+             $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('relay_1');
+             return response($switch,201);
     }
+    
 }
