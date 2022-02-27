@@ -6,6 +6,8 @@ use App\PowerpackControlls;
 use App\User;
 use App\Billing;
 use App\CustomerAccount;
+use App\Notifications;
+use App\Payments;
 use Auth;
 use App\powerpackPackage;
 use Illuminate\Http\Request;
@@ -75,13 +77,14 @@ class PowerpackAPI extends Controller
           //update customer account
 
          $cost_consumption = Billing::where('PackCode',$request->packagecode)->sum("ConsumtionCost");
-         $total_cons = Billing::where('PackCode',$request->packagecode)->sum("Consumption");
-                  $total_pay = CustomerAccount::where('PackCode',$request->packagecode)->value('ToatlPayment');
+         $total_cons."cost of consumption Tzs " = Billing::where('PackCode',$request->packagecode)->sum("Consumption");
+                  $total_pay, = Payments::where('PackCode',$request->packagecode)->sum('AmountPaid');
                $balance = $total_pay - $cost_consumption;
 
          CustomerAccount::where('PackCode',$request->packagecode)->update([
             'TotalCost'=> $cost_consumption, 
             'TotalConsumption'=>$total_cons,
+            'ToatlPayment'=>$total_pay,
              'Balance' =>$balance]); 
 
          $response = [
@@ -89,12 +92,21 @@ class PowerpackAPI extends Controller
             'BillData'=>$billing_data,
                               ];
 
+          $notification = new Notifications;
+          $message = "total consumtpion wh ".$total_cons.", cost of consumption Tzs ".$cost_consumption.", Last bill ref: ".$this->generateCostRef();
+
+          $notification->packagecode = $request->input("packagecode");
+          $notification->NotificationType = "Bill and Consumption";
+          $notification->Message =  $message;
+          $notification->save();
+
 
 
         return response($response,201);  
         
     }
     
+
      public function generateCostRef(){
       do{
          $cost_ref = random_int(135790, 99999999);
@@ -102,6 +114,32 @@ class PowerpackAPI extends Controller
       }while(Billing::where('CostRef',"=",$cost_ref)->first());
 
       return $cost_ref;
+
+     }
+
+
+     public function fetch_bill(Request $request){
+      $bill_history = Billing::where('PackCode',$request->code)->orderBy('id','desc')->limit(5)->pluck('ConsumtionCost');
+      $comsumption_history = Billing::where('PackCode',$request->code)->orderBy('id','desc')->limit(5)->pluck('Consumption');
+      $bill_ref = $this->generateCostRef();
+        $details = CustomerAccount::where('PackCode',$request->code)->->first();
+         $response = [
+            'bills' =>  $details,
+            'bill_ref'=> $bill_ref,
+            'bill_history'=>$bill_history,
+            'consumption_history'=>$comsumption_history,
+          ];
+         return response($response,201);
+
+
+    
+
+     }
+     public function fetch_notification (Request $request){
+
+
+       $notification = Notifications::where('packagecode', $request->code)->orderBy('id','desc')->limit(8)->gret();
+       return response($notification,201);
 
      }
 }

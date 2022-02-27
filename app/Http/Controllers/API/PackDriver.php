@@ -9,6 +9,7 @@ use App\PackDiagnosisLogs;
 use App\CustomerAccount;
 use Auth;
 use App\powerpackPackage;
+use App\Notifications;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,10 @@ class PackDriver extends Controller
     public function PackSystemDiagnosis(Request $request)
     {
         $diagnosis = new PackDiagnosisLogs;
+        $notification = new Notifications;
+
+        $message = "pack diagnisis results, Temperature Sensitivity: ".$request->input("TempSensor").",Current Sensitivity: ".$request->input("CurrentSensor")."SD storage: ".$request->input("MemoryShield");
+
         $diagnosis->packagecode = $request->input("packagecode");
          $diagnosis->TempSensor = $request->input("TempSensor");
           $diagnosis->Relay = $request->input("Relay");
@@ -28,8 +33,13 @@ class PackDriver extends Controller
 
           $diagnosis->save();
 
+          $notification->packagecode = $request->input("packagecode");
+          $notification->NotificationType = "Pack Diagnosis";
+          $notification->Message =  $message;
+          $notification->save();
+
           $response = ['faults'=>$diagnosis];
-            return response("on",200);
+            return response($response,200);
 
     }
     public function StatusCheck(Request $request)
