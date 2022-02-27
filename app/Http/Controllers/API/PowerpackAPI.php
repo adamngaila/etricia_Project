@@ -77,8 +77,8 @@ class PowerpackAPI extends Controller
           //update customer account
 
          $cost_consumption = Billing::where('PackCode',$request->packagecode)->sum("ConsumtionCost");
-         $total_cons."cost of consumption Tzs " = Billing::where('PackCode',$request->packagecode)->sum("Consumption");
-                  $total_pay, = Payments::where('PackCode',$request->packagecode)->sum('AmountPaid');
+         $total_cons = Billing::where('PackCode',$request->packagecode)->sum("Consumption");
+                  $total_pay = Payments::where('PackCode',$request->packagecode)->sum('AmountPaid');
                $balance = $total_pay - $cost_consumption;
 
          CustomerAccount::where('PackCode',$request->packagecode)->update([
