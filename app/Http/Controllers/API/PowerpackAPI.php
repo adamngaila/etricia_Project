@@ -122,7 +122,7 @@ class PowerpackAPI extends Controller
       $bill_history = Billing::where('PackCode',$request->code)->orderBy('id','desc')->limit(5)->pluck('ConsumtionCost');
       $comsumption_history = Billing::where('PackCode',$request->code)->orderBy('id','desc')->limit(5)->pluck('Consumption');
       $bill_ref = $this->generateCostRef();
-        $details = CustomerAccount::where('PackCode',$request->code)->->first();
+        $details = CustomerAccount::where('PackCode',$request->code)->first();
          $response = [
             'bills' =>  $details,
             'bill_ref'=> $bill_ref,
