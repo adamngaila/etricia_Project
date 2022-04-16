@@ -40,6 +40,6 @@ Route::middleware('auth:sanctum')->post('/logout_user', function (Request $reque
 
     return response('Loggedout', 200);
 });
-Route::get('/notificatins',"API\PowerpackAPI@fetch_notification");
-Route::get('/fetch_bills',"API\PowerpackAPI@fetch_bill");
+Route::post('/notificatins',"API\PowerpackAPI@fetch_notification");
+Route::post('/fetch_bills',"API\PowerpackAPI@fetch_bill");
 
