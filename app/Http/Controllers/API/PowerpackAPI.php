@@ -139,8 +139,8 @@ class PowerpackAPI extends Controller
 
 
        $notification = Notifications::where('packagecode', $request->code)->orderBy('id','desc')->limit(8)->get();
-       $response = ['notify' => $notification];
-       return response($response,201);
+      
+       return response($notification,201);
 
      }
 }
