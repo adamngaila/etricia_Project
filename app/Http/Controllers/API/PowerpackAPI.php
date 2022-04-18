@@ -150,7 +150,7 @@ class PowerpackAPI extends Controller
        $Parameters = PowerpackParameters::where('packagecode', $request->code)->latest()->first();
 
        $date = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('created_at');
-       $date->format('W D M Y H i');
+       $date->translatedFormat('l j F Y H i');
 
       $b = powerpackPackage::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
 
