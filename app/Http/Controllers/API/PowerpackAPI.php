@@ -153,7 +153,7 @@ class PowerpackAPI extends Controller
 
       $b = powerpackPackage::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
 
-      $battery = (float)$b*100;
+      $battery = $b;
 
       $response = [
          'params'=> $Parameters,
