@@ -13,7 +13,7 @@ use App\powerpackPackage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-
+use Carbon\Carbon;
 
 class PowerpackAPI extends Controller
 {
@@ -150,7 +150,7 @@ class PowerpackAPI extends Controller
        $Parameters = PowerpackParameters::where('packagecode', $request->code)->latest()->first();
 
        $date = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('created_at');
-      
+       $date->format('W D M Y H i');
 
       $b = powerpackPackage::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
 
