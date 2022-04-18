@@ -42,4 +42,5 @@ Route::middleware('auth:sanctum')->post('/logout_user', function (Request $reque
 });
 Route::post('/notificatins',"API\PowerpackAPI@fetch_notification");
 Route::post('/fetch_bills',"API\PowerpackAPI@fetch_bill");
+oute::post('/fetch_monitoring',"API\PowerpackAPI@fetch_monitoring");
 
