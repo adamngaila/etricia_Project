@@ -180,25 +180,25 @@ class PowerpackAPI extends Controller
        return response('Pack unlocked',201);
      }
      elseif($request->command =='Charge'){
-       PowerpackControlls::where('packagecode',$,$request->code)->update([
+       PowerpackControlls::where('packagecode',$request->code)->update([
              'relay_2'=>'ON',
          ]); 
        return response('Charging started',201);
      }
      elseif($request->command =='Uncharge'){
-       PowerpackControlls::where('packagecode',$,$request->code)->update([
+       PowerpackControlls::where('packagecode',$request->code)->update([
            'relay_2'=>'OFF',
          ]); 
        return response('Charging stopped',201);
      }
      elseif($request->command == 'PowerOn'){
-       PowerpackControlls::where('packagecode',$,$request->code)->update([
+       PowerpackControlls::where('packagecode',$request->code)->update([
           'relay_1'=>'ON',
          ]); 
        return response('Pack is on',201);
      }
      elseif($request->command == 'PowerOff'){
-       PowerpackControlls::where('packagecode',$,$request->code)->update([
+       PowerpackControlls::where('packagecode',$request->code)->update([
             'relay_1'=>'OFF',
          ]); 
        return response('Pack is off',201);
