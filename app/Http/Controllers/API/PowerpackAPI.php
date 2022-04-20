@@ -166,14 +166,14 @@ class PowerpackAPI extends Controller
 
      public function Send_Commands (Request $request){
       if($request->command == 'Locked'){
-        PowerpackControlls::where('packagecode',$,$request->code)->update([
+        PowerpackControlls::where('packagecode',$request->code)->update([
             'Lock'=>'ON',
           
          ]); 
         return response('Pack locked',201);
      }
      elseif($request->command =='UnLocked'){
-       PowerpackControlls::where('packagecode',$,$request->code)->update([
+       PowerpackControlls::where('packagecode',$request->code)->update([
             'Lock'=>'OFF',
             
          ]); 
