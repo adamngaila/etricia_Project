@@ -74,7 +74,7 @@ class PackDriver extends Controller
             api/pack_charge_control?packagecode= for charging 
             values are = ON and OFF for all controls
         */
-             $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('Lock');
+             $switch = PowerpackControlls::where('packagecode',$request->packagecode)->pluck('Lock');
              return response($switch,201);
 
     }
