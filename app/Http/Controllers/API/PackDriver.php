@@ -79,7 +79,7 @@ class PackDriver extends Controller
 
               $result = \DB::table('powerpack_controlls')->select('Lock')->where('packagecode',$request->packagecode)->get();
 
-             return response($result,201);
+             return response(json_decode($result),201);
 
     }
         public function PackUserControll(Request $request)
