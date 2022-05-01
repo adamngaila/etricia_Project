@@ -75,7 +75,7 @@ class PackDriver extends Controller
             values are = ON and OFF for all controls
         */
              $switch = PowerpackControlls::where('packagecode',$request->packagecode)->pluck('Lock');
-             return response(json_decode($switch,true),201);
+             return response(json_decode($switch),201);
 
     }
         public function PackUserControll(Request $request)
