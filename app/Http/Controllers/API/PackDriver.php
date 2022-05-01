@@ -63,16 +63,7 @@ class PackDriver extends Controller
             values are = ON and OFF for all controls
         */
             $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('MasterControl');
-
-                 if( $switch =="ON")
-             {
-             return response('ON',201);
-
-             }elseif( $switch =="ON")
-             {
-                 return response('OFF',201);
-             }
-
+             return response($switch,201);
     }
         public function PackLockControll(Request $request)
     {
@@ -84,14 +75,7 @@ class PackDriver extends Controller
             values are = ON and OFF for all controls
         */
              $switch = PowerpackControlls::where('packagecode',$request->packagecode)->pluck('Lock');
-             if( $switch =="ON")
-             {
-             return response('ON',201);
-
-             }elseif( $switch =="ON")
-             {
-                 return response('OFF',201);
-             }
+             return response($switch,201);
 
     }
         public function PackUserControll(Request $request)
@@ -104,16 +88,7 @@ class PackDriver extends Controller
             values are = ON and OFF for all controls
         */
              $switch = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('relay_1');
-
-               if( $switch =="ON")
-             {
-             return response('ON',201);
-
-             }elseif( $switch =="ON")
-             {
-                 return response('OFF',201);
-             }
-
+             return response($switch,201);
     }
     
 }
