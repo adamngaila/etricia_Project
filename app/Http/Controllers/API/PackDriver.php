@@ -77,10 +77,9 @@ class PackDriver extends Controller
              $switch = PowerpackControlls::where('packagecode',$request->packagecode)->pluck('Lock');
              $jibu = json_decode($switch);
 
-              $result = \DB::table('powerpack_controlls')->select('Lock')->where('packagecode',$request->packagecode)->get();
-              $r = json_decode($result);
+             
 
-             return response($r->Lock,201);
+             return response($jibu[0],201);
 
     }
         public function PackUserControll(Request $request)
