@@ -30,7 +30,7 @@ Route::get('/pack_status',"API\PackDriver@StatusCheck");
 Route::get('/switch_control',"API\PackDriver@PackUserControll");
 Route::get('/admin_pack_control',"API\PackDriver@PackAdminControll");
 
-oute::get('/pack_charge_control',"API\PackDriver@PackChargeControll");
+Route::get('/pack_charge_control',"API\PackDriver@PackChargeControll");
 Route::get('/Lock_control',"API\PackDriver@PackLockControll");
 Route::post('/profile_user',"API\PowerpackAPI@ProfileShow");
 Route::post('/pack_params',"API\PowerpackAPI@PackParametersView");
