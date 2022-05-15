@@ -29,7 +29,7 @@ Blackscience | {{ Auth::user()->name }}
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label >Email address</label>
+                        <label >Phone</label>
                         <input type="email" class="form-control" disabled="" value={{ Auth::user()->email }}>
                       </div>
                     </div>
@@ -38,7 +38,7 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->name }}>
+                        <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->phone }}>
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
@@ -51,8 +51,8 @@ Blackscience | {{ Auth::user()->name }}
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>Phone</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Home Address" value={{ Auth::user()->phone }}>
+                        <label>Email adress</label>
+                        <input type="text" class="form-control" disabled="" placeholder="Home Address" value={{ Auth::user()->email }}>
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code= {{ Auth::user()->serverip }}" alt="..." size="150">
+                <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150">
               </div>
               <div class="card-body">
                 

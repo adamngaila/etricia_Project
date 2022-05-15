@@ -2,7 +2,7 @@
 
 
 @section('title')
-Iristracker | Etricia
+Etricia | Monitoring
 @endsection
 
 
