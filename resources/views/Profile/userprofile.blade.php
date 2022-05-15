@@ -44,7 +44,7 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label> Pack Code </label>
-                        <input type="text" class="form-control"disabled="" placeholder="Last Name" value=" ">
+                        <input type="text" class="form-control"disabled=""  value= {{ Auth::user()->serverip }}>
                       </div>
                     </div>
                   </div>
@@ -72,7 +72,7 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label>Connection Code</label>
-                        <input type="number" class="form-control" disabled="" value= {{ Auth::user()->serverip }}>
+                        <input type="number" class="form-control" disabled="" value= {{ Auth::user()->serverip}}>
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code="+{{ Auth::user()->serverip }} alt="...">
+                <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code= {{ Auth::user()->serverip }}" alt="...">
               </div>
               <div class="card-body">
                 
