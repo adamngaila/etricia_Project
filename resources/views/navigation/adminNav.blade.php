@@ -29,9 +29,9 @@
                 <p> Products</p>         
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="{{route('super_etricia')}}">Batter Pack</a>
-                  <a class="dropdown-item" href="">Surveilance</a>
-                  <a class="dropdown-item" href="#">Iris tracker</a>
+                  <a class="dropdown-item" href="{{route('super_etricia')}}">Battery Pack</a>
+                  <a class="dropdown-item" href="">Agriculture Solution</a>
+                  <a class="dropdown-item" href="#">IOT</a>
                 </div>
               
           </li>

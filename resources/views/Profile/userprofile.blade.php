@@ -43,7 +43,7 @@ Blackscience | {{ Auth::user()->name }}
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label> Package </label>
+                        <label> Pack Code </label>
                         <input type="text" class="form-control"disabled="" placeholder="Last Name" value=" ">
                       </div>
                     </div>
@@ -71,7 +71,7 @@ Blackscience | {{ Auth::user()->name }}
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label>IP adress</label>
+                        <label>Connection Code</label>
                         <input type="number" class="form-control" disabled="" value= {{ Auth::user()->serverip }}>
                       </div>
                     </div>
@@ -80,7 +80,7 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>About Me</label>
-                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
+                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Etricia powerpack solution we make your life better than before</textarea>
                       </div>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="images/front3.jpg" alt="...">
+                <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code="+{{ Auth::user()->serverip }} alt="...">
               </div>
               <div class="card-body">
                 

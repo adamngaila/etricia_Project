@@ -15,30 +15,24 @@
               <p>Profile</p>
             </a>
           </li>
-          <li>
-            <a href="./surveilance">
-              <i class="now-ui-icons ui-1_bell-53"></i>
-              <p>Surveilance</p>
-            </a>
-          </li>
-          
+    
           <li>
             <a href="./map">
               <i class="now-ui-icons location_map-big"></i>
-              <p>GPS tracker</p>
+              <p>Pack Control</p>
             </a>
           </li>
           <li>
             <a href="./etricia">
               <i class="now-ui-icons media-2_sound-wave"></i>
-              <p>Etricia</p>
+              <p>Monitor</p>
             </a>
           </li>
            </li>
           <li>
             <a href="./forums">
               <i class="now-ui-icons business_globe"></i>
-              <p>Forum</p>
+              <p>Billing</p>
             </a>
           </li>
         
