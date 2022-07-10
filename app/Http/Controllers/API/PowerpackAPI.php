@@ -120,7 +120,7 @@ class PowerpackAPI extends Controller
      public function fetch_invoice(Request $request)
      {
         
-        $invoice = CustomerAccount::where('PackCode',$request->code);
+        $invoice = CustomerAccount::where('PackCode',$request->code)->first();
         return response($invoice,201);
      }
 
