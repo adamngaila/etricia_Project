@@ -117,6 +117,12 @@ class PowerpackAPI extends Controller
       return $cost_ref;
 
      }
+     public function fetch_invoice(Request $request)
+     {
+        
+        $invoice = CustomerAccount::where('PackCode',$request->code);
+        return response($invoice,201);
+     }
 
 
      public function fetch_bill(Request $request){
