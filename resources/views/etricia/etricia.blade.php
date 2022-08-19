@@ -160,9 +160,21 @@ Etricia | Monitoring
                                         <a href="javascript:void(0);">
                                             <div class="member-view-box">
                                                 <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                   <img src="../images/tree/charge.png" alt="Member">
                                                     <div class="member-details">
                                                         <h5>Charge</h5>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="member-view-box">
+                                                <div class="member-image">
+                                                   <img src="../images/tree/lock.jpg" alt="Member">
+                                                    <div class="member-details">
+                                                        <h5>lock</h5>
                                                     </div>
                                                 </div>
                                             </div>
