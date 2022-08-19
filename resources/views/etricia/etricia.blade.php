@@ -155,8 +155,7 @@ Etricia | Monitoring
                                     </div>
                                 </a>
                                 </li>
-                              </ul>
-                              <ul>
+                          
                                     <li>
                                         <a href="javascript:void(0);">
                                             <div class="member-view-box">
@@ -169,10 +168,9 @@ Etricia | Monitoring
                                             </div>
                                         </a>
                                     </li>
-                                    </ul>
-                             </li> 
-                        </ul>
-                 
+                                  </ul>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
