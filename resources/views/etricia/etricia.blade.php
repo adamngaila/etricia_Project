@@ -7,7 +7,7 @@ Etricia | Monitoring
 
 
 @section('content')
-link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style.css">
 
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
