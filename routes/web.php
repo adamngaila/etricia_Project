@@ -28,7 +28,7 @@ Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
 
 Route::get('/etricia', function () {
   return view('etricia.etricia');
-}
+
 })->name('etricia');
 
 Route::get('/map', function () {
