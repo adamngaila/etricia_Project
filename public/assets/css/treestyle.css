@@ -23,7 +23,7 @@
 .genealogy-body{
     white-space: nowrap;
     overflow-y: hidden;
-    padding: 50px;
+    padding: 150px;
     min-height: 500px;
     padding-top: 10px;
 }
@@ -104,12 +104,12 @@
     position: relative;
 }
 .member-image{
-    width: 60px;
+    width: 160px;
     position: relative;
 }
 .member-image img{
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 6px;
   background-color :#000;
   z-index: 1;
