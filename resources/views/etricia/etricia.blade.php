@@ -15,10 +15,10 @@ Etricia | Monitoring
                 <a href="javascript:void(0);">
                     <div class="member-view-box">
                         <div class="member-image">
-                           <h2>Control Monitor tree</h2>
-                   
+                           <h3>Control Monitor tree</h3>
+                           <img src="../images/tree/toplevel.png" alt="Member">
                             <div class="member-details">
-                                <h3>blc-001l-2021</h3>
+                                <h5>blc-001l-2021</h5>
                             </div>
                         </div>
                     </div>
@@ -28,9 +28,9 @@ Etricia | Monitoring
                         <a href="javascript:void(0);">
                             <div class="member-view-box">
                                 <div class="member-image">
-                                    <img src="store1.png" alt="Member">
+                                     <img src="../images/tree/monitor.jpg" alt="Member">
                                     <div class="member-details">
-                                        <h3>Store A</h3>
+                                        <h4>Monitor</h4>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ Etricia | Monitoring
                                         <div class="member-image">
                                             <img src="assets.png" alt="Member">
                                             <div class="member-details">
-                                                <h3>Assets Store A </h3>
+                                                <h5>Temperature</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -54,7 +54,7 @@ Etricia | Monitoring
                                         <div class="member-image">
                                             <img src="products.png" alt="Member">
                                             <div class="member-details">
-                                                <h3>Products Store A</h3>
+                                                <h5>Voltage</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -66,7 +66,7 @@ Etricia | Monitoring
                                         <div class="member-image">
                                             <img src="employee.jpg" alt="Member">
                                             <div class="member-details">
-                                                <h3>Employees Store A</h3>
+                                                <h5>Other parameters</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -78,7 +78,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h3>Member 1-3-1</h3>
+                                                        <h5>Current</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,7 +90,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h3>Member 1-3-2</h3>
+                                                        <h5>Frequency</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,7 +102,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h3>Member 1-3-3</h3>
+                                                        <h5>Power</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,9 +115,9 @@ Etricia | Monitoring
                         <a href="javascript:void(0);">
                             <div class="member-view-box">
                                 <div class="member-image">
-                                    <img src="store 2.png" alt="Member">
+                                  <img src="../images/tree/control.png" alt="Member">
                                     <div class="member-details">
-                                        <h3>Store B </h3>
+                                        <h4>Control</h4>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +129,24 @@ Etricia | Monitoring
                                         <div class="member-image">
                                             <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                             <div class="member-details">
-                                                <h3>John Doe</h3>
+                                                <h5>Switch</h5>
+                                                <div class="table-responsive table-upgrade">
+                                                    <table class="table">
+                                                     
+                                                      <tbody>
+                                                       
+                                                        <tr>
+                                                          <td class="text-center"></td>
+                                                          <td class="text-center">
+                                                            <BUTTON  id="switchON"  class="btn btn-round btn-success">SWITCH ON</BUTTON>
+                                                          </td>
+                                                          <td class="text-center">
+                                                            <BUTTON id="swichOFF" class="btn btn-round btn-primary">SWITCH OFF</BUTTON>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody>
+                                                    </table>
+                                                  </div>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +158,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h3>John Doe</h3>
+                                                        <h5>Charge</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,7 +170,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h3>John Doe</h3>
+                                                        <h5>lock/unlock</h5>
                                                     </div>
                                                 </div>
                                             </div>
