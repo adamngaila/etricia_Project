@@ -7,7 +7,6 @@ Etricia | Monitoring
 
 
 @section('content')
-<link rel="stylesheet" href="./style.css">
 
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
@@ -288,7 +287,6 @@ Etricia | Monitoring
 @endsection
 
 @section('scripts')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 $(function () {
     $('.genealogy-tree ul').hide();
@@ -301,6 +299,6 @@ $(function () {
         e.stopPropagation();
     });
 });
-
+</script>
 
 @endsection
