@@ -17,15 +17,9 @@
           </li>
     
           <li>
-            <a href="./map">
-              <i class="now-ui-icons location_map-big"></i>
-              <p>Pack Control</p>
-            </a>
-          </li>
-          <li>
             <a href="./etricia?code ={{ Auth::user()->serverip}}">
               <i class="now-ui-icons media-2_sound-wave"></i>
-              <p>Monitor</p>
+              <p>Monitor/Control</p>
             </a>
           </li>
            </li>

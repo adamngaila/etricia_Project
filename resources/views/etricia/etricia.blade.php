@@ -7,112 +7,150 @@ Etricia | Monitoring
 
 
 @section('content')
+<link rel="stylesheet" href="./style.css">
 
+<div class="body genealogy-body genealogy-scroll">
+    <div class="genealogy-tree">
+        <ul>
+            <li>
+                <a href="javascript:void(0);">
+                    <div class="member-view-box">
+                        <div class="member-image">
+                            <h2>Control Tree</h2>
+                            <div class="member-details">
+                                <h3>{{$result->packagecode}}</h3>
+                                <br>Status</br>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <ul class="active">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <div class="member-view-box">
+                                <div class="member-image">
+                                    <img src="store1.png" alt="Member">
+                                    <div class="member-details">
+                                        <h3>Store A</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <ul >
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="member-view-box">
+                                        <div class="member-image">
+                                            <img src="assets.png" alt="Member">
+                                            <div class="member-details">
+                                                <h3>Assets Store A </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="member-view-box">
+                                        <div class="member-image">
+                                            <img src="products.png" alt="Member">
+                                            <div class="member-details">
+                                                <h3>Products Store A</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="member-view-box">
+                                        <div class="member-image">
+                                            <img src="employee.jpg" alt="Member">
+                                            <div class="member-details">
+                                                <h3>Employees Store A</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="member-view-box">
+                                                <div class="member-image">
+                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                    <div class="member-details">
+                                                        <h3>Member 1-3-1</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="member-view-box">
+                                                <div class="member-image">
+                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                    <div class="member-details">
+                                                        <h3>Member 1-3-2</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="member-view-box">
+                                                <div class="member-image">
+                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                    <div class="member-details">
+                                                        <h3>Member 1-3-3</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li> 
+</ul>
+</li>                                               <li>
+                        <a href="javascript:void(0);">
+                            <div class="member-view-box">
+                                <div class="member-image">
+                                    <img src="store 2.png" alt="Member">
+                                    <div class="member-details">
+                                        <h3>Store B </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="active">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="member-view-box">
+                                        <div class="member-image">
+                                            <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                            <div class="member-details">
+                                                <h3>John Doe</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                              <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">
+                                            <div class="member-view-box">
+                                                <div class="member-image">
+                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                    <div class="member-details">
+                                                        <h3>John Doe</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
 
       
-        <div class="row">
-          <div class="col-md-12 ml-auto mr-auto">
-            <div class="card card-upgrade">
-              <div class="card-header text-center">
-                <h4 class="card-title">Etricia Powerpack</h3>
-                  <p class="card-category">Are you looking for sustainable reliable source of energy? Blackcience brings yuou the Etricia project which it is a powerpack which can power your home, shop or your productive activities. Your powerpack has the following features.</p>
-              </div>
-              <div class="card-body">
-                <div class="table-responsive table-upgrade">
-                  <table class="table">
-                    <thead>
-                      <th></th>
-                      <th class="text-center"> Feauture</th>
-                      <th class="text-center">Status</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Components</td>
-                        <td class="text-center">{{$result->description}}</td>
-                        <td class="text-center">all active </td>
-                      </tr>
-                      <tr>
-                        <td>Number of cells</td>
-                        <td class="text-center">Number of cells</td>
-                        <td class="text-center">{{$result->cell_number}}</td>
-                      </tr>
-                      <tr>
-                        <td>Capacity</td>
-                        <td class="text-center">Power output</td>
-                        <td class="text-center">{{$result->capacity}}</td>
-                      </tr>
-                      
-                      <tr>
-                        <td>Control, switch off, switch on</td>
-                       </tr>
-                      <tr>
-                        <td class="text-center"></td>
-                        <td class="text-center">
-                          <BUTTON  id="switchON"  class="btn btn-round btn-success">SWITCH ON</BUTTON>
-                        </td>
-                        <td class="text-center">
-                          <BUTTON id="swichOFF" class="btn btn-round btn-primary">SWITCH OFF</BUTTON>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="col-md-13 ml-auto mr-auto">
-            <div class="card card-chart" style="background:#00BFFF;">
-              <div class="card-header bg-blue">
-              <h5 class="card-title" style="color:white; font-family:Courier;"><center>ETRICIA READINGS</center></h5>
-                
-              </div>
-           
-            </div>
-          </div>
-          <div class="row">
-                  <div class="col-md-6">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">VOLTAGE READINGS</h2>
-                
-              </div>
-           
-              <canvas id="S1chart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
-                
-              
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">CURRENT READINGS</h2>
-                
-              </div>
-           
-              <canvas id="Currentchart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
-                
-              
-            </div>
-          </div>
-                </div>
-                <div class="row">
-      
-          <div class="col-md-12">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">TEMPERATURE</h2>
-                
-              </div>
-           
-                <canvas id="Temperaturechart"></canvas>
-                
-              
-            </div>
-          </div>
-          </div>
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
     
       
 @endsection

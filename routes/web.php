@@ -28,7 +28,7 @@ Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
 
 Route::get('/etricia', function () {
     $query_id = Auth::user()->serverip;
-    $result = DB::table('powerpack_packages')->join('etricia_directories','powerpack_packages.packagecode','=','etricia_directories.packagecode')->select('powerpack_packages.*','etricia_directories.*')->where('powerpack_packages.packagecode','=',$serverip)->first();
+    $result = DB::table('powerpack_packages')->join('etricia_directories','powerpack_packages.packagecode','=','etricia_directories.packagecode')->select('powerpack_packages.*','etricia_directories.*')->where('powerpack_packages.packagecode','=',$query_id)->first();
                         
     if($result != null){
    return view('etricia.etricia')->with("result",$result);
