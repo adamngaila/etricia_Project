@@ -127,11 +127,7 @@ Etricia | Monitoring
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                         <div class="member-image">
-                                            <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                            <div class="member-details">
-                                                <h5>Switch</h5>
-                                                <div class="table-responsive table-upgrade">
-                                                    <table class="table">
+                                             <table class="table">
                                                      
                                                       <tbody>
                                                        
@@ -146,11 +142,14 @@ Etricia | Monitoring
                                                         </tr>
                                                       </tbody>
                                                     </table>
-                                                  </div>
+                                            <div class="member-details">
+                                                <h5>Switch</h5>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
+                                </li>
+                              </ul>
                               <ul>
                                     <li>
                                         <a href="javascript:void(0);">
@@ -167,8 +166,7 @@ Etricia | Monitoring
                                   
                                 </ul>
                         </ul>
-                    </li>
-                </ul>
+                 
             </li>
         </ul>
     </div>
