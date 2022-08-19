@@ -18,7 +18,7 @@ Etricia | Monitoring
                         <div class="member-image">
                             <h2>Control Tree</h2>
                             <div class="member-details">
-                                <h3>{{$result->packagecode}}</h3>
+                                <h3>{{Auth::user()->serverip}}</h3>
                                 <br>Status</br>
                             </div>
                         </div>
