@@ -7,6 +7,13 @@ Etricia | Monitoring
 
 
 @section('content')
+<div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header ">
+                Control and Monitoring window
+              </div>
+              <div class="card-body ">
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
@@ -172,7 +179,9 @@ Etricia | Monitoring
     </div>
 </div>
 
-
+ </div>
+          </div>
+        </div>
     
       
 @endsection
