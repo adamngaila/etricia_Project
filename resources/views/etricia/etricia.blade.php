@@ -16,7 +16,7 @@ Etricia | Monitoring
                     <div class="member-view-box">
                         <div class="member-image">
                            <h3>Control Monitor tree</h3>
-                           <img src="../images/tree/toplevel.png" alt="Member">
+                           <img src="../images/tree/toplevel.jpg" alt="Member">
                             <div class="member-details">
                                 <h5>blc-001l-2021</h5>
                             </div>
@@ -115,7 +115,7 @@ Etricia | Monitoring
                         <a href="javascript:void(0);">
                             <div class="member-view-box">
                                 <div class="member-image">
-                                  <img src="../images/tree/control.png" alt="Member">
+                                  <img src="../images/tree/control.jpg" alt="Member">
                                     <div class="member-details">
                                         <h4>Control</h4>
                                     </div>
@@ -138,10 +138,10 @@ Etricia | Monitoring
                                                         <tr>
                                                           <td class="text-center"></td>
                                                           <td class="text-center">
-                                                            <BUTTON  id="switchON"  class="btn btn-round btn-success">SWITCH ON</BUTTON>
+                                                            <BUTTON  id="switchON"  class="btn btn-round btn-success">ON</BUTTON>
                                                           </td>
                                                           <td class="text-center">
-                                                            <BUTTON id="swichOFF" class="btn btn-round btn-primary">SWITCH OFF</BUTTON>
+                                                            <BUTTON id="swichOFF" class="btn btn-round btn-primary">OFF</BUTTON>
                                                           </td>
                                                         </tr>
                                                       </tbody>
@@ -164,132 +164,8 @@ Etricia | Monitoring
                                             </div>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h5>lock/unlock</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
+                                  
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">
-                                    <div class="member-view-box">
-                                        <div class="member-image">
-                                            <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                            <div class="member-details">
-                                                <h3>John Doe</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <ul>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">
-                                    <div class="member-view-box">
-                                        <div class="member-image">
-                                            <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                            <div class="member-details">
-                                                <h3>John Doe</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                              <ul>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);">
-                                            <div class="member-view-box">
-                                                <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
-                                                    <div class="member-details">
-                                                        <h3>John Doe</h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
                         </ul>
                     </li>
                 </ul>
