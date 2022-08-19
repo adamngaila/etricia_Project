@@ -19,7 +19,7 @@ link rel="stylesheet" href="./style.css">
                            <h2>Control Monitor tree</h2>
                    
                             <div class="member-details">
-                                <h3>{ Auth::user()->name }</h3>
+                                <h3>blc-001l-2021</h3>
                             </div>
                         </div>
                     </div>
