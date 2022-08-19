@@ -22,7 +22,6 @@ Etricia | Monitoring
                 <a href="javascript:void(0);">
                     <div class="member-view-box">
                         <div class="member-image">
-                           <h3>Control Monitor tree</h3>
                            <img src="../images/tree/toplevel.jpg" alt="Member">
                             <div class="member-details">
                                 <h5>blc-001l-2021</h5>
@@ -170,8 +169,8 @@ Etricia | Monitoring
                                             </div>
                                         </a>
                                     </li>
-                                  
-                                </ul>
+                                    </ul>
+                             </li> 
                         </ul>
                  
             </li>
