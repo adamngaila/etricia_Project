@@ -52,9 +52,9 @@ Etricia | Monitoring
                                            <div class="table-responsive table-upgrade">
                   <table class="table">
                     <thead>
-                      <th></th>
-                      <th class="text-center"> Param</th>
-                      <th class="text-center">Status</th>
+                      <th>param</th>
+                      <th class="text-center"> unit</th>
+                      <th class="text-center">value</th>
                     </thead>
                     <tbody>
                       <tr>
@@ -75,8 +75,20 @@ Etricia | Monitoring
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
-                                        <div class="member-image">
-                                            <img src="products.png" alt="Member">
+                                        <di<table class="table">
+                    <thead>
+                      <th>param</th>
+                      <th class="text-center"> unit</th>
+                      <th class="text-center">value</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>voltage</td>
+                        <td class="text-center">V</td>
+                        <td class="text-center">13</td>
+                      </tr>
+                      </tbody>
+                  </table>
                                             <div class="member-details">
                                                 <h5>Voltage</h5>
                                             </div>
