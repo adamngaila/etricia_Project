@@ -103,7 +103,7 @@ Etricia | Monitoring
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                         <div class="member-image">
-                                            <img src="employee.jpg" alt="Member">
+                                           
                                             <div class="member-details">
                                                 <h5>Other parameters</h5>
                                             </div>
@@ -115,7 +115,7 @@ Etricia | Monitoring
                                         <a href="javascript:void(0);">
                                             <div class="member-view-box">
                                                 <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                   
                                                     <div class="member-details">
                                                         <h5>Current</h5>
                                                     </div>
@@ -143,7 +143,7 @@ Etricia | Monitoring
                                         <a href="javascript:void(0);">
                                             <div class="member-view-box">
                                                 <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                    
                                                     <div class="member-details">
                                                         <h5>Battery</h5>
                                                     </div>
@@ -155,7 +155,7 @@ Etricia | Monitoring
                                         <a href="javascript:void(0);">
                                             <div class="member-view-box">
                                                 <div class="member-image">
-                                                    <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
+                                                 
                                                     <div class="member-details">
                                                         <h5>Power</h5>
                                                     </div>
@@ -193,7 +193,7 @@ Etricia | Monitoring
                                 </div>
                             </div>
                         </a>
-                        <ul class="active">
+                        <ul>
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
