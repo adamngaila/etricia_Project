@@ -11,12 +11,15 @@ Etricia | Monitoring
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header header-dark ">
-               <h5 class="title"> Control and Monitoring window </h5>
-                <form action="{{route('etricia')}}" method = 'get'>
-@csrf
-<button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-bars"></i>Charts</button>
+              <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'MonitorControl')">Monitor/Control</button>
+  <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
+  <button class="tablinks" onclick="openCity(event, 'Diagnosis')">Diagnosis</button>
+</div>
               </div>
               <div class="card-body ">
+                <div id="MonitorControl" class="tabcontent">
+  <h5 Class ='title'>London</h5>
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
@@ -258,10 +261,23 @@ Etricia | Monitoring
 </div>
 
  </div>
+ <div id="Charts" class="tabcontent">
+  <h5 class="title">Charts</h5>
+ 
+</div>
+
+ <div id="Diagnosis" class="tabcontent">
+  <h5 class="title">Diagnosis</h5>
+ 
+</div>
+
+
+</div>
           </div>
         </div>
     
-      
+      </div>
+
 @endsection
 
 @section('scripts')
