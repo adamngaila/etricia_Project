@@ -32,7 +32,7 @@ Etricia | Bills
                   </tbody>
                </table>
             </div>
-             <div id="payments" class="tabcontent">
+              <div id="payments" class="tabcontent">
                <h5 class="title">Payment History</h5>
             </div>
               </div>
