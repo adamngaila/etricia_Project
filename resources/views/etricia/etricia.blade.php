@@ -10,16 +10,14 @@ Etricia | Monitoring
 <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <div class="card-header header-dark ">
-              <div class="tab">
+              <div class="card-body ">
+                 <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'MonitorControl')">Monitor/Control</button>
   <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
   <button class="tablinks" onclick="openCity(event, 'Diagnosis')">Diagnosis</button>
 </div>
-              </div>
-              <div class="card-body ">
                 <div id="MonitorControl" class="tabcontent">
-  <h5 Class ='title'>London</h5>
+  <h5 Class ='title'>Monitoring and Control</h5>
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
