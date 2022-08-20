@@ -68,7 +68,7 @@ Route::group(['middleware' => 'auth'], function () {
 })->name('etricia_Monitor');
     etricia_Bills
 
-Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+
 Route::any('/etricia_Bills', 'Bills/BillingController@index')->name('etricia_Bills');
   Route::any('/etricia_Bills/show', 'Bills/BillingController@show');  
     });
