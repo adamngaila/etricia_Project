@@ -26,10 +26,7 @@ Route::get('/register-surveilance', function () {
 Route::post('surveilance','Surveilance\DisplayController@store');
 Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
 
-Route::get('/etricia', function () {
-  return view('etricia.etricia');
 
-})->name('etricia');
 
 Route::get('/map', function () {
     return view('gps.tracker');
@@ -45,7 +42,6 @@ Route::group(['middleware'=>['auth','profile']],function(){
 });
 
 //etricia
-Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
 
 
 //Admin
@@ -65,3 +61,13 @@ Route::get('/super_etricia', function (){
  
 })->name('super_etricia');
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/etricia', function () {
+  return view('etricia.etricia');
+
+})->name('etricia');
+    
+Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+
+    
+    });

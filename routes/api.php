@@ -34,7 +34,7 @@ Route::get('/pack_charge_control',"API\PackDriver@PackChargeControll");
 Route::get('/Lock_control',"API\PackDriver@PackLockControll");
 Route::post('/profile_user',"API\PowerpackAPI@ProfileShow");
 Route::post('/pack_params',"API\PowerpackAPI@PackParametersView");
-Route::get('/qrcode_user',"API\PowerpackAPI@ProfileShow");
+Route::any('/qrcode_user',"API\PowerpackAPI@ProfileShow");
 Route::post('/add_user',"API\userAPI@AddUser");
 Route::post('/login_user',"API\userAPI@login");
 Route::middleware('auth:sanctum')->post('/logout_user', function (Request $request) {
