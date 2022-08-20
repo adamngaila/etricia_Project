@@ -20,12 +20,12 @@ class BillingController extends Controller
 {
      public function index(Request  $request)
     {
-      $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(10);
+      $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(15);
         return view('bill.index',compact('billl_list'));
     }
     public function show(Request  $request)
     {
-        $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(10);
+        $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(15);
         return view('bill.index',compact('billl_list'));
 
 
