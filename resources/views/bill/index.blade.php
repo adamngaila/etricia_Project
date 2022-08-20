@@ -32,6 +32,8 @@ Etricia | Bills
                         <td> {{$bill->Consumption}}</td>
                         <td> {{$bill->ConsumtionCost}}</td>
                      </tr>
+
+                    @endforeach
                   </tbody>
                </table>
             </div>
