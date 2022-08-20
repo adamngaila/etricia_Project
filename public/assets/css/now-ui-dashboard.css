@@ -1878,14 +1878,14 @@ h2,
 
 h3,
 .h3 {
-  font-size: 2em;
+  font-size: 1.7em;
   margin-bottom: 30px;
   line-height: 1.4em;
 }
 
 h4,
 .h4 {
-  font-size: 1.714em;
+  font-size: 1.314em;
   line-height: 1.45em;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -1900,9 +1900,9 @@ h4.title+.category,
 
 h5,
 .h5 {
-  font-size: 1.57em;
+  font-size: 1.1em;
   line-height: 1.4em;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 h6,
@@ -1913,7 +1913,7 @@ h6,
 }
 
 p.description {
-  font-size: 1.14em;
+  font-size: 1em;
 }
 
 .title {
