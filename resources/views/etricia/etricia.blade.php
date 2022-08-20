@@ -32,7 +32,7 @@ Etricia | Monitoring
                         </div>
                     </div>
                 </a>
-                <ul class="active">
+                <ul>
                     <li>
                         <a href="javascript:void(0);">
                             <div class="member-view-box">
@@ -55,7 +55,7 @@ Etricia | Monitoring
                                         </div>
                                          <div class="table-responsive ">
                   <table class="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-light">
+                    <thead class="thead-blue">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -82,7 +82,7 @@ Etricia | Monitoring
                                         </div>
                                         <div class="table-responsive table-upgrade">
                                         <table class ="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-light">
+                    <thead class="thead-blue">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -122,7 +122,7 @@ Etricia | Monitoring
                                                 </div>
                                                  <div class="table-responsive table-upgrade">
                                         <table class ="table  table-bordered table-striped table-sm">
-                    <thead class="thead-dark">
+                    <thead class="thead-blue">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -162,7 +162,7 @@ Etricia | Monitoring
                                                 </div>
                                                  <div class="table-responsive table-upgrade">
                                         <table class ="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-dark">
+                    <thead class="thead-blue">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
