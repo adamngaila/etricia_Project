@@ -1,4 +1,4 @@
-@extends('layouts.map')
+@extends('layouts.bill')
 @section('title')
 Etricia | Bills
 @endsection
