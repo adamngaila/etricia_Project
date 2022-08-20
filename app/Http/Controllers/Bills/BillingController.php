@@ -25,7 +25,7 @@ class BillingController extends Controller
     public function show(Request  $request)
     {
         $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(10);
-        return view('bill.index')->with('billl_list', $billl_list);
+        return view('bill.index',compact('billl_list'));
 
 
     }
