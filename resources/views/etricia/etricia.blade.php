@@ -19,7 +19,6 @@ Etricia | Monitoring
               </div>
               <div class="card-body ">
                 <div id="MonitorControl" class="tabcontent">
-  <h5 Class ='title'>Monitoring and Control</h5>
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
 <div class="body genealogy-body genealogy-scroll">
     <div class="genealogy-tree">
