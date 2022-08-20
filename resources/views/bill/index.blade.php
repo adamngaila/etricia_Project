@@ -20,14 +20,17 @@ Etricia | Bills
                      <tr>
                         <th>Date</th>
                         <th>Bill ref</th>
-                        <th class="td-actions">Amount </th>
+                        <th>Consumption Wh</th>
+                        <th>Cost Tzs</th>
                      </tr>
                   </thead>
                   <tbody>
+                    @foreach($BillHistory as $bill)
                      <tr>
-                        <td> Fresh Web Development Resources </td>
-                        <td> http://www.egrappler.com/ </td>
-                        <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                        <td>{{$bill->updated_at}}</td>
+                        <td> {{$bill->CostRef}}</td>
+                        <td> {{$bill->Consumption}}</td>
+                        <td> {{$bill->ConsumtionCost}}</td>
                      </tr>
                   </tbody>
                </table>

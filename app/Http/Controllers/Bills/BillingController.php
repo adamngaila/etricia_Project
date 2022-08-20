@@ -22,8 +22,11 @@ class BillingController extends Controller
     {
         return view('bill.index');
     }
-    public function show()
+    public function show(Request  $request)
     {
+        $billl_list = Billing::where('PackCode',$request->code)->get();
+        return view("bill.index",['BillHistory' => $billl_list]);
+
 
     }
 }
