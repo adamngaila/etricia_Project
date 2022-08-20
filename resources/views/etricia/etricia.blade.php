@@ -10,7 +10,7 @@ Etricia | Monitoring
 <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <div class="card-header" style="padding: 0px; background-color:ADD8E6;">
+              <div class="card-header" style="padding: 0px">
               <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'MonitorControl')">Monitor/Control</button>
   <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
