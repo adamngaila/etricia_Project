@@ -33,6 +33,7 @@
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
 <link href="../assets/css/treestyle.css" rel="stylesheet" />
+<link href="../assets/css/statement_style.css" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -56,6 +57,7 @@
     </div>
   </div>
   <!--   Core JS Files   -->
+  <script src="../assets/js/statement.js"></script>
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
