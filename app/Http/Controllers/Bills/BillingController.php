@@ -20,7 +20,8 @@ class BillingController extends Controller
 {
      public function index()
     {
-        return view('bill.index');
+      $billl_list = Billing::where('PackCode',$request->code)->orderBy('id','DESC')->paginate(10);
+        return view('bill.index',compact('billl_list'));
     }
     public function show(Request  $request)
     {
