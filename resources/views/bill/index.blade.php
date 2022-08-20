@@ -36,6 +36,7 @@ Etricia | Bills
                     @endforeach
                   </tbody>
                </table>
+               {{$billl_list-> links()}}
             </div>
               <div id="payments" class="tabcontent">
                <h5 class="title">Payment History</h5>
