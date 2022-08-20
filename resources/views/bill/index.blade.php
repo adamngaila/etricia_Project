@@ -13,7 +13,7 @@ Etricia | Bills
             </div>
          </div>
               <div class="card-body ">
-            <div id="bill" class="tabcontent">
+            <div id="bill" class="tabcontent active">
                <h5>Bills History</h5>
                <table class="table table-striped table-bordered" style="font-size: 11px;">
                   <thead>
