@@ -33,7 +33,7 @@
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
-
+<link href="../assets/css/battery_level_style.css" rel="stylesheet" />
 </head>
 
 <body class="">

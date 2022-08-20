@@ -55,7 +55,7 @@ Etricia | Monitoring
                                         </div>
                                          <div class="table-responsive ">
                   <table class="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-blue">
+                    <thead class="thead-dark">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -82,7 +82,7 @@ Etricia | Monitoring
                                         </div>
                                         <div class="table-responsive table-upgrade">
                                         <table class ="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-blue">
+                    <thead class="thead-dark">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -122,7 +122,7 @@ Etricia | Monitoring
                                                 </div>
                                                  <div class="table-responsive table-upgrade">
                                         <table class ="table  table-bordered table-striped table-sm">
-                    <thead class="thead-blue">
+                    <thead class="thead-dark">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -146,6 +146,9 @@ Etricia | Monitoring
                                                     
                                                     <div class="member-details">
                                                         <h5>Battery</h5>
+                                                        <div class="container">
+  <div class="skills html">80%</div>
+</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,7 +165,7 @@ Etricia | Monitoring
                                                 </div>
                                                  <div class="table-responsive table-upgrade">
                                         <table class ="table table-responsive-sm table-bordered table-striped table-sm">
-                    <thead class="thead-blue">
+                    <thead class="thead-dark">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
