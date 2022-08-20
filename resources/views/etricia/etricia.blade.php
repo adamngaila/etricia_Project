@@ -12,6 +12,9 @@ Etricia | Monitoring
             <div class="card ">
               <div class="card-header ">
                 Control and Monitoring window
+                <form action="{{route('draw_charts')}}" method = 'get'>
+@csrf
+<button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-plus"></i>Charts</button>
               </div>
               <div class="card-body ">
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
@@ -46,7 +49,22 @@ Etricia | Monitoring
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                         <div class="member-image">
-                                            <img src="assets.png" alt="Member">
+                                           <div class="table-responsive table-upgrade">
+                  <table class="table">
+                    <thead>
+                      <th></th>
+                      <th class="text-center"> Param</th>
+                      <th class="text-center">Status</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>temperature</td>
+                        <td class="text-center">celcius</td>
+                        <td class="text-center">30 </td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
                                             <div class="member-details">
                                                 <h5>Temperature</h5>
                                             </div>
