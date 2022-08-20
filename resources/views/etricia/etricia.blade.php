@@ -49,9 +49,13 @@ Etricia | Monitoring
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                         <div class="member-image">
-                                           <div class="table-responsive table-upgrade">
-                  <table class="table">
-                    <thead>
+                                            <div class="member-details">
+                                                <h5>Temperature</h5>
+                                            </div>
+                                        </div>
+                                         <div class="table-responsive ">
+                  <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                    <thead class="thead-light">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
@@ -65,10 +69,6 @@ Etricia | Monitoring
                       </tbody>
                   </table>
               </div>
-                                            <div class="member-details">
-                                                <h5>Temperature</h5>
-                                            </div>
-                                        </div>
                                     </div>
                                 </a>
                             </li>
@@ -81,8 +81,8 @@ Etricia | Monitoring
                                             </div>
                                         </div>
                                         <div class="table-responsive table-upgrade">
-                                        <table class="table">
-                    <thead>
+                                        <table class ="table table-responsive-sm table-bordered table-striped table-sm">
+                    <thead class="thead-light">
                       <th>param</th>
                       <th class="text-center"> unit</th>
                       <th class="text-center">value</th>
