@@ -70,10 +70,19 @@
   <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
   <script>
-    $(document).ready(function() {
-      // Javascript method's body can be found in assets/js/demos.js
-      demo.initGoogleMaps();
-    });
+     function openCity(evt, cityName) {
+     var i, tabcontent, tablinks;
+     tabcontent = document.getElementsByClassName("tabcontent");
+     for (i = 0; i < tabcontent.length; i++) {
+       tabcontent[i].style.display = "none";
+     }
+     tablinks = document.getElementsByClassName("tablinks");
+     for (i = 0; i < tablinks.length; i++) {
+       tablinks[i].className = tablinks[i].className.replace(" active", "");
+     }
+     document.getElementById(cityName).style.display = "block";
+     evt.currentTarget.className += " active";
+   }
   </script>
 
 @yield('scripts')
