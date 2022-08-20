@@ -8,12 +8,12 @@ Etricia | Bills
             <div class="card ">
               <div class="card-header" style="padding: 0px">
             <div class="tab">
-               <button class="tablinks" onclick="openCity(event, 'bill')">Bill History</button>
+               <button class="tablinks" onclick="openCity(event, 'bill')" id="defaultOpen">Bill History</button>
                <button class="tablinks" onclick="openCity(event, 'payments')">Payment History</button>
             </div>
          </div>
               <div class="card-body ">
-            <div id="bill" class="tabcontent active">
+            <div id="bill" class="tabcontent">
                <h5>Bills History</h5>
                <table class="table table-striped table-bordered" style="font-size: 11px;">
                   <thead>

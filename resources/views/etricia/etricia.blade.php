@@ -8,7 +8,7 @@ Etricia | Monitoring
       <div class="card ">
          <div class="card-header" style="padding: 0px">
             <div class="tab">
-               <button class="tablinks" onclick="openCity(event, 'MonitorControl')">Monitor/Control</button>
+               <button class="tablinks" onclick="openCity(event, 'MonitorControl')" id="defaultOpen">Monitor/Control</button>
                <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
                <button class="tablinks" onclick="openCity(event, 'Diagnosis')">Diagnosis</button>
             </div>
@@ -288,18 +288,21 @@ Etricia | Monitoring
            e.stopPropagation();
        });
    });
-   function openCity(evt, cityName) {
-     var i, tabcontent, tablinks;
-     tabcontent = document.getElementsByClassName("tabcontent");
-     for (i = 0; i < tabcontent.length; i++) {
-       tabcontent[i].style.display = "none";
-     }
-     tablinks = document.getElementsByClassName("tablinks");
-     for (i = 0; i < tablinks.length; i++) {
-       tablinks[i].className = tablinks[i].className.replace(" active", "");
-     }
-     document.getElementById(cityName).style.display = "block";
-     evt.currentTarget.className += " active";
-   }
+  function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
 @endsection
