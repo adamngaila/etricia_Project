@@ -120,6 +120,22 @@ Etricia | Monitoring
                                                         <h5>Current</h5>
                                                     </div>
                                                 </div>
+                                                 <div class="table-responsive table-upgrade">
+                                        <table class ="table table-responsive-sm table-bordered table-striped table-sm">
+                    <thead class="thead-dark">
+                      <th>param</th>
+                      <th class="text-center"> unit</th>
+                      <th class="text-center">value</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Amps</td>
+                        <td class="text-center">A</td>
+                        <td class="text-center">0.23</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
                                             </div>
                                         </a>
                                     </li>
@@ -129,7 +145,7 @@ Etricia | Monitoring
                                                 <div class="member-image">
                                                     <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member">
                                                     <div class="member-details">
-                                                        <h5>Frequency</h5>
+                                                        <h5>Battery</h5>
                                                     </div>
                                                 </div>
                                             </div>
@@ -144,6 +160,22 @@ Etricia | Monitoring
                                                         <h5>Power</h5>
                                                     </div>
                                                 </div>
+                                                 <div class="table-responsive table-upgrade">
+                                        <table class ="table table-responsive-sm table-bordered table-striped table-sm">
+                    <thead class="thead-dark">
+                      <th>param</th>
+                      <th class="text-center"> unit</th>
+                      <th class="text-center">value</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Power</td>
+                        <td class="text-center">W</td>
+                        <td class="text-center">96</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
                                             </div>
                                         </a>
                                     </li>
