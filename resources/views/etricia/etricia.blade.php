@@ -10,11 +10,11 @@ Etricia | Monitoring
 <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <div class="card-header ">
+              <div class="card-header header-dark ">
                 Control and Monitoring window
                 <form action="{{route('etricia')}}" method = 'get'>
 @csrf
-<button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-plus"></i>Charts</button>
+<button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-bars"></i>Charts</button>
               </div>
               <div class="card-body ">
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
