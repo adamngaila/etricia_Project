@@ -11,7 +11,7 @@ Etricia | Monitoring
           <div class="col-md-12">
             <div class="card ">
               <div class="card-header header-dark ">
-                Control and Monitoring window
+               <h5 class="title"> Control and Monitoring window </h5>
                 <form action="{{route('etricia')}}" method = 'get'>
 @csrf
 <button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-bars"></i>Charts</button>
