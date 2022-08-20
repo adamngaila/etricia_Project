@@ -25,7 +25,7 @@
            </li>
           <li>
             <a href=" ./etricia_Bills?code ={{ Auth::user()->serverip}}">
-              <i class="now-ui-icons business_globe"></i>
+              <i class="now-ui-icons business_money-coins"></i>
               <p>Billing</p>
             </a>
           </li>

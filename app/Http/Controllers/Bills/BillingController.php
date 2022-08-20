@@ -20,7 +20,7 @@ class BillingController extends Controller
 {
      public function index()
     {
-        return view('etricia.etricia');
+        return view('bill.index');
     }
     public function show()
     {
