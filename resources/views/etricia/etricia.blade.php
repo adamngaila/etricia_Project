@@ -147,7 +147,7 @@ Etricia | Monitoring
                                                     <div class="member-details">
                                                         <h5>Battery</h5>
                                                         <div class="container">
-  <div class="skills css">90%</div>
+  <div class="skills html">90%</div>
 </div>
                                                     </div>
                                                 </div>
