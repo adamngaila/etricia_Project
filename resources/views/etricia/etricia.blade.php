@@ -75,6 +75,7 @@ Etricia | Monitoring
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
+                                         <div class="member-image">
                                         <di<table class="table">
                     <thead>
                       <th>param</th>
