@@ -121,7 +121,7 @@ Etricia | Monitoring
                                                     </div>
                                                 </div>
                                                  <div class="table-responsive table-upgrade">
-                                        <table class ="table table-responsive-sm table-bordered table-striped table-sm">
+                                        <table class ="table  table-bordered table-striped table-sm">
                     <thead class="thead-dark">
                       <th>param</th>
                       <th class="text-center"> unit</th>
