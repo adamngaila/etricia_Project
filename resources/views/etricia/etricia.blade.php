@@ -10,12 +10,14 @@ Etricia | Monitoring
 <div class="row">
           <div class="col-md-12">
             <div class="card ">
-              <div class="card-body ">
-                 <div class="tab">
+              <div class="card-header header-dark ">
+              <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'MonitorControl')">Monitor/Control</button>
   <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
   <button class="tablinks" onclick="openCity(event, 'Diagnosis')">Diagnosis</button>
 </div>
+              </div>
+              <div class="card-body ">
                 <div id="MonitorControl" class="tabcontent">
   <h5 Class ='title'>Monitoring and Control</h5>
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
@@ -291,6 +293,19 @@ $(function () {
         e.stopPropagation();
     });
 });
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 </script>
 
 @endsection
