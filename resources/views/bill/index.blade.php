@@ -52,7 +52,7 @@ Etricia | Bills
         <p>{{ Auth::user()->email }}</p>
       </address>
       <span><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150"></span>
-    </header>
+   
     <article>
       <h1>Recipient</h1>
       <address contenteditable>
@@ -108,7 +108,7 @@ Etricia | Bills
         </tr>
       </table>
     </article>
-    <aside>
+
             </div>
               </div>
             </div>
