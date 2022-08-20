@@ -75,8 +75,13 @@ Etricia | Monitoring
                             <li>
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
-                                         <div class="member-image">
-                                        <di<table class="table">
+                                    <div class="member-image">
+                                            <div class="member-details">
+                                                <h5>Voltage</h5>
+                                            </div>
+                                        </div>
+                                        <div class="table-responsive table-upgrade">
+                                        <table class="table">
                     <thead>
                       <th>param</th>
                       <th class="text-center"> unit</th>
@@ -90,10 +95,7 @@ Etricia | Monitoring
                       </tr>
                       </tbody>
                   </table>
-                                            <div class="member-details">
-                                                <h5>Voltage</h5>
-                                            </div>
-                                        </div>
+              </div>
                                     </div>
                                 </a>
                             </li>
