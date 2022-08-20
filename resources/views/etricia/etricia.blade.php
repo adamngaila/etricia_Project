@@ -12,7 +12,7 @@ Etricia | Monitoring
             <div class="card ">
               <div class="card-header ">
                 Control and Monitoring window
-                <form action="{{route('draw_charts')}}" method = 'get'>
+                <form action="{{route('etricia')}}" method = 'get'>
 @csrf
 <button class="btn btn-success  btn-rounded pull-right "  type="submit"> <i class="fas fa-plus"></i>Charts</button>
               </div>
