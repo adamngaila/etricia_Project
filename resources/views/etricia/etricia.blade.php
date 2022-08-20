@@ -201,7 +201,12 @@ Etricia | Monitoring
                                 <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                         <div class="member-image">
-                                             <table class="table">
+                                            
+                                            <div class="member-details">
+                                                <h5>Switch</h5>
+                                            </div>
+                                        </div>
+                                         <table class="table">
                                                      
                                                       <tbody>
                                                        
@@ -216,10 +221,6 @@ Etricia | Monitoring
                                                         </tr>
                                                       </tbody>
                                                     </table>
-                                            <div class="member-details">
-                                                <h5>Switch</h5>
-                                            </div>
-                                        </div>
                                     </div>
                                 </a>
                                 </li>
