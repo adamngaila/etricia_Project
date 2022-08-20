@@ -17,14 +17,14 @@
           </li>
     
           <li>
-            <a href="./etricia?code ={{ Auth::user()->serverip}}">
+            <a href="./etricia_Monitor?code ={{ Auth::user()->serverip}}">
               <i class="now-ui-icons media-2_sound-wave"></i>
               <p>Monitor/Control</p>
             </a>
           </li>
            </li>
           <li>
-            <a href="./forums">
+            <a href=" ./etricia_Bills?code ={{ Auth::user()->serverip}}">
               <i class="now-ui-icons business_globe"></i>
               <p>Billing</p>
             </a>

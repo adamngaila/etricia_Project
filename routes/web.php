@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Auth;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -62,12 +62,13 @@ Route::get('/super_etricia', function (){
 })->name('super_etricia');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/etricia', function () {
+    Route::get('/etricia_Monitor', function () {
   return view('etricia.etricia');
 
-})->name('etricia');
-    
-Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+})->name('etricia_Monitor');
+    etricia_Bills
 
-    
+Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+Route::any('/etricia_Bills', 'Bills/BillingController@index')->name('etricia_Bills');
+  Route::any('/etricia_Bills/show', 'Bills/BillingController@show');  
     });
