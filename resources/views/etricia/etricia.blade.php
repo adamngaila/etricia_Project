@@ -253,7 +253,7 @@ Etricia | Monitoring
             </div>
             <div id="Diagnosis" class="tabcontent">
                <h5 class="title">Diagnosis</h5>
-               <table class="table table-striped table-bordered">
+               <table class="table table-striped table-bordered" style="font-size: 11px;">
                   <thead>
                      <tr>
                         <th> Free Resource </th>
