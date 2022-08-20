@@ -25,7 +25,7 @@ Etricia | Bills
                      </tr>
                   </thead>
                   <tbody>
-                    @foreach($BillHistory as $bill)
+                    @foreach($billl_list as $bill)
                      <tr>
                         <td>{{$bill->updated_at}}</td>
                         <td> {{$bill->CostRef}}</td>
