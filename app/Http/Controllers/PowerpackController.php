@@ -21,8 +21,8 @@ class PowerpackController extends Controller
 
        $datetime = PowerpackParameters::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('created_at');
 
-      $b = powerpackPackage::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
-      $batery = $b*100;
+      $batery = powerpackPackage::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
+
 
 
         return view('etricia.etricia',compact('diagnosis','Parameters','datetime','batery'));
