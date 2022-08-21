@@ -15,17 +15,23 @@ class PowerpackController extends Controller
     public function index()
     {
          $code = Auth::user()->serverip;
-        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
+        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(30))->orderBy('id','DESC')->paginate(15);
          
+       $Parameters = PowerpackParameters::where('packagecode', $code)->latest()->first();
+
+       $datetime = PowerpackParameters::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('created_at');
+
+      $b = powerpackPackage::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
+      $batery = $b*100;
 
 
-        return view('etricia.etricia',compact('diagnosis'));
+        return view('etricia.etricia',compact('diagnosis','Parameters','datetime','batery'));
     }
 
     public function DrawCharts(Request $request)
     {
         $code = Auth::user()->serverip;
-        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(40))->get();
+        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(30))->get();
         return json_encode($result);
         
     }

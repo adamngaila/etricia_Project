@@ -40,6 +40,7 @@ Etricia | Monitoring
                                           <img src="../images/tree/monitor.jpg" alt="Member">
                                           <div class="member-details">
                                              <h4>Monitor</h4>
+                                             <p> {{datetime}} </p>
                                           </div>
                                        </div>
                                     </div>
@@ -64,7 +65,7 @@ Etricia | Monitoring
                                                       <tr>
                                                          <td>temperature</td>
                                                          <td class="text-center">celcius</td>
-                                                         <td class="text-center">30 </td>
+                                                         <td class="text-center">{{Parameters->Temperature}} </td>
                                                       </tr>
                                                    </tbody>
                                                 </table>
@@ -91,7 +92,7 @@ Etricia | Monitoring
                                                       <tr>
                                                          <td>voltage</td>
                                                          <td class="text-center">V</td>
-                                                         <td class="text-center">13</td>
+                                                         <td class="text-center">{{Parameters->volts}}</td>
                                                       </tr>
                                                    </tbody>
                                                 </table>
@@ -129,7 +130,7 @@ Etricia | Monitoring
                                                             <tr>
                                                                <td>Amps</td>
                                                                <td class="text-center">A</td>
-                                                               <td class="text-center">0.23</td>
+                                                               <td class="text-center">{{Parameters->current}}</td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
@@ -144,7 +145,7 @@ Etricia | Monitoring
                                                       <div class="member-details">
                                                          <h5>Battery</h5>
                                                          <div class="container">
-                                                            <div class="skills html">90%</div>
+                                                            <div class="skills html">{{batery}}%</div>
                                                          </div>
                                                       </div>
                                                    </div>
@@ -170,7 +171,7 @@ Etricia | Monitoring
                                                             <tr>
                                                                <td>Power</td>
                                                                <td class="text-center">W</td>
-                                                               <td class="text-center">96</td>
+                                                               <td class="text-center">{{Parameters->power}}</td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
