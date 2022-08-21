@@ -15,8 +15,7 @@ use Auth;
 use App\powerpackPackage;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-use App\Payments;
-use App\CustomerAccount;
+
 class BillingController extends Controller
 {
      public function index(Request  $request)
