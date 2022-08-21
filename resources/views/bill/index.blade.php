@@ -107,10 +107,10 @@ Etricia | Bills
         </thead>
         <tbody>
           <tr>
-            <td><a class="cut">-</a><span >Huduma ya Etricia</span></td>
-            <td><span >Matumizi</span></td>
-            <td><span >500.00</span></td>
-            <td><span data-prefix>wh</span><span >{{$statement->TotalConsumption}}</span></td>
+            <td><span >Huduma ya Etricia</span></td>
+            <td><span >Matumizi wh</span></td>
+            <td><span data-prefix>Tzs</span><span >500.00</span></td>
+            <td><span >{{$statement->TotalConsumption}}</span></td>
             <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
           </tr>
         </tbody>
