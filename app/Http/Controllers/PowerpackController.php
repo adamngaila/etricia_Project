@@ -19,7 +19,7 @@ class PowerpackController extends Controller
          
 
 
-        return view('etricia.etricia',['diagnosis'=>$diagnosis]);
+        return view('etricia.etricia',compact('diagnosis'));
     }
 
     public function DrawCharts(Request $request)
