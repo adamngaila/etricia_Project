@@ -8,7 +8,7 @@ use App\PowerpackParameters;
 use App\PowerpackControlls;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-
+use App\PackDiagnosisLogs;
 
 class PowerpackController extends Controller
 {
@@ -20,10 +20,7 @@ class PowerpackController extends Controller
     public function DrawCharts(Request $request)
     {
         $code = Auth::user()->serverip;
-        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(30))->get(['created_at',avg('consumption'),avg('volts'),avg('power'),]) ->groupBy(function ($val) {
-        return Carbon::parse($val->created_at)->format('d');
-    });
-  
+        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(40))->get();
         return json_encode($result);
         
     }
@@ -37,6 +34,17 @@ class PowerpackController extends Controller
                             ->select('powerpack_packages.*','powerpack_parameters.*')
                             ->where('packagecode',$request->code)->get();                         
          return redirect('/etricia')->with('result',$result);
+    }
+    public function monitor_Parameters(){
+
+    }
+    public function control_pack(){
+
+    }
+    public function diagnosis_results(){
+        $code = Auth::user()->serverip;
+        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
+        return redirect('/etricia_Monitor/diagnosis')->with('diagnosis',$diagnosis);
     }
 
  

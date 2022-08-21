@@ -299,19 +299,26 @@ Etricia | Monitoring
                <table class="table table-striped table-bordered" style="font-size: 11px;">
                   <thead>
                      <tr>
-                        <th> Free Resource </th>
-                        <th> Download</th>
-                        <th class="td-actions"> </th>
+                        <th> DATE</th>
+                        <th> Temperature Sensor </th>
+                        <th> Current Sensor</th>
+                        <th> Voltage Sensor </th>
+                         <th> Memory </th>
                      </tr>
                   </thead>
                   <tbody>
+                       @foreach($diagnosis as $result)
                      <tr>
-                        <td> Fresh Web Development Resources </td>
-                        <td> http://www.egrappler.com/ </td>
-                        <td class="td-actions"><a href="javascript:;" class="btn btn-small btn-success"><i class="btn-icon-only icon-ok"> </i></a><a href="javascript:;" class="btn btn-danger btn-small"><i class="btn-icon-only icon-remove"> </i></a></td>
+                        <td>{{$result->created_at}}</td>
+                       <td>{{$result->TempSensor}}</td>
+                       <td>{{$result->CurrentSensor}}</td>
+                      <td>{{$result->VoltageSensor}}</td>
+                      <td>{{$result->MemoryShield}}</td>
                      </tr>
+                       @endforeach
                   </tbody>
                </table>
+                {{$result-> links()}}
             </div>
          </div>
       </div>
@@ -348,5 +355,18 @@ Etricia | Monitoring
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+var updateDiagnosis = function() {
+    $.ajax({
+      url: "{{route('/etricia_Monitor/diagnosis')}}",
+      type: 'get',
+      dataType: 'json',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+         console.log('working');}})
+ }
+
 </script>
 @endsection
