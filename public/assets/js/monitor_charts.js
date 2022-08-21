@@ -104,5 +104,5 @@ var ctx = document.getElementById("S1chart");
   
   updateChart();
   setInterval(() => {
-    updateCha();
+    updateChart();
   }, 100000);
