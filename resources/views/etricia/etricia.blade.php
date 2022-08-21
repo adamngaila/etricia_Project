@@ -373,7 +373,7 @@ document.getElementById("defaultOpen").click();
 
 var updateDiagnosis = function() {
     $.ajax({
-      url: '/etricia_Monitor',
+      url: './etricia_Monitor',
       type: 'get',
       dataType: 'json',
       headers: {

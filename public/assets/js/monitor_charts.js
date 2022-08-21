@@ -101,8 +101,27 @@ var ctx = document.getElementById("S1chart");
     });
     //renderChart(data, labels);<canvas id="lineChartExampleWithNumbersAndGrid" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
   }
-  
+  var updateDiagnosis = function() {
+    $.ajax({
+      url: './etricia_Monitor',
+      type: 'get',
+      dataType: 'json',
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+         console.log('working');}})
+ }
+function loadlink(){
+    $('#tabcontent').load('./etricia_Monitor',function () {
+         $(this).unwrap();
+    });
+}
+
   updateChart();
+  loadlink();
   setInterval(() => {
+    updateDiagnosis();
     updateChart();
+    loadlink();
   }, 100000);
