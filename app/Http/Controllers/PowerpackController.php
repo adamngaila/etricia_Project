@@ -14,7 +14,7 @@ class PowerpackController extends Controller
 {
     public function index()
     {
-        diagnosis_results();
+       
         return view('etricia.etricia');
     }
 

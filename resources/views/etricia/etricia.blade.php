@@ -358,7 +358,7 @@ document.getElementById("defaultOpen").click();
 
 var updateDiagnosis = function() {
     $.ajax({
-      url: "{{route('/etricia_Monitor/diagnosis')}}",
+      url: '/etricia_Monitor/diagnosis',
       type: 'get',
       dataType: 'json',
       headers: {
