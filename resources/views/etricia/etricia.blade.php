@@ -28,6 +28,7 @@ Etricia | Monitoring
                                        <h5>{{ Auth::user()->name }}</h5>
                                        <h5>{{ Auth::user()->serverip }}</h5>
                                        <p>{{date("d/m/Y")}}</p>
+                                       <p>{{$controlStatus->MasterControl}}</p>
                                     </div>
                                  </div>
                               </div>

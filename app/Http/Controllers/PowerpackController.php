@@ -55,7 +55,8 @@ class PowerpackController extends Controller
         PowerpackControlls::where('packagecode',$request->code)->update([
             'Lock'=>'ON',
           
-         ]);        
+         ]);  
+         }      
      elseif($request->command =='UnLocked'){
        PowerpackControlls::where('packagecode',$request->code)->update([
             'Lock'=>'OFF',
