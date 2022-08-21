@@ -69,7 +69,7 @@ var ctx = document.getElementById("S1chart");
   });
   var updateChart = function() {
     $.ajax({
-      url: "{{route('voltcharts')}}",
+      url: 'voltcharts',
       type: 'get',
       dataType: 'json',
       headers: {
