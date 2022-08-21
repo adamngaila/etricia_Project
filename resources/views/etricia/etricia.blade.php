@@ -184,7 +184,7 @@ Etricia | Monitoring
                                     </li>
                                  </ul>
                               </li>
-                              <li>
+                              <li class="active">
                                  <a href="javascript:void(0);">
                                     <div class="member-view-box">
                                        <div class="member-image">
