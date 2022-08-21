@@ -109,7 +109,7 @@ Etricia | Bills
           <tr>
             <td><a class="cut">-</a><span >Huduma ya Etricia</span></td>
             <td><span >Matumizi</span></td>
-            <td><span data-prefix>Tzs</span><span >500.00</span></td>
+            <td><span >500.00</span></td>
             <td><span data-prefix>wh</span><span >{{$statement->TotalConsumption}}</span></td>
             <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
           </tr>
@@ -117,7 +117,8 @@ Etricia | Bills
       </table>
      
       <table class="balance">
-        <tr><span>Total</span></th>
+        <tr>
+          <th><span>Total</span></th>
           <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
         </tr>
         <tr>
