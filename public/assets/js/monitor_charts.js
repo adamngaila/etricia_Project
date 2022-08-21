@@ -1,4 +1,4 @@
-<script>
+
 var ctx = document.getElementById("S1chart");
   var myChart = new Chart(ctx, {
     cache: false,
@@ -106,4 +106,3 @@ var ctx = document.getElementById("S1chart");
   setInterval(() => {
     updateCha();
   }, 100000);
-</script>
