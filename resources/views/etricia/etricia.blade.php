@@ -217,7 +217,9 @@ Etricia | Monitoring
                                                               </a>
                                                          </label>
                                                           <label class="btn btn-primary">
-                                                          <input  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff' type="radio" name="options" id="option2" autocomplete="off"> OFF
+                                                          <input   type="radio" name="options" id="option2" autocomplete="off"> <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'>
+                                                               OFF
+                                                              </a>
                                                          </label>
                                                        </div>
                                                       </td>
