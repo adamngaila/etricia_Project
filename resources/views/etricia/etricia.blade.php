@@ -230,24 +230,28 @@ Etricia | Monitoring
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="javascript:void(0);">
+                                       <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Charge'>
                                           <div class="member-view-box">
                                              <div class="member-image">
                                                 <img src="../images/tree/charge.png" alt="Member">
                                                 <div class="member-details">
+                                                    <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Uncharge'>
                                                    <h5>Charge</h5>
+                                                     </a>
+                                                    <p>{{$controlStatus->relay_2}}</p>
                                                 </div>
                                              </div>
                                           </div>
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="javascript:void(0);">
+                                       <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Locked'>
                                           <div class="member-view-box">
                                              <div class="member-image">
                                                 <img src="../images/tree/lock.jpg" alt="Member">
                                                 <div class="member-details">
                                                    <h5>lock</h5>
+                                                    <p>{{$controlStatus->Lock}}</p>
                                                 </div>
                                              </div>
                                           </div>
