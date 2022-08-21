@@ -25,7 +25,9 @@ Etricia | Monitoring
                                  <div class="member-image">
                                     <img src="../images/tree/toplevel.jpg" alt="Member">
                                     <div class="member-details">
-                                       <h5>blc-001l-2021</h5>
+                                       <h5>{{ Auth::user()->name }}</h5>
+                                       <h5>{{ Auth::user()->serverip }}</h5>
+                                       <p>{{date("d/m/Y")}}</p>
                                     </div>
                                  </div>
                               </div>
@@ -250,6 +252,47 @@ Etricia | Monitoring
             </div>
             <div id="Charts" class="tabcontent">
                <h5 class="title">Charts</h5>
+                     <div class="row">
+                  <div class="col-md-6">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">VOLTAGE READINGS</h2>
+                
+              </div>
+           
+              <canvas id="S1chart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+                
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">CURRENT READINGS</h2>
+                
+              </div>
+           
+              <canvas id="Currentchart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+                
+              
+            </div>
+          </div>
+                </div>
+                <div class="row">
+      
+          <div class="col-md-12">
+            <div class="card card-chart" background="dark";>
+              <div class="card-header bg-blue">
+                <h2 class="card-category">TEMPERATURE</h2>
+                
+              </div>
+           
+                <canvas id="Temperaturechart"></canvas>
+                
+              
+            </div>
+          </div>
+          </div>
             </div>
             <div id="Diagnosis" class="tabcontent">
                <h5 class="title">Diagnosis</h5>

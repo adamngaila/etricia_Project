@@ -78,7 +78,11 @@
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
-  
+<!--charts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.min.js"></script>
+<script src="../assets/js/monitor_charts.js"></script>
+
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 
 <script>
