@@ -31,7 +31,7 @@ class PowerpackController extends Controller
     public function DrawCharts(Request $request)
     {
         $code = Auth::user()->serverip;
-        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(30))->get();
+        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(45))->get();
         return json_encode($result);
         
     }
