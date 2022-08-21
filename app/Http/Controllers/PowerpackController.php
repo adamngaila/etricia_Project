@@ -15,7 +15,7 @@ class PowerpackController extends Controller
     public function index()
     {
          $code = Auth::user()->serverip;
-        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(30))->orderBy('id','DESC')->paginate(15);
+        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(45))->orderBy('id','DESC')->paginate(15);
          
        $Parameters = PowerpackParameters::where('packagecode', $code)->latest()->first();
 
@@ -83,6 +83,7 @@ class PowerpackController extends Controller
             'relay_1'=>'OFF',
          ]); 
      }
+      
      return redirect('/etricia_Monitor');
 
 
