@@ -16,10 +16,10 @@ class PowerpackController extends Controller
     {
          $code = Auth::user()->serverip;
         $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
-         $response = [diagnosis => $diaggnosis];
+         
 
 
-        return view('etricia.etricia', $response);
+        return view('etricia.etricia',['diagnosis'=>$diagnosis]);
     }
 
     public function DrawCharts(Request $request)
