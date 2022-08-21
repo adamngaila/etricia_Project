@@ -18,12 +18,9 @@ class PowerpackController extends Controller
 
     public function DrawCharts(Request $request)
     {
+        $code = Auth::user()->serverip;
+        $result = PowerpackParameters::where('packagecode',$code)->get();
   
-        $result = \DB::table('powerpack_packages')
-                            ->join('powerpack_parameters','powerpack_packages.packagecode','=','powerpack_parameters.packagecode')
-                            ->select('powerpack_packages.*','powerpack_parameters.*')
-                            ->where('user_id',$request->code)->get();
-     $results =  \DB::table('powerpack_parameters')->get();           
         return json_encode($result);
         
     }

@@ -29,7 +29,7 @@ var ctx = document.getElementById("S1chart");
     data: {
       labels:[],
       datasets: [{
-        label: 'Current (A)',
+        label: 'Power (w)',
         data:[],
         borderWidth: 3
       }]
@@ -52,7 +52,7 @@ var ctx = document.getElementById("S1chart");
     data: {
       labels:[],
       datasets: [{
-        label: 'Temperature (C)',
+        label: 'Consumption (Wh)',
         data:[],
         borderWidth: 3
       }]
@@ -81,9 +81,9 @@ var ctx = document.getElementById("S1chart");
           myChart.data.labels.push(data.created_at);
           myChart.data.datasets[0].data.push(data.volts);
           curChart.data.labels.push(data.created_at);
-          curChart.data.datasets[0].data.push(data.current);
+          curChart.data.datasets[0].data.push(data.power);
           joto.data.labels.push(data.created_at);
-          joto.data.datasets[0].data.push(data.Temperature);
+          joto.data.datasets[0].data.push(data.consumption);
           //var earnings = data.bei;
 
         //$("#earnings").text(earnings);

@@ -62,12 +62,12 @@ Route::get('/super_etricia', function (){
 })->name('super_etricia');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/etricia_Monitor', function () {
-  return view('etricia.etricia');
 
-})->name('etricia_Monitor');
-
+//monitor and controll
+Route::any('/etricia_Monitor','PowerpackController@index')->name('etricia_Monitor');
 Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
+
+//bills
 Route::any('/etricia_Bills', 'Bills\BillingController@index')->name('etricia_Bills');
-  Route::any('/etricia_Bills/show', 'Bills\BillingController@show');  
+Route::any('/etricia_Bills/show', 'Bills\BillingController@show');  
     });

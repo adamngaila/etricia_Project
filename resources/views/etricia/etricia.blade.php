@@ -268,7 +268,7 @@ Etricia | Monitoring
           <div class="col-md-6">
             <div class="card card-chart" background="dark";>
               <div class="card-header bg-blue">
-                <h2 class="card-category">CURRENT READINGS</h2>
+                <h2 class="card-category">POWER READINGS</h2>
                 
               </div>
            
@@ -283,7 +283,7 @@ Etricia | Monitoring
           <div class="col-md-12">
             <div class="card card-chart" background="dark";>
               <div class="card-header bg-blue">
-                <h2 class="card-category">TEMPERATURE</h2>
+                <h2 class="card-category">CONSUMPTION TREND</h2>
                 
               </div>
            
