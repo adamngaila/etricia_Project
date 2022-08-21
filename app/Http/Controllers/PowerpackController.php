@@ -19,13 +19,13 @@ class PowerpackController extends Controller
          
        $Parameters = PowerpackParameters::where('packagecode', $code)->latest()->first();
 
-       $datetime = PowerpackParameters::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('created_at');
+       $controlStatus = PowerpackControlls::where('packagecode', $code)->first();;
 
       $batery = powerpackPackage::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
 
 
 
-        return view('etricia.etricia',compact('diagnosis','Parameters','datetime','batery'));
+        return view('etricia.etricia',compact('diagnosis','Parameters','controlStatus','batery'));
     }
 
     public function DrawCharts(Request $request)
@@ -49,9 +49,44 @@ class PowerpackController extends Controller
     public function monitor_Parameters(){
 
     }
-    public function control_pack(){
 
-    }
+    public function control_pack (Request $request){
+      if($request->command == 'Locked'){
+        PowerpackControlls::where('packagecode',$request->code)->update([
+            'Lock'=>'ON',
+          
+         ]);        
+     elseif($request->command =='UnLocked'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+            'Lock'=>'OFF',
+            
+         ]); 
+     }
+     elseif($request->command =='Charge'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+             'relay_2'=>'ON',
+         ]); 
+     }
+     elseif($request->command =='Uncharge'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+           'relay_2'=>'OFF',
+         ]);
+     }
+     elseif($request->command == 'PowerOn'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+          'relay_1'=>'ON',
+         ]);
+     }
+     elseif($request->command == 'PowerOff'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+            'relay_1'=>'OFF',
+         ]); 
+     }
+     return redirect('/etricia_Monitor');
+
+
+     }
+    
     public function diagnosis_results(){
         $code = Auth::user()->serverip;
         $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);

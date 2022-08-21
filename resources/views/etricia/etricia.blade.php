@@ -40,7 +40,7 @@ Etricia | Monitoring
                                           <img src="../images/tree/monitor.jpg" alt="Member">
                                           <div class="member-details">
                                              <h4>Monitor</h4>
-                                             <p> {{$datetime}} </p>
+                                             <p> {{$Parameters->created_at}} </p>
                                           </div>
                                        </div>
                                     </div>
@@ -201,17 +201,21 @@ Etricia | Monitoring
                                              <div class="member-image">
                                                 <div class="member-details">
                                                    <h5>Switch</h5>
+                                                   <p>{{$controlStatus->relay_1}}</p>
                                                 </div>
                                              </div>
                                              <table class="table">
                                                 <tbody>
                                                    <tr>
-                                                      <td class="text-center"></td>
-                                                      <td class="text-center">
-                                                         <BUTTON  id="switchON"  class="btn btn-round btn-success">ON</BUTTON>
-                                                      </td>
-                                                      <td class="text-center">
-                                                         <BUTTON id="swichOFF" class="btn btn-round btn-primary">OFF</BUTTON>
+                                                      <td>
+                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                         <label class="btn btn-primary active">
+                                                          <input type="radio" name="options" id="option1" autocomplete="off" checked href='/etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'> ON
+                                                         </label>
+                                                          <label class="btn btn-primary">
+                                                          <input type="radio" name="options" id="option2" autocomplete="off" href='/etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'> OFF
+                                                         </label>
+                                                       </div>
                                                       </td>
                                                    </tr>
                                                 </tbody>
