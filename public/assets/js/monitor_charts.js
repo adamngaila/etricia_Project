@@ -1,4 +1,3 @@
-
 <script>
 var ctx = document.getElementById("S1chart");
   var myChart = new Chart(ctx, {
