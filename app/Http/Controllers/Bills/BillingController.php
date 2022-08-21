@@ -15,14 +15,17 @@ use Auth;
 use App\powerpackPackage;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
-
+use App\Payments;
+use App\CustomerAccount;
 class BillingController extends Controller
 {
      public function index(Request  $request)
     {
         $code = Auth::user()->serverip;
       $billl_list = Billing::where('PackCode',$code)->orderBy('id','DESC')->paginate(25);
-        return view('bill.index',compact('billl_list'));
+      $payments = Payments::where('PackCode',$code)->orderBy('id','DESC')->paginate(25);
+      $statement = CustomerAccount::where('PackCode',$code)->first();
+        return view('bill.index',compact('billl_list','payments','statement'));
     }
     public function showPayments(Request  $request)
     {
@@ -35,3 +38,4 @@ class BillingController extends Controller
     }
 
 }
+ 

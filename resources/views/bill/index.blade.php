@@ -42,6 +42,29 @@ Etricia | Bills
             </div>
               <div id="payments" class="tabcontent">
                <h5 class="title">Payment History</h5>
+               <table class="table table-striped table-bordered" style="font-size: 11px;">
+                  <thead>
+                     <tr>
+                        <th>Date</th>
+                        <th>Payment Description</th>
+                        <th>Amount Tzs</th>
+                       
+                     </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($payments as $pay)
+                     <tr>
+                        <td>{{$payments->updated_at}}</td>
+                        <td> {{$payments->paymentDescrpition}}</td>
+                        <td> {{$payments->AmountPaid}}</td>
+                        
+                     </tr>
+
+                    @endforeach
+                  </tbody>
+                  {{$billl_list-> links()}}
+               </table>
+{{$billl_list-> links()}}
             </div>
              <div id="statement" class="tabcontent">
               <h5 class ="title">Statement</h5>
@@ -69,7 +92,7 @@ Etricia | Bills
         </tr>
         <tr>
           <th><span >Amount Due</span></th>
-          <td><span id="prefix" >$</span><span>600.00</span></td>
+          <td><span id="prefix" >Tzs</span><span>{{$statement->Balance}}</span></td>
         </tr>
       </table>
       <table class="inventory">
@@ -84,26 +107,26 @@ Etricia | Bills
         </thead>
         <tbody>
           <tr>
-            <td><a class="cut">-</a><span >Front End Consultation</span></td>
-            <td><span >Experience Review</span></td>
-            <td><span data-prefix>$</span><span contenteditable>150.00</span></td>
-            <td><span >4</span></td>
-            <td><span data-prefix>$</span><span>600.00</span></td>
+            <td><a class="cut">-</a><span >Huduma ya Etricia</span></td>
+            <td><span >Matumizi</span></td>
+            <td><span data-prefix>Tzs</span><span >500.00</span></td>
+            <td><span data-prefix>wh </span><span>{{$statement->TotalConsumption}}</span></td>
+            <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
           </tr>
         </tbody>
       </table>
      
       <table class="balance">
         <tr>Total</span></th>
-          <td><span data-prefix>$</span><span>600.00</span></td>
+          <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
         </tr>
         <tr>
           <th><span >Amount Paid</span></th>
-          <td><span data-prefix>$</span><span contenteditable>0.00</span></td>
+          <td><span data-prefix>Tzs</span><span >{{$statement->ToatlPayment}}</span></td>
         </tr>
         <tr>
           <th><span >Balance Due</span></th>
-          <td><span data-prefix>$</span><span>600.00</span></td>
+          <td><span data-prefix>Tzs</span><span>{{$statement->Balance}}</span></td>
         </tr>
       </table>
     </article>

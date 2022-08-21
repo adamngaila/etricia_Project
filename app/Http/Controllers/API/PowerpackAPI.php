@@ -66,7 +66,7 @@ class PowerpackAPI extends Controller
 
         //save billing record
          $billing_data = new Billing;
-          $cost = (100*($request->input("consumption")));
+          $cost = (500*($request->input("consumption")));
 
          $billing_data->PackCode = $request->input("packagecode");
          $billing_data->Consumption = $request->input("consumption");

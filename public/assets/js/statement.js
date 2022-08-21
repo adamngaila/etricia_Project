@@ -172,7 +172,6 @@ function onContentLoad() {
 		else if (e.target.className == 'cut') {
 			row = e.target.ancestorQuerySelector('tr');
 
-			row.parentNode.removeChild(row);
 		}
 
 		updateInvoice();
