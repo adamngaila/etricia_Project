@@ -7,6 +7,7 @@ use App\powerpackPackage;
 use App\PowerpackParameters;
 use App\PowerpackControlls;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 
 class PowerpackController extends Controller
@@ -19,7 +20,9 @@ class PowerpackController extends Controller
     public function DrawCharts(Request $request)
     {
         $code = Auth::user()->serverip;
-        $result = PowerpackParameters::where('packagecode',$code)->distinct()->get();
+        $result = PowerpackParameters::where('packagecode',$code) ->where( 'created_at', '>', Carbon::now()->subDays(30))->get(['created_at',avg('consumption'),avg('volts'),avg('power'),]) ->groupBy(function ($val) {
+        return Carbon::parse($val->created_at)->format('d');
+    });
   
         return json_encode($result);
         
