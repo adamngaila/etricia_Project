@@ -211,10 +211,13 @@ Etricia | Monitoring
                                                       <td>
                                                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                                          <label class="btn btn-primary active">
-                                                          <input type="radio" name="options" id="option1" autocomplete="off" checked href='/etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'> ON
+                                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> 
+                                                          <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'>
+                                                               ON
+                                                              </a>
                                                          </label>
                                                           <label class="btn btn-primary">
-                                                          <input type="radio" name="options" id="option2" autocomplete="off" href='/etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'> OFF
+                                                          <input  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff' type="radio" name="options" id="option2" autocomplete="off"> OFF
                                                          </label>
                                                        </div>
                                                       </td>
