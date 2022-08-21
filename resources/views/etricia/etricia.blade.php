@@ -318,7 +318,7 @@ Etricia | Monitoring
                        @endforeach
                   </tbody>
                </table>
-                {{$result-> links()}}
+                {{$diagnosis-> links()}}
             </div>
          </div>
       </div>
