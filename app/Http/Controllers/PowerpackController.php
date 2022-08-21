@@ -19,7 +19,7 @@ class PowerpackController extends Controller
     public function DrawCharts(Request $request)
     {
         $code = Auth::user()->serverip;
-        $result = PowerpackParameters::where('packagecode',$code)->get();
+        $result = PowerpackParameters::where('packagecode',$code)->groupBy('created_at')->avg();
   
         return json_encode($result);
         
