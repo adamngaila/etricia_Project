@@ -46,7 +46,7 @@
                         <a class="nav-link" href="/login"> Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/admin"> Admin</a>
+                        <a class="nav-link" href="/order_portal"> Order</a>
                     </li>
                 </ul>
             </div>

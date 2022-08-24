@@ -5,12 +5,12 @@
          
         <div class="col-lg-7 col-xl-5 mb-4 text-center text-lg-left">
             <h1 class="mb-3">
-            Make your place safer<br>and smart.
+            Energize your place with Clean <br>and smart Energy.
             </h1>
 
             <p class="lead mb-3">
                 Use etricia web or mobile app to discover what's possible for your
-                shop, store, super-maker, pharmacy, butchery, home...
+                shop, store, super-maker, pharmacy, butchery, home to benefit Etricia Energy technology...
             </p>
 
             @include('view_helpers.register_button')
@@ -142,8 +142,8 @@
         <p class="text-center mb-5">
             <strong>Etricia</strong> with it's awesome and easy to use, multi-language user interface,
             offers; <br>
-            <strong>Surveilance system</strong> to allow you to protect your home or business by recieving live video feed from any location,<br>
-            <strong>Geographical positon tracking system</strong> to enable you tracking your vehicle or lost devices,<br>
+            <strong>Energy metering</strong> to allow you  meter energy flow at home or business by recieving live feed energy report from any location,<br>
+            <strong>Analysis tools</strong> to enable you tracking your energy costs and investment<br>
             <strong>Power control and monitoring</strong> to enable monitoring power consumprion and to regulate i, t<br>
             <strong>Internet of things</strong> to allow user to have mandate of using their electrical appliance at any location.
             <br>
@@ -196,9 +196,9 @@
             <div class="col-sm-6 col-md-3 mb-2">
                 <div class="card card-price shadow-lg">
                     <div class="card-body">
-                        <h5 class="text-center">Security</h5>
+                        <h5 class="text-center">Agriculture Solutions</h5>
                         <hr>
-                        Protect your business and home with real time security and surveilance.
+                        Renewable source of energy for farming activities and means of data collection from your farm.
                     </div>
                 </div>
             </div>
@@ -334,15 +334,7 @@
                     <div id="collapse1" class="bg-inherit collapse" role="tabpanel" aria-labelledby="heading1"
                          data-parent="#accordionEx7">
                         <div class="bg-inherit mb-1 rgba-grey-light white-text p-3">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                            ad squid.
-                            3 wolf moon officia aute,
-                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch
-                            3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                            shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-                            sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                            farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                            accusamus labore sustainable.
+                            
                         </div>
                     </div>
                 </div>
@@ -350,7 +342,7 @@
 
                 @php
                 $faqData = [
-                    'What is etricia?' => 'Etricia is blah blah blaaaaah.',
+                    'What is etricia?' => 'Etricia is powefull upcoming energy storage technology. Its fast clean and smart energy storage with tools to enable you to be able to monitor,control, manage your energy consumption from anywhere',
 
                     'How do I get started with Etricia?' => 'You can get started with either our Free or Plus Plan
                      with just a few <a href="/register">clicks here</a>. Everyone who signs up to Etricia will
@@ -358,10 +350,10 @@
                      select which plan works best for you. To get started with Premium, contact our sales team.',
 
                      'Can I upgrade my package?' => 'Yes, you are able to upgrafe your existing
-                     package',
+                     package', contact us for further instruxtions
 
-                     'How do I switch from my current solution?' => 'Signing up for Etricia for free and add your inventory.
-                     There are no hidden fees or long term contracts. And if you need help, Mauzosheet Support Team is
+                     'How do I switch from my current solution?' => 'Signing up for Etricia for free and add your packdetails.
+                     There are no hidden fees or long term contracts. And if you need help, Etricia Support Team is
                      here for you.'
                 ];
 
