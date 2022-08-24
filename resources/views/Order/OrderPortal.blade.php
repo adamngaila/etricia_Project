@@ -47,13 +47,15 @@
 @include('landing_page.header')
 
 <div class="col-md-6 text-center mb-5">
-<h2 class="heading-section">Make an order</h2>
+
 </div>
 </div>
 <div class="row justify-content-center">
 <div class="col-lg-10 col-md-12">
 <div class="wrapper">
 <div class="row justify-content-center">
+	<h2 class="heading-section">Make an order</h2>
+
 <div class="col-lg-8 mb-5">
 <div class="row">
 <div class="col-md-4">
