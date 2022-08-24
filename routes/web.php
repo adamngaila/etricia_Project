@@ -73,3 +73,6 @@ Route::any('/etricia_Monitor/control','PowerpackController@control_pack');
 Route::any('/etricia_Bills', 'Bills\BillingController@index')->name('etricia_Bills');
 Route::any('/etricia_Bills/show', 'Bills\BillingController@show');  
     });
+
+//Orders
+Route::any('/order_portal', 'Orders\OrderController@index');

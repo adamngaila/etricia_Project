@@ -113,7 +113,7 @@ var ctx = document.getElementById("S1chart");
          console.log('working');}})
  }
 function loadlink(){
-    $('#MonitorControl').load('./etricia_Monitor',function () {
+    $('#tabcontent').load('./etricia_Monitor',function () {
          $(this).unwrap();
     });
 }
