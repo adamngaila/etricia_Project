@@ -54,7 +54,7 @@
 <div class="col-lg-10 col-md-12">
 <div class="wrapper">
 <div class="row justify-content-center">
-	<h2 class="heading-section">Make an order</h2>
+	
 
 <div class="col-lg-8 mb-5">
 <div class="row">
@@ -74,7 +74,7 @@
 <span class="fa fa-phone"></span>
 </div>
 <div class="text">
-<p><span>Phone:</span> <a href="tel://1234567920">+ 255 686 036 401</a></p>
+<p><span>Phone:</span> <a href="tel://1234567920">+255 686036401</a></p>
 </div>
 </div>
 </div>
@@ -92,10 +92,10 @@
 </div>
 <div class="col-lg-8">
 <div class="contact-wrap">
-<h3 class="mb-4 text-center">Get in touch with us</h3>
+<h3 class="mb-4 text-center">Make an order</h3>
 <div id="form-message-warning" class="mb-4 w-100 text-center"></div>
 <div id="form-message-success" class="mb-4 w-100 text-center">
-Your order was sent, thank you!
+we are here for you!
 </div>
 <form method="POST" id="contactForm" name="contactForm" class="contactForm">
 <div class="row">
