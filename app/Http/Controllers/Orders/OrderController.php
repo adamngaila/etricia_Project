@@ -9,6 +9,6 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view(Order.OrderPortal);
+        return view('Order.OrderPortal');
     }
 }
