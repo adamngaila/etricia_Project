@@ -350,7 +350,7 @@
                      select which plan works best for you. To get started with Premium, contact our sales team.',
 
                      'Can I upgrade my package?' => 'Yes, you are able to upgrafe your existing
-                     package', contact us for further instruxtions
+                     package contact us for further instruxtions', 
 
                      'How do I switch from my current solution?' => 'Signing up for Etricia for free and add your packdetails.
                      There are no hidden fees or long term contracts. And if you need help, Etricia Support Team is
