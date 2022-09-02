@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\PackDiagnosisLogs;
 
 class PowerpackAPI extends Controller
 {
@@ -167,6 +168,23 @@ class PowerpackAPI extends Controller
          'charge'=>$battery
       ];
        return response($response,201);
+
+     }
+     public function diagnosis_results(Request $request){
+          $diagnosis_volt = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','VoltageSensor']);
+          $diagnosis_current = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->get(['created_at','CurrentSensor']);
+          $diagnosis_temp = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','TempSensor']);
+          $diagnosis_memory = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','MemoryShield']);
+       
+          $response = [
+            'VoltSensor' => $diagnosis_volt,
+            'CurrentSensor' => $diagnosis_current,
+            'TempSensor' =>  $diagnosis_temp,
+            'memory' =>  $diagnosis_memory,
+          
+          ];
+          return response($response,201);
+
 
      }
 
