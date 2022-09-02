@@ -171,10 +171,10 @@ class PowerpackAPI extends Controller
 
      }
      public function diagnosis_results(Request $request){
-          $diagnosis_volt = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','VoltageSensor']);
+          $diagnosis_volt = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->get(['created_at','VoltageSensor']);
           $diagnosis_current = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->get(['created_at','CurrentSensor']);
-          $diagnosis_temp = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','TempSensor']);
-          $diagnosis_memory = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck(['created_at','MemoryShield']);
+          $diagnosis_temp = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->get(['created_at','TempSensor']);
+          $diagnosis_memory = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->get(['created_at','MemoryShield']);
        
           $response = [
             'VoltSensor' => $diagnosis_volt,
