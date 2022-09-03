@@ -175,7 +175,8 @@ class PowerpackAPI extends Controller
           $diagnosis_current = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck('CurrentSensor');
           $diagnosis_temp = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck('TempSensor');
           $diagnosis_memory = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck('MemoryShield');
-       
+          $diagnosis_time = PackDiagnosisLogs::where('packagecode',$request->code)->orderBy('id','desc')->limit(6)->pluck('created_at');
+
           $response = [
             'VoltSensor' => $diagnosis_volt,
             'CurrentSensor' => $diagnosis_current,
