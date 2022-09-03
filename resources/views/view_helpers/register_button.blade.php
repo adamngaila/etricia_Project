@@ -13,7 +13,7 @@
     }
 </style>
 <a class="btn btn-dark btn-block d-md-inline-block w-auto mx-1 ml-sm-0 my-3 text-capitalize reg-button"
-   href="{{ route('login') }}"
+   href="/DownloadApp"
    role="button">
-    Get Started For Free...
+    Download App For Free...
 </a>

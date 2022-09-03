@@ -47,5 +47,5 @@ Route::post('/fetch_bills',"API\PowerpackAPI@fetch_bill");
 Route::post('/fetch_monitoring',"API\PowerpackAPI@fetch_monitoring");
 Route::post('/send_comand',"API\PowerpackAPI@Send_Commands");
 Route::post('/fetch_invoice',"API\PowerpackAPI@fetch_invoice");
-Route::any('/diagnosis_results',"API\PowerpackAPI@diagnosis_results");
+Route::post('/diagnosis_results',"API\PowerpackAPI@diagnosis_results");
 

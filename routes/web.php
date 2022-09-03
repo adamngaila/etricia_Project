@@ -76,3 +76,6 @@ Route::any('/etricia_Bills/show', 'Bills\BillingController@show');
 
 //Orders
 Route::any('/order_portal', 'Orders\OrderController@index');
+
+//Downloads FileManagerController
+Route::any('/DownloadApp', 'Files\FileManagerController@Download_App');
