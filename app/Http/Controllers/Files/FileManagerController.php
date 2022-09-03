@@ -8,7 +8,7 @@ use Response;
 class FileManagerController extends Controller
 {
     public function Download_App(){
-        $file = public_path()."Android/app-debug.apk";
+        $file = public_path()."/Android/app-debug.apk";
         $headers = array(
             'Content-Type: application/apk',
         );
