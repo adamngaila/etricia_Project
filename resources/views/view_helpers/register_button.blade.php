@@ -13,7 +13,7 @@
     }
 </style>
 <a class="btn btn-dark btn-block d-md-inline-block w-auto mx-1 ml-sm-0 my-3 text-capitalize reg-button"
-   href="/DownloadApp"
+   href="/login"
    role="button">
-    Download App For Free...
+    Get started  For Free...
 </a>

@@ -13,7 +13,7 @@
                 shop, store, super-maker, pharmacy, butchery, home to benefit Etricia Energy technology...
             </p>
 
-            @include('view_helpers.register_button')
+            @include('view_helpers.downloadApp_button')
 
         </div>
         <div class="col-md-4 col-xl-5 mb-4">
