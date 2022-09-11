@@ -10,7 +10,8 @@ class FileManagerController extends Controller
     public function Download_App(){
         $file = public_path()."/Android/app-release.apk";
         $headers = array(
-            'Content-Type: application/apk',
+            'Content-Type: application/vnd.android.package-archive',
+           
         );
         return Response::download($file,"EtriciApp.apk",$headers);
     }
