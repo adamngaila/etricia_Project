@@ -159,13 +159,15 @@ class PowerpackAPI extends Controller
        $date = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('created_at');
 
       $b = powerpackPackage::where('packagecode', $request->code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
+      $status = PowerpackControlls::where('packagecode',$request->code)->get();
 
       $battery = $b;
 
       $response = [
          'params'=> $Parameters,
          'date'=>$date,
-         'charge'=>$battery
+         'charge'=>$battery,
+         'status'=> $status,
       ];
        return response($response,201);
 
