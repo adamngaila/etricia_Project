@@ -18,50 +18,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/register-surveilance', function () {
-    return view('Surveilance.register-surveilance');
-});
-Route::post('surveilance','Surveilance\DisplayController@store');
-Route::get('/surveilance', 'Surveilance\DisplayController@listIP');
-
-
-
-Route::get('/map', function () {
-    return view('gps.tracker');
-});
 Route::group(['middleware'=>['auth','profile']],function(){
     Route::get('/profile', function () {
         return view('Profile.userprofile');
     });
-   // Route::get('/admin_dashboard', 'SuperController@index')->name('admin_dashboard');
-   Route::get('/admin_dashboard', function () {
-    return view('admin.admin_dashboard');
-})->name('admin_dashboard');
 });
 
-//etricia
 
+Route::group(['middleware' => ['auth','profile']], function () {
+    //Admin
+    Route::get('/admin_dashboard', 'SuperController@index')->name('admin_dashboard');
+    Route::get('/super_etricia','Admin\TechnicalManager@EtriciaRetrieve' )->name('super_etricia');
 
-//Admin
-
-Route::get('/add_etricia', function () {
-    
-    return view('admin.products.etricia.create');
-})->name('add_etricia');
-Route::get('/store_etricia', 'SuperController@StoreEtricia')->name('store_etricia');
-//Route::post('/super_etricia', 'SuperController@EtriciaRetrieve')->name('super_etricia');
-
-Route::get('/super_etricia', function (){
-
-    $EtriciaProduct = \DB::table('etricia_directories')->get();
-     
-    return view('admin.products.etricia.index',['EtriciaProduct'=>$EtriciaProduct]);
- 
-})->name('super_etricia');
-
-Route::group(['middleware' => 'auth'], function () {
+    //Admin creating pack 
+    Route::get('/add_etricia','SuperController@navigate_create_etricia') ->name('add_etricia');
+    Route::get('/store_etricia', 'Admin\TechnicalManager@StoreEtricia')->name('store_etricia');
 
 //monitor and controll
 Route::any('/etricia_Monitor','PowerpackController@index')->name('etricia_Monitor');

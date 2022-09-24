@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 use Carbon\Carbon;
 use App\EtriciaDirectory;
 use App\powerpackPackage;
@@ -8,10 +8,9 @@ use App\PowerpackControlls;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
 
-class SuperController extends Controller
+class TechnicalManager extends Controller
 {
-    //
-    public function index(){
+     public function index(){
         return view('admin.admin_dashboard');
     }
 
@@ -54,16 +53,9 @@ class SuperController extends Controller
 
     public function EtriciaRetrieve()
     {
-        $EtriciaProduct = \DB::table('etricia_directories')->get();
+       
+    $EtriciaProduct = \DB::table('etricia_directories')->get();
      
-        return redirect("/super_etricia",['EtriciaProduct'=>$EtriciaProduct]);
-      
+    return view('admin.products.etricia.index',['EtriciaProduct'=>$EtriciaProduct]);
     }
-
-    public function navigate_create_etricia()
-    {
-          return view('admin.products.etricia.create');
-    }
-
-
 }
