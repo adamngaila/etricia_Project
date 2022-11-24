@@ -25,6 +25,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 //Route::post('/registration/', 'RegistrationController@store');
 Route::get('/SaveParams',"API\PowerpackAPI@saveParams");
+Route::get('/UpdateLive',"API\PowerpackAPI@update_live_monitor");
 Route::get('/pack_diagnosis',"API\PackDriver@PackSystemDiagnosis");
 Route::get('/pack_status',"API\PackDriver@StatusCheck");
 Route::get('/switch_control',"API\PackDriver@PackUserControll");

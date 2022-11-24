@@ -15,10 +15,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\PackDiagnosisLogs;
+use App\LiveMonitering;
 
 class PowerpackAPI extends Controller
 {
-    //
+    
     public function ProfileShow(Request $request)
     {
        $profile = \DB::table('users')->join('etricia_directories','users.serverip','=','etricia_directories.packagecode')->select('etricia_directories.*','users.*')->where('users.serverip','=',$request->input("code"))->first();
@@ -27,6 +28,7 @@ class PowerpackAPI extends Controller
        return response($response,201);
 
     }
+
     public function PackParametersView(Request $request)
     { 
       $CurrentParams = PowerpackParameters::where('packagecode', $request->code)->orderBy('id','desc')->limit(4)->pluck('current');
@@ -52,6 +54,30 @@ class PowerpackAPI extends Controller
        return response($response,201);
 
     }
+
+    //this is for updating live tracking
+      public function update_live_monitor(Request $request)
+    {
+      
+       $parameter = new LiveMonitering;
+        $packagecode = $request->input("packagecode");
+        $volts = $request->input("volts");
+        $current = $request->input("current");
+        $Temperature = $request->input("Temperature");
+         $power = $request->input("power");
+          $consumption = $request->input("consumption");
+          $ChargeLevel = $request->input("ChargeLevel");
+       
+        LiveMonitering::where('packagecode',$packagecode)->update([
+            'volts' => $volts,
+            'current' => $current,
+            'Temperature' => $Temperature,
+            'power' => $power,
+            'consumption' => $consumption,
+            'ChargeLevel' => $ChargeLevel,
+        ]);
+    }
+                                                                                                                                                                                                                                        0
     public function saveParams(Request $request)
     {
       //saving to parameters table
