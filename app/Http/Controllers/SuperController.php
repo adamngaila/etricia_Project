@@ -28,7 +28,7 @@ class SuperController extends Controller
         $package = new powerpackPackage;
         $control = new PowerpackControlls;
 
-        $new_etricia->packagecode = $request->input('packagecode');
+        $new_etricia->packagecode = $this->etricia_package_code(8);
         $new_etricia->serial_no = $request->input('serial_no');
         $new_etricia->capacity = $request->input('capacity');
         $new_etricia->cell_number = $request->input('cell_no');
@@ -64,6 +64,32 @@ class SuperController extends Controller
     {
           return view('admin.products.etricia.create');
     }
+
+
+public function etricia_package_code($size)
+{
+   
+    $alpha_key ='ETRC-';
+    $keys = range('0', '9');
+
+    for ($i = 0; $i < 4; $i++)
+    {
+      $alpha_key .= $keys[array_rand($keys)];
+
+    }
+    $length = $size - 2;
+
+    $key = '';
+    $keys = range(0, 9);
+
+    for ($i = 0; $i < $length; $i++) {
+      $key .= $keys[array_rand($keys)];
+    }
+
+    return $alpha_key . $key;
+        return $test;
+}
+
 
 
 }
