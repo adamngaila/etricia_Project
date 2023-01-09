@@ -24,10 +24,17 @@ Route::group(['middleware'=>['auth','profile']],function(){
     });
 });
 
+Route::group(['middleware'=>['auth','admin_dashboard']],function(){
+    Route::get('/admin_dashboard', function () {
+        return view('admin.admin_dashboard');
+    });
+});
+
+
 
 Route::group(['middleware' => ['auth','profile']], function () {
     //Admin
-    Route::get('/admin_dashboard', 'SuperController@index')->name('admin_dashboard');
+    Route::get('/admin_dashboard', 'Admin\TechnicalManager@@index')->name('admin_dashboard');
     Route::get('/super_etricia','Admin\TechnicalManager@EtriciaRetrieve' )->name('super_etricia');
 
     //Admin creating pack 
