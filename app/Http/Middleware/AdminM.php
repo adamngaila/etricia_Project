@@ -20,7 +20,7 @@ class AdminM
         }
         elseif(Auth::user()->usertype == 'super'){
            return redirect('admin_dashboard'); 
-           //return $next($request); 
+          // return $next($request); 
         }
         else{
             return redirect('/home')->with('Status','Karibu Blackscience technologies');
