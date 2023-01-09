@@ -24,11 +24,11 @@ Route::group(['middleware'=>['auth','profile']],function(){
     });
 });
 
-Route::group(['middleware'=>['auth','admin_dashboard']],function(){
+
     Route::get('/admin_dashboard', function () {
         return view('admin.admin_dashboard');
     });
-});
+
 
 
 
