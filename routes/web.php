@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth','profile']], function () {
 
     //Admin creating pack 
     Route::get('/add_etricia','SuperController@navigate_create_etricia') ->name('add_etricia');
-    Route::get('/store_etricia', 'Admin\TechnicalManager@StoreEtricia')->name('store_etricia');
+    Route::get('/store_etricia', 'SuperController@StoreEtricia')->name('store_etricia');
 
 //monitor and controll
 Route::any('/etricia_Monitor','PowerpackController@index')->name('etricia_Monitor');
