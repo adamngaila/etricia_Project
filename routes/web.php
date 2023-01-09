@@ -28,7 +28,7 @@ Route::group(['middleware'=>['auth','profile']],function(){
 Route::group(['middleware' => ['auth','profile']], function () {
     //Admin
     Route::get('/admin_dashboard', 'SuperController@index')->name('admin_dashboard');
-    Route::get('/super_etricia','Admin\TechnicalManager@EtriciaRetrieve' )->name('super_etricia');
+    Route::get('/super_etricia','ASuperController@EtriciaRetrieve' )->name('super_etricia');
 
     //Admin creating pack 
     Route::get('/add_etricia','SuperController@navigate_create_etricia') ->name('add_etricia');
