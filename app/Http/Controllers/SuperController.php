@@ -56,7 +56,8 @@ class SuperController extends Controller
     {
         $EtriciaProduct = \DB::table('etricia_directories')->get();
      
-        return redirect("/super_etricia",['EtriciaProduct'=>$EtriciaProduct]);
+       // return redirect("/super_etricia",['EtriciaProduct'=>$EtriciaProduct]);
+           return view('admin.products.etricia.index',compact('EtriciaProduct'));
       
     }
 
