@@ -27,8 +27,9 @@ class SuperController extends Controller
         $new_etricia = new EtriciaDirectory;
         $package = new powerpackPackage;
         $control = new PowerpackControlls;
+        $code = $this->etricia_package_code(8);
 
-        $new_etricia->packagecode = $this->etricia_package_code(8);
+        $new_etricia->packagecode = $code;
         $new_etricia->serial_no = $request->input('serial_no');
         $new_etricia->capacity = $request->input('capacity');
         $new_etricia->cell_number = $request->input('cell_no');
@@ -39,10 +40,10 @@ class SuperController extends Controller
 
         $new_etricia->save();
 
-         $package->packagecode = $request->input('packagecode');
+         $package->packagecode = $code;
           $package->save();
 
-            $control->packagecode = $request->input('packagecode');
+            $control->packagecode = $code;
           $control->save();
 
 
