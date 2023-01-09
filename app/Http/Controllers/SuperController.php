@@ -7,6 +7,7 @@ use App\powerpackPackage;
 use App\PowerpackControlls;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
+use App\LiveMonitering;
 
 class SuperController extends Controller
 {
@@ -27,6 +28,8 @@ class SuperController extends Controller
         $new_etricia = new EtriciaDirectory;
         $package = new powerpackPackage;
         $control = new PowerpackControlls;
+        $moniter = new LiveMonitering;
+
         $code = $this->etricia_package_code(8);
 
         $new_etricia->packagecode = $code;
@@ -40,11 +43,14 @@ class SuperController extends Controller
 
         $new_etricia->save();
 
-         $package->packagecode = $code;
-          $package->save();
+        $package->packagecode = $code;
+        $package->save();
 
-            $control->packagecode = $code;
-          $control->save();
+        $control->packagecode = $code;
+        $control->save();
+
+        $moniter->packagecode = $code;
+        $moniter->save();
 
 
 
