@@ -88,7 +88,7 @@ class RegisterController extends Controller
 
       
         if($data['name']=="Root"){
-            if($data['email']=="root@etricia.com")
+            if($data['email']=="root@etriciatz.com")
             {
             $user =  User::create([
                 'name' => $data['name'],
@@ -158,7 +158,6 @@ class RegisterController extends Controller
             'package'=>$data['package'],
             'package_uses'=>$uses,
             'PackPhone'=>$data['PackPhone'],
-             'ServiceProvider' =>$data['ServiceProvider'],
              'APN'=>$data['apn'],
               'unit_cost'=> $unitcost, 
          ]); 
