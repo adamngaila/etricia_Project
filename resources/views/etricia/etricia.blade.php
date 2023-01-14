@@ -391,22 +391,13 @@ var updateDiagnosis = function() {
     $("#power_on").click(function(){
      var packcode_value = document.getElementById('packcode').value;
    console.log(packcode_value);
-    $.ajax({
-    type: "POST",
-    url: "./etricia_Monitor/control",
-    data: {
-        code:packcode_value,
-        command:"PowerOn",
-    },
-    success: function(response) {
-        if (response) {
-            
-            $('#MonitorControl').load(document.URL +  ' #MonitorControl');
-             alert(packcode_value + ' is ON ');
-         
-        }
-    }
- });
+   
+ 
+    $.post("./etricia_Monitor/control",{code: packcode_value, command: "PowerOn" },
+    function(response){
+      alert(packcode_value + ' is ON ');
+         console.log(response);
+    });
 });
  $("#power_off").click(function(){});
 });
