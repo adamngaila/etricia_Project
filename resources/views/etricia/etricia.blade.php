@@ -386,10 +386,11 @@ var updateDiagnosis = function() {
  }
 
  $(document).ready(function(){
-   var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+  
 
     $("#power_on").click(function(){
+     var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
     $.ajax({
     type: "POST",
     url: "./etricia_Monitor/control",
