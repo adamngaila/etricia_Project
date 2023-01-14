@@ -77,7 +77,6 @@ class PowerpackAPI extends Controller
             'ChargeLevel' => $ChargeLevel,
         ]);
     }
-                                                                                                                                                                                                                                        0
     public function saveParams(Request $request)
     {
       //saving to parameters table

@@ -9,6 +9,7 @@ use App\PowerpackControlls;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\PackDiagnosisLogs;
+use App\LiveMonitering;
 
 class PowerpackController extends Controller
 {
@@ -17,7 +18,7 @@ class PowerpackController extends Controller
          $code = Auth::user()->serverip;
         $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(45))->orderBy('id','DESC')->paginate(15);
          
-       $Parameters = PowerpackParameters::where('packagecode', $code)->latest()->first();
+       $Parameters = LiveMonitering::where('packagecode', $code)->latest()->first();
 
        $controlStatus = PowerpackControlls::where('packagecode', $code)->first();;
 
