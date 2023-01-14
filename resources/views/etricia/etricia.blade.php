@@ -14,6 +14,7 @@ Etricia | Monitoring
             </div>
          </div>
          <div class="card-body ">
+          <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
             <div id="MonitorControl" class="tabcontent">
                <link href="../assets/css/treestyle.css" rel="stylesheet" />
                <div class="body genealogy-body genealogy-scroll">
@@ -211,13 +212,13 @@ Etricia | Monitoring
                                                       <td>
                                                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                                          <label class="btn btn-primary active">
-                                                          <input type="radio" name="options" id="option1" autocomplete="off" checked> 
-                                                          <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'>
+                                                          <input type="radio" name="options" id="power_on" autocomplete="off"> 
+                                                          
                                                                ON
                                                               </a>
                                                          </label>
                                                           <label class="btn btn-primary">
-                                                          <input   type="radio" name="options" id="option2" autocomplete="off"> <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'>
+                                                          <input   type="radio" name="options" id="power_off" autocomplete="off"> <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'>
                                                                OFF
                                                               </a>
                                                          </label>
@@ -370,7 +371,7 @@ Etricia | Monitoring
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
+var packcode_value = document.getElementById('packcode').value;
 var updateDiagnosis = function() {
     $.ajax({
       url: './etricia_Monitor',
@@ -382,6 +383,29 @@ var updateDiagnosis = function() {
       success: function(response) {
          console.log('working');}})
  }
+
+ $(document).ready(function(){
+   var packcode_value = document.getElementById('packcode').value;
+    $("#power_on").click(function(){
+    $.ajax({
+    type: "POST",
+    url: "./etricia_Monitor/control",
+    data: {
+        code:packcode_value,
+        command: PowerOn,
+    },
+    success: function(response) {
+        if (response) {
+            
+            $('#MonitorControl').load(document.URL +  ' #MonitorControl');
+             alert(packcode_value + ' is ON ';
+         
+        }
+    }
+ });
+});
+ $("#power_off").click(function(){});
+});
 
 </script>
 @endsection
