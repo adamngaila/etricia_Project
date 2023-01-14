@@ -402,7 +402,7 @@ var updateDiagnosis = function() {
         if (response) {
             
             $('#MonitorControl').load(document.URL +  ' #MonitorControl');
-             alert(packcode_value + ' is ON ';
+             alert(packcode_value + ' is ON ');
          
         }
     }
