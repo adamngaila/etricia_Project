@@ -3,6 +3,7 @@
 Etricia | Monitoring
 @endsection
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <div class="row">
    <div class="col-md-12">
       <div class="card ">
@@ -391,13 +392,23 @@ var updateDiagnosis = function() {
     $("#power_on").click(function(){
      var packcode_value = document.getElementById('packcode').value;
    console.log(packcode_value);
-   
+    $.ajax({
+      url: './etricia_Monitor/control',
+      type: 'post',
+      dataType: 'json',
+      data:{
+      code:packcode_value,
+      command:"PowerOn" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + ' is ON ');
+         console.log(response);}
+
+      });
  
-    $.post("/etricia_Monitor/control?", {code: packcode_value, command: "PowerOn" },
-    function(response){
-      alert(packcode_value + ' is ON ');
-         console.log(response);
-    });
+    
 });
  $("#power_off").click(function(){});
 });
