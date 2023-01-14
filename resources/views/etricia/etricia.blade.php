@@ -202,7 +202,7 @@ Etricia | Monitoring
                                        <a href="javascript:void(0);">
                                           <div class="member-view-box">
                                              <div class="member-image">
-                                                <div class="member-details">
+                                                <div class="member-details" id="switch_status">
                                                    <h5>Switch</h5>
                                                    <p>{{$controlStatus->relay_1}}</p>
                                                 </div>
@@ -404,7 +404,7 @@ var updateDiagnosis = function() {
       success: function(response) {
        alert(packcode_value + ' is ON ');
          console.log(response);}
-         window.location.reload(true);
+        
 
       });
  
@@ -425,11 +425,15 @@ var updateDiagnosis = function() {
       success: function(response) {
        alert(packcode_value + ' is OFF ');
        console.log(response);}
-       window.location.reload(true);
+      
       });
  
 
  });
+
+ setInterval(function(){
+      $("#switch_status").load(window.location.href + " #switch_status" );
+}, 3000);
 });
 
 </script>
