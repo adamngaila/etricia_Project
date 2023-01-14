@@ -396,7 +396,7 @@ var updateDiagnosis = function() {
     url: "./etricia_Monitor/control",
     data: {
         code:packcode_value,
-        command: PowerOn,
+        command:"PowerOn",
     },
     success: function(response) {
         if (response) {
