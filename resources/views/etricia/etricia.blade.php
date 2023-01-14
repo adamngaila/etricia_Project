@@ -393,7 +393,7 @@ var updateDiagnosis = function() {
    console.log(packcode_value);
    
  
-    $.post("./etricia_Monitor/control?","code" + packcode_value + "&command=PowerOn",
+    $.post("./etricia_Monitor/control/", jQuery.param({code: packcode_value, command: "PowerOn" }),
     function(response){
       alert(packcode_value + ' is ON ');
          console.log(response);
