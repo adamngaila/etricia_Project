@@ -433,7 +433,7 @@ var updateDiagnosis = function() {
 
  setInterval(function(){
       $("#switch_status").load(window.location.href + " #switch_status" );
-}, 3000);
+}, 1000);
 });
 
 </script>
