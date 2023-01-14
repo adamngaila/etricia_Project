@@ -214,7 +214,7 @@ Etricia | Monitoring
                                                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                                          <label class="btn btn-primary active">
                                                           <input type="radio" name="options" id="power_on" autocomplete="off"> 
-                                                          
+                                                           <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'>
                                                                ON
                                                               </a>
                                                          </label>
@@ -393,9 +393,8 @@ var updateDiagnosis = function() {
      var packcode_value = document.getElementById('packcode').value;
    console.log(packcode_value);
     $.ajax({
-      url: './etricia_Monitor/control',
+      url: '/etricia_Monitor/control',
       type: 'post',
-      dataType: 'json',
       data:{
       code:packcode_value,
       command:"PowerOn" },
