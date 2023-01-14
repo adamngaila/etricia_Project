@@ -14,7 +14,7 @@ Etricia | Monitoring
             </div>
          </div>
          <div class="card-body ">
-          <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
+         
             <div id="MonitorControl" class="tabcontent">
                <link href="../assets/css/treestyle.css" rel="stylesheet" />
                <div class="body genealogy-body genealogy-scroll">
@@ -340,6 +340,7 @@ Etricia | Monitoring
       </div>
    </div>
 </div>
+ <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
 @endsection
 @section('scripts')
 
@@ -386,6 +387,8 @@ var updateDiagnosis = function() {
 
  $(document).ready(function(){
    var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+
     $("#power_on").click(function(){
     $.ajax({
     type: "POST",
