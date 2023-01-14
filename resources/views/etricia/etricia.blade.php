@@ -404,12 +404,32 @@ var updateDiagnosis = function() {
       success: function(response) {
        alert(packcode_value + ' is ON ');
          console.log(response);}
+         window.location.reload(true);
 
       });
  
     
 });
- $("#power_off").click(function(){});
+ $("#power_off").click(function(){
+   var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data:{
+      code:packcode_value,
+      command:"PowerOff" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + ' is OFF ');
+       console.log(response);}
+       window.location.reload(true);
+      });
+ 
+
+ });
 });
 
 </script>
