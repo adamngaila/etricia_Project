@@ -15,7 +15,6 @@ Etricia | Monitoring
             </div>
          </div>
          <div class="card-body ">
-         
             <div id="MonitorControl" class="tabcontent">
                <link href="../assets/css/treestyle.css" rel="stylesheet" />
                <div class="body genealogy-body genealogy-scroll">
@@ -211,19 +210,16 @@ Etricia | Monitoring
                                                 <tbody>
                                                    <tr>
                                                       <td>
-                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                         <label class="btn btn-primary active">
-                                                          <input type="radio" name="options" id="power_on" autocomplete="off"> 
-                                                           
-                                                               ON
-                                                              
-                                                         </label>
-                                                          <label class="btn btn-primary">
-                                                          <input   type="radio" name="options" id="power_off" autocomplete="off"> 
-                                                               OFF
-                                                            
-                                                         </label>
-                                                       </div>
+                                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-primary active">
+                                                            <input type="radio" name="options" id="power_on" autocomplete="off"> 
+                                                            ON
+                                                            </label>
+                                                            <label class="btn btn-primary">
+                                                            <input   type="radio" name="options" id="power_off" autocomplete="off"> 
+                                                            OFF
+                                                            </label>
+                                                         </div>
                                                       </td>
                                                    </tr>
                                                 </tbody>
@@ -232,330 +228,297 @@ Etricia | Monitoring
                                        </a>
                                     </li>
                                     <li>
-                                     
-                                          <div class="member-view-box">
-                                             <div class="member-image">
-                                                <img src="../images/tree/charge.png" alt="Member">
-                                                <p>{{$controlStatus->relay_2}}</p>
-                                                </div>
-                                                <div class="member-details">
-                                                <table class="table">
+                                       <div class="member-view-box">
+                                          <div class="member-image">
+                                             <img src="../images/tree/charge.png" alt="Member">
+                                             <p>{{$controlStatus->relay_2}}</p>
+                                          </div>
+                                          <div class="member-details">
+                                             <table class="table">
                                                 <tbody>
                                                    <tr>
                                                       <td>
-                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                    <label class="btn btn-primary active">
-                              
-                                                          <input type="radio" name="options" id="charge_on" autocomplete="off"> 
-                                                        
-                                                               START
-                                                              
-                                                         </label>
-                                                          <label class="btn btn-primary">
-                                                          <input   type="radio" name="options" id="charge_off" autocomplete="off"> 
-                                                               STOP
-                                                         </label>
-                                                           </div>
+                                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                            <label class="btn btn-primary active">
+                                                            <input type="radio" name="options" id="charge_on" autocomplete="off"> 
+                                                            START
+                                                            </label>
+                                                            <label class="btn btn-primary">
+                                                            <input   type="radio" name="options" id="charge_off" autocomplete="off"> 
+                                                            STOP
+                                                            </label>
+                                                         </div>
                                                       </td>
                                                    </tr>
                                                 </tbody>
                                              </table>
                                           </div>
-                                       </a>
+                                          </a>
                                     </li>
                                     <li>
-                                       <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Locked'>
-                                          <div class="member-view-box">
-                                             <div class="member-image">
-                                                <img src="../images/tree/lock.jpg" alt="Member">
-                                                <p>{{$controlStatus->Lock}}</p>
-                                                </div>
-                                                <div class="member-details">
-                                                   
-                                                    <table class="table">
-                                                <tbody>
-                                                   <tr>
-                                                      <td>
-                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                     <label class="btn btn-primary active">
-                              
-                                                          <input type="radio" name="options" id="lock_on" autocomplete="off"> 
-                                                        
-                                                               LOCK
-                                                              
-                                                         </label>
-                                                          <label class="btn btn-primary">
-                                                          <input   type="radio" name="options" id="lock_off" autocomplete="off"> 
-                                                               UNLOCK
-                                                         </label>
-                                                    </div>
-                                                      </td>
-                                                   </tr>
-                                                </tbody>
-                                             </table>
-                                          </div>
-                                                </div>
-                                             </div>
-                                          </div>
-                                       </a>
-                                    </li>
-                                 </ul>
-                              </li>
-                           </ul>
-                        </li>
-                     </ul>
+                                    <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Locked'>
+                                    <div class="member-view-box">
+                                    <div class="member-image">
+                                    <img src="../images/tree/lock.jpg" alt="Member">
+                                    <p>{{$controlStatus->Lock}}</p>
+                                    </div>
+                                    <div class="member-details">
+                                    <table class="table">
+                                    <tbody>
+                                    <tr>
+                                    <td>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                    <input type="radio" name="options" id="lock_on" autocomplete="off"> 
+                                    LOCK
+                                    </label>
+                                    <label class="btn btn-primary">
+                                    <input   type="radio" name="options" id="lock_off" autocomplete="off"> 
+                                    UNLOCK
+                                    </label>
+                                    </div>
+                                    </td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </div>
+                                    </div>
+                                    </div>
+                  </div>
+                  </a>
+                  </li>
+                  </ul>
+                  </li>
+                  </ul>
+                  </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div id="Charts" class="tabcontent">
+            <h5 class="title">Charts</h5>
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="card card-chart" background="dark";>
+                     <div class="card-header bg-blue">
+                        <h2 class="card-category">VOLTAGE READINGS</h2>
+                     </div>
+                     <canvas id="S1chart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="card card-chart" background="dark";>
+                     <div class="card-header bg-blue">
+                        <h2 class="card-category">POWER READINGS</h2>
+                     </div>
+                     <canvas id="Currentchart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
                   </div>
                </div>
             </div>
-            <div id="Charts" class="tabcontent">
-               <h5 class="title">Charts</h5>
-                     <div class="row">
-                  <div class="col-md-6">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">VOLTAGE READINGS</h2>
-                
-              </div>
-           
-              <canvas id="S1chart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
-                
-              
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="card card-chart" background="dark";>
+                     <div class="card-header bg-blue">
+                        <h2 class="card-category">CONSUMPTION TREND</h2>
+                     </div>
+                     <canvas id="Temperaturechart"></canvas>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">POWER READINGS</h2>
-                
-              </div>
-           
-              <canvas id="Currentchart" width="411" height="190" class="chartjs-render-monitor" style="display: block; width: 411px; height: 190px;"></canvas>
-                
-              
-            </div>
-          </div>
-                </div>
-                <div class="row">
-      
-          <div class="col-md-12">
-            <div class="card card-chart" background="dark";>
-              <div class="card-header bg-blue">
-                <h2 class="card-category">CONSUMPTION TREND</h2>
-                
-              </div>
-           
-                <canvas id="Temperaturechart"></canvas>
-                
-              
-            </div>
-          </div>
-          </div>
-            </div>
-            <div id="Diagnosis" class="tabcontent">
-               <h5 class="title">Diagnosis</h5>
-               <table class="table table-striped table-bordered" style="font-size: 11px;">
-                  <thead>
-                     <tr>
-                        <th> DATE</th>
-                        <th> Temperature Sensor </th>
-                        <th> Current Sensor</th>
-                        <th> Voltage Sensor </th>
-                         <th> Memory </th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                       @foreach($diagnosis as $result)
-                     <tr>
-                        <td>{{$result->created_at}}</td>
-                       <td>{{$result->TempSensor}}</td>
-                       <td>{{$result->CurrentSensor}}</td>
-                      <td>{{$result->VoltageSensor}}</td>
-                      <td>{{$result->MemoryShield}}</td>
-                     </tr>
-                       @endforeach
-                  </tbody>
-               </table>
-                {{$diagnosis-> links()}}
-            </div>
+         </div>
+         <div id="Diagnosis" class="tabcontent">
+            <h5 class="title">Diagnosis</h5>
+            <table class="table table-striped table-bordered" style="font-size: 11px;">
+               <thead>
+                  <tr>
+                     <th> DATE</th>
+                     <th> Temperature Sensor </th>
+                     <th> Current Sensor</th>
+                     <th> Voltage Sensor </th>
+                     <th> Memory </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  @foreach($diagnosis as $result)
+                  <tr>
+                     <td>{{$result->created_at}}</td>
+                     <td>{{$result->TempSensor}}</td>
+                     <td>{{$result->CurrentSensor}}</td>
+                     <td>{{$result->VoltageSensor}}</td>
+                     <td>{{$result->MemoryShield}}</td>
+                  </tr>
+                  @endforeach
+               </tbody>
+            </table>
+            {{$diagnosis-> links()}}
          </div>
       </div>
    </div>
 </div>
- <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
+</div>
+<input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
 @endsection
 @section('scripts')
-
 <script>
-   $(function () {
-       $('.genealogy-tree ul').hide();
-       $('.genealogy-tree>ul').show();
-       $('.genealogy-tree ul.active').show();
-       $('.genealogy-tree li').on('click', function (e) {
-           var children = $(this).find('> ul');
-           if (children.is(":visible")) children.hide('fast').removeClass('active');
-           else children.show('fast').addClass('active');
-           e.stopPropagation();
-       });
+   $(function() {
+   $('.genealogy-tree ul').hide();
+   $('.genealogy-tree>ul').show();
+   $('.genealogy-tree ul.active').show();
+   $('.genealogy-tree li').on('click', function(e) {
+    var children = $(this).find('> ul');
+    if (children.is(":visible")) children.hide('fast').removeClass('active');
+    else children.show('fast').addClass('active');
+    e.stopPropagation();
    });
-  function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
+   });
+   
+   function openCity(evt, cityName) {
+   var i, tabcontent, tablinks;
+   tabcontent = document.getElementsByClassName("tabcontent");
+   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
+   }
+   tablinks = document.getElementsByClassName("tablinks");
+   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-var packcode_value = document.getElementById('packcode').value;
-var updateDiagnosis = function() {
-    $.ajax({
-      url: './etricia_Monitor',
-      type: 'get',
-      dataType: 'json',
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      },
-      success: function(response) {
-         console.log('working');}})
- }
-
- $(document).ready(function(){
-  
-
-    $("#power_on").click(function(){
-     var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
-    $.ajax({
-      url: '/etricia_Monitor/control',
-      type: 'post',
-      data:{
-      code:packcode_value,
-      command:"PowerOn" },
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      },
-      success: function(response) {
-       alert(packcode_value + ' is ON ');
-         console.log(response);}
-        
-
-      });
- 
-    
-});
- $("#power_off").click(function(){
+   }
+   document.getElementById(cityName).style.display = "block";
+   evt.currentTarget.className += " active";
+   }
+   // Get the element with id="defaultOpen" and click on it
+   document.getElementById("defaultOpen").click();
    var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+   var updateDiagnosis = function() {
+   $.ajax({
+    url: './etricia_Monitor',
+    type: 'get',
+    dataType: 'json',
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    success: function(response) {
+      console.log('working');
+    }
+   })
+   }
+   $(document).ready(function() {
+   $("#power_on").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/control',
       type: 'post',
-      data:{
-      code:packcode_value,
-      command:"PowerOff" },
+      data: {
+        code: packcode_value,
+        command: "PowerOn"
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function(response) {
-       alert(packcode_value + ' is OFF ');
-       console.log(response);}
-      
-      });  
-      });
-
-      $("#charge_on").click(function(){
-   var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+        alert(packcode_value + ' is ON ');
+        console.log(response);
+      }
+    });
+   });
+   $("#power_off").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/control',
       type: 'post',
-      data:{
-      code:packcode_value,
-      command:"Charge" },
+      data: {
+        code: packcode_value,
+        command: "PowerOff"
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function(response) {
-       alert(packcode_value + ' is charging');
-       console.log(response);}
-      
-      });
-  
-      });
-
- $("#charge_off").click(function(){
-   var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+        alert(packcode_value + ' is OFF ');
+        console.log(response);
+      }
+    });
+   });
+   $("#charge_on").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/control',
       type: 'post',
-      data:{
-      code:packcode_value,
-      command:"Uncharge" },
+      data: {
+        code: packcode_value,
+        command: "Charge"
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function(response) {
-       alert(packcode_value + ' has stopped charging');
-       console.log(response);}
-      
-      });
- 
- });
-
- $("#lock_on").click(function(){
-   var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+        alert(packcode_value + ' is charging');
+        console.log(response);
+      }
+    });
+   });
+   $("#charge_off").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/control',
       type: 'post',
-      data:{
-      code:packcode_value,
-      command:"Locked" },
+      data: {
+        code: packcode_value,
+        command: "Uncharge"
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function(response) {
-       alert(packcode_value + 'is locked by user');
-       console.log(response);}
-      
-      });
- 
-
- });
-
- $("#lock_off").click(function(){
-   var packcode_value = document.getElementById('packcode').value;
-   console.log(packcode_value);
+        alert(packcode_value + ' has stopped charging');
+        console.log(response);
+      }
+    });
+   });
+   $("#lock_on").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/control',
       type: 'post',
-      data:{
-      code:packcode_value,
-      command:"UnLocked" },
+      data: {
+        code: packcode_value,
+        command: "Locked"
+      },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
       },
       success: function(response) {
-       alert(packcode_value + ' is unlocked by user');
-       console.log(response);}
-      
-      });
- 
-
- });
-
- setInterval(function(){
-      $("#switch_status").load(window.location.href + " #switch_status" );
-}, 1000);
-});
- 
- });
+        alert(packcode_value + 'is locked by user');
+        console.log(response);
+      }
+    });
+   });
+   $("#lock_off").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data: {
+        code: packcode_value,
+        command: "UnLocked"
+      },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+        alert(packcode_value + ' is unlocked by user');
+        console.log(response);
+      }
+    });
+   });
+   setInterval(function() {
+    $("#switch_status").load(window.location.href + " #switch_status");
+   }, 1000);
+   });
 </script>
 @endsection
