@@ -256,7 +256,7 @@ Etricia | Monitoring
                                           </a>
                                     </li>
                                     <li>
-                                    <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Locked'>
+                                   
                                     <div class="member-view-box">
                                     <div class="member-image">
                                     <img src="../images/tree/lock.jpg" alt="Member">
