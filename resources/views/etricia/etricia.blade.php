@@ -228,8 +228,8 @@ Etricia | Monitoring
                                        </a>
                                     </li>
                                     <li>
-                                       <div class="member-view-box">
-                                          <div class="member-image">
+                                       <div class="member-view-box" id="charge_status">
+                                          <div class="member-image" >
                                              <img src="../images/tree/charge.png" alt="Member">
                                              <p>{{$controlStatus->relay_2}}</p>
                                           </div>
@@ -257,7 +257,7 @@ Etricia | Monitoring
                                     </li>
                                     <li>
                                    
-                                    <div class="member-view-box">
+                                    <div class="member-view-box" id="lock_status">
                                     <div class="member-image">
                                     <img src="../images/tree/lock.jpg" alt="Member">
                                     <p>{{$controlStatus->Lock}}</p>
@@ -518,6 +518,8 @@ Etricia | Monitoring
    });
    setInterval(function() {
     $("#switch_status").load(window.location.href + " #switch_status");
+    $("#charge_status").load(window.location.href + " #charge_status");
+    $("#lock_status").load(window.location.href + " #lock_status");
    }, 1000);
    });
 </script>
