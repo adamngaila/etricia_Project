@@ -201,8 +201,8 @@ Etricia | Monitoring
                                        <a href="javascript:void(0);">
                                           <div class="member-view-box">
                                              <div class="member-image">
-                                                <div class="member-details" id="switch_status">
-                                                   <h5>Switch</h5>
+                                             <img src="../images/tree/power.png" alt="Member">
+                                                <div id="switch_status">
                                                    <p>{{$controlStatus->relay_1}}</p>
                                                 </div>
                                              </div>
@@ -228,10 +228,12 @@ Etricia | Monitoring
                                        </a>
                                     </li>
                                     <li>
-                                       <div class="member-view-box" id="charge_status">
-                                          <div class="member-image" >
+                                       <div class="member-view-box">
+                                          <div class="member-image">
                                              <img src="../images/tree/charge.png" alt="Member">
+                                             <div id="charge_status">
                                              <p>{{$controlStatus->relay_2}}</p>
+                                             </div>
                                           </div>
                                           <div class="member-details">
                                              <table class="table">
@@ -257,10 +259,12 @@ Etricia | Monitoring
                                     </li>
                                     <li>
                                    
-                                    <div class="member-view-box" id="lock_status">
+                                    <div class="member-view-box" >
                                     <div class="member-image">
                                     <img src="../images/tree/lock.jpg" alt="Member">
+                                    <div id="lock_status">
                                     <p>{{$controlStatus->Lock}}</p>
+                                    </div>
                                     </div>
                                     <div class="member-details">
                                     <table class="table">
