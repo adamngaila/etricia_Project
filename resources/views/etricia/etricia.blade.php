@@ -237,7 +237,7 @@ Etricia | Monitoring
                                              <div class="member-image">
                                                 <img src="../images/tree/charge.png" alt="Member">
                                                 <p>{{$controlStatus->relay_2}}</p>
-                                                 <h5>Charge</h5>
+                                                </div>
                                                 <div class="member-details">
                                                 <table class="table">
                                                 <tbody>
@@ -261,11 +261,6 @@ Etricia | Monitoring
                                                 </tbody>
                                              </table>
                                           </div>
-                                                   
-                                                    
-                                                </div>
-                                             </div>
-                                          </div>
                                        </a>
                                     </li>
                                     <li>
@@ -274,8 +269,14 @@ Etricia | Monitoring
                                              <div class="member-image">
                                                 <img src="../images/tree/lock.jpg" alt="Member">
                                                 <p>{{$controlStatus->Lock}}</p>
+                                                </div>
                                                 <div class="member-details">
-                                                   <h5>lock</h5>
+                                                   
+                                                    <table class="table">
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                                      <label class="btn btn-primary active">
                               
                                                           <input type="radio" name="options" id="lock_on" autocomplete="off"> 
@@ -287,7 +288,12 @@ Etricia | Monitoring
                                                           <input   type="radio" name="options" id="lock_off" autocomplete="off"> 
                                                                UNLOCK
                                                          </label>
-                                                   
+                                                    </div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
                                                 </div>
                                              </div>
                                           </div>
@@ -460,6 +466,7 @@ var updateDiagnosis = function() {
        alert(packcode_value + ' is OFF ');
        console.log(response);}
       
+      });  
       });
 
       $("#charge_on").click(function(){
@@ -479,7 +486,9 @@ var updateDiagnosis = function() {
        console.log(response);}
       
       });
- 
+  
+      });
+
  $("#charge_off").click(function(){
    var packcode_value = document.getElementById('packcode').value;
    console.log(packcode_value);
@@ -546,6 +555,7 @@ var updateDiagnosis = function() {
       $("#switch_status").load(window.location.href + " #switch_status" );
 }, 1000);
 });
-
+ 
+ });
 </script>
 @endsection
