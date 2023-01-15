@@ -214,14 +214,14 @@ Etricia | Monitoring
                                                       <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                                          <label class="btn btn-primary active">
                                                           <input type="radio" name="options" id="power_on" autocomplete="off"> 
-                                                           <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOn'>
+                                                           
                                                                ON
-                                                              </a>
+                                                              
                                                          </label>
                                                           <label class="btn btn-primary">
-                                                          <input   type="radio" name="options" id="power_off" autocomplete="off"> <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=PowerOff'>
+                                                          <input   type="radio" name="options" id="power_off" autocomplete="off"> 
                                                                OFF
-                                                              </a>
+                                                            
                                                          </label>
                                                        </div>
                                                       </td>
@@ -232,15 +232,37 @@ Etricia | Monitoring
                                        </a>
                                     </li>
                                     <li>
-                                       <a href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Charge'>
+                                     
                                           <div class="member-view-box">
                                              <div class="member-image">
                                                 <img src="../images/tree/charge.png" alt="Member">
+                                                <p>{{$controlStatus->relay_2}}</p>
+                                                 <h5>Charge</h5>
                                                 <div class="member-details">
-                                                    <a  href='./etricia_Monitor/control?code={{ Auth::user()->serverip}}&command=Uncharge'>
-                                                   <h5>Charge</h5>
-                                                     </a>
-                                                    <p>{{$controlStatus->relay_2}}</p>
+                                                <table class="table">
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-primary active">
+                              
+                                                          <input type="radio" name="options" id="charge_on" autocomplete="off"> 
+                                                        
+                                                               START
+                                                              
+                                                         </label>
+                                                          <label class="btn btn-primary">
+                                                          <input   type="radio" name="options" id="charge_off" autocomplete="off"> 
+                                                               STOP
+                                                         </label>
+                                                           </div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                                   
+                                                    
                                                 </div>
                                              </div>
                                           </div>
@@ -251,9 +273,21 @@ Etricia | Monitoring
                                           <div class="member-view-box">
                                              <div class="member-image">
                                                 <img src="../images/tree/lock.jpg" alt="Member">
+                                                <p>{{$controlStatus->Lock}}</p>
                                                 <div class="member-details">
                                                    <h5>lock</h5>
-                                                    <p>{{$controlStatus->Lock}}</p>
+                                                     <label class="btn btn-primary active">
+                              
+                                                          <input type="radio" name="options" id="lock_on" autocomplete="off"> 
+                                                        
+                                                               LOCK
+                                                              
+                                                         </label>
+                                                          <label class="btn btn-primary">
+                                                          <input   type="radio" name="options" id="lock_off" autocomplete="off"> 
+                                                               UNLOCK
+                                                         </label>
+                                                   
                                                 </div>
                                              </div>
                                           </div>
@@ -424,6 +458,83 @@ var updateDiagnosis = function() {
       },
       success: function(response) {
        alert(packcode_value + ' is OFF ');
+       console.log(response);}
+      
+      });
+
+      $("#charge_on").click(function(){
+   var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data:{
+      code:packcode_value,
+      command:"Charge" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + ' is charging');
+       console.log(response);}
+      
+      });
+ 
+ $("#charge_off").click(function(){
+   var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data:{
+      code:packcode_value,
+      command:"Uncharge" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + ' has stopped charging');
+       console.log(response);}
+      
+      });
+ 
+ });
+
+ $("#lock_on").click(function(){
+   var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data:{
+      code:packcode_value,
+      command:"Locked" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + 'is locked by user');
+       console.log(response);}
+      
+      });
+ 
+
+ });
+
+ $("#lock_off").click(function(){
+   var packcode_value = document.getElementById('packcode').value;
+   console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/control',
+      type: 'post',
+      data:{
+      code:packcode_value,
+      command:"UnLocked" },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+       alert(packcode_value + ' is unlocked by user');
        console.log(response);}
       
       });
