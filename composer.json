@@ -12,7 +12,7 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5",
+        "php": "^8.1.6",
         "devdojo/chatter": "0.2.*",
         "doctrine/dbal": "2.*",
         "encore/laravel-admin": "^1.8",
