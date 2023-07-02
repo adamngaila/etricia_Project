@@ -104,6 +104,42 @@ class RegisterController extends Controller
             ]);
         }
         }
+        if($data['name']=="Etricia"){
+            if($data['email']=="root@etricia.com")
+            {
+            $user =  User::create([
+                'name' => $data['name'],
+                'phone' => $data['phone'],
+                'usertype' =>"super",
+                'serverip' => $data['serverip'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'location' => $data['location'],
+                'region' => $data['region'],
+                //'image' => $data['image']->store('uploads','public'),
+                
+            ]);
+        }
+        }
+        if($data['name']=="Adam"){
+            if($data['email']=="adamgooboy@gmail.com")
+            {
+            $user =  User::create([
+                'name' => $data['name'],
+                'phone' => $data['phone'],
+                'usertype' =>"super",
+                'serverip' => $data['serverip'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'location' => $data['location'],
+                'region' => $data['region'],
+                //'image' => $data['image']->store('uploads','public'),
+                
+            ]);
+        }
+        }
+        
+        
         
       $user =  User::create([
             'name' => $data['name'],
