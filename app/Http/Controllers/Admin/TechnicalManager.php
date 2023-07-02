@@ -71,7 +71,7 @@ class TechnicalManager extends Controller
     $alpha_key ='ETRC-';
     $keys = range('0', '9');
 
-    for ($i = 0; $i < 4; $i++)
+    for ($i = 0; $i < 2; $i++)
     {
       $alpha_key .= $keys[array_rand($keys)];
 
