@@ -38,7 +38,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="blue">
+    <div class="sidebar" data-color="thead-dark">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
     -->
