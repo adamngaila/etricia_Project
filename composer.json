@@ -13,9 +13,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3||^8.2",
-        "doctrine/dbal": "2.*",
-        "fideloper/proxy": "^4.0",
-        "laravel-admin-ext/chartjs": "^1.0",
         "laravel/framework": "^7.0",
         "laravel/sanctum": "^2.12",
         "laravel/tinker": "^2.0",
