@@ -184,7 +184,7 @@ Blackscience | {{ Auth::user()->name }}
               </div>
               <div class="card-body">
                 <div id="map">
-        <div class="leaflet-control coordinate"></div>
+      
     </div>
               </div>
             </div>
