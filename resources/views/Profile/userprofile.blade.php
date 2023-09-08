@@ -14,76 +14,63 @@ Blackscience | {{ Auth::user()->name }}
               </div>
               <div class="card-body">
                 <form>
-                  <div class="row">
-                    <div class="col-md-5 pr-1">
-                      <div class="form-group">
-                        <label>Company </label>
-                        <input type="text" class="form-control" disabled="" placeholder="Company" value="BLACKSCIENCE Inc.">
-                      </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">VOLTS </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">V</div>
+                  
                     </div>
-                    <div class="col-md-3 px-1">
-                      <div class="form-group">
-                        <label>Username </label>
-                        <input type="text" class="form-control" disabled="" placeholder="Username" value={{ Auth::user()->name }}>
-                      </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label >Phone</label>
-                        <input type="email" class="form-control" disabled="" value={{ Auth::user()->email }}>
-                      </div>
+                    <div class="col-auto">
+                      <i class="bn ti-bag "></i>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6 pr-1">
-                      <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->phone }}>
-                      </div>
+                </div>
+              </div>
+            </div>
+            <!-- New User Card Example -->
+                   <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">%</div>
+                  
                     </div>
-                    <div class="col-md-6 pl-1">
-                      <div class="form-group">
-                        <label> Pack Code </label>
-                        <input type="text" class="form-control"disabled=""  value= {{ Auth::user()->serverip }}>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>Email adress</label>
-                        <input type="text" class="form-control" disabled="" placeholder="Home Address" value={{ Auth::user()->email }}>
-                      </div>
+                    <div class="col-auto">
+                      <i class="bn ti-bag "></i>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-4 pr-1">
-                      <div class="form-group">
-                        <label>City/Region</label>
-                        <input type="text" class="form-control" disabled="" placeholder="City" value={{ Auth::user()->region }}>
+                </div>
+              </div>
+            </div>
+            <!-- New User Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                    
+                      <div class="text-xs font-weight-bold text-uppercase mb-1"> TOTAL CONSUMTION</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">KWh</div>
+                      <div class="mt-2 mb-0  text-xs">
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"> 
+                       </div>
+                     
+                      
                       </div>
                     </div>
-                    <div class="col-md-4 px-1">
-                      <div class="form-group">
-                        <label>Location</label>
-                        <input type="text" class="form-control" disabled=""  placeholder="location" value={{ Auth::user()->location }}>
-                      </div>
-                    </div>
-                    <div class="col-md-4 pl-1">
-                      <div class="form-group">
-                        <label>Connection Code</label>
-                       <input type="text" class="form-control"disabled=""  value= {{ Auth::user()->serverip }}>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label>About Me</label>
-                        <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Etricia powerpack solution we make your life better than before</textarea>
-                      </div>
+                    <div class="col-auto">
+                      <i class=" bn ti-headphone-alt  "></i>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+             
                 </form>
               </div>
             </div>
@@ -101,15 +88,32 @@ Blackscience | {{ Auth::user()->name }}
                     <h5 class="title">{{ Auth::user()->name }}</h5>
                   </a>
                   <p class="description">
-                  {{ Auth::user()->name }}
+                   <label>Phone</label>
+                    <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->phone }}>
                   </p>
                 </div>
                 
                 <p class="description text-center">
-                  " <br>
-                  I am a user of etricia product <br>
-                  "
+            
+                   <label>Email</label>
+                    <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->email }}>
+              
                 </p>
+
+                <p class="description text-center">
+            
+                   <label>Pack Code</label>
+                    <input type="text" class="form-control" disabled="" placeholder="Company" value={{ Auth::user()->serverip }}>
+              
+                </p>
+                <p class="description text-center">
+                     <label>City/Region</label>
+                  <input type="text" class="form-control" disabled="" placeholder="City" value={{ Auth::user()->region }}>
+                </p>
+                 <p class="description text-center">
+                 <label>Location</label>
+                        <input type="text" class="form-control" disabled=""  placeholder="location" value={{ Auth::user()->location }}>
+                      </p>
               </div>
               <hr>
               <div class="button-container">
