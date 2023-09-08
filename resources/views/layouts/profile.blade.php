@@ -103,7 +103,7 @@
 
 <script>
     // Map initialization 
-    var map = L.map('map').setView([-6.8395, 39.2894], 13);
+    var map = L.map('map').setView([-6.8195, 39.2894], 11);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
