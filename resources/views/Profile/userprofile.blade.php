@@ -16,44 +16,6 @@ Blackscience | {{ Auth::user()->name }}
               <div class="card-body">
                 <form>
                   <div class="row">
-                    <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">VOLTS </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">V</div>
-                      {{$Parameters->volts}}
-                  
-                    </div>
-                    <div class="col-auto">
-                      <i class="bn ti-bag ">
-                        
-                      </i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- New User Card Example -->
-                   <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE LEVEL </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
-                      <p>{{$batery[0]}}%</p>
-                  
-                    </div>
-                    <div class="col-auto">
-                      <i class="bn ti-bag "></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- New User Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
@@ -157,30 +119,7 @@ Blackscience | {{ Auth::user()->name }}
               </div>
             </div>
             <!-- New User Card Example -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                    
-                      <div class="text-xs font-weight-bold text-uppercase mb-1"> TEMPERATURE</div>
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Celcius</div>
-                      <div class="mt-2 mb-0  text-xs">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800"> 
-                       </div>
-                     
-                       {{$Parameters->Temperature}}
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  ">
-                       
-                      </i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
              </div>
                 </form>
              

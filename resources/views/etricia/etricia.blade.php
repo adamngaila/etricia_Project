@@ -147,7 +147,7 @@ Etricia | Monitoring
                                                       <div class="member-details">
                                                          <h5>Battery</h5>
                                                          <div class="container">
-                                                            <div class="skills html">{{$batery}}%</div>
+                                                            <div class="skills html">{{$batery[0]}}%</div>
                                                          </div>
                                                       </div>
                                                    </div>
