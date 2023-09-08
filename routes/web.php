@@ -19,9 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=>['auth','profile']],function(){
-    Route::get('/profile', function () {
-        return view('Profile.userprofile');
-    });
+    Route::any('/profile','profileController@index');
 });
 
 
