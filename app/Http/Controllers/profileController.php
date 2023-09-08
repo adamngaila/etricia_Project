@@ -1,8 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\User;
+use Auth;
+use App\powerpackPackage;
+use App\PowerpackParameters;
+use App\PowerpackControlls;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use App\PackDiagnosisLogs;
+use App\LiveMonitering;
+
 
 class profileController extends Controller
 {
