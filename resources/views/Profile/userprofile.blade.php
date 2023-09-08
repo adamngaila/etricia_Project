@@ -23,11 +23,12 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">VOLTS </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">V</div>
+                      {{$Parameters->volts}}
                   
                     </div>
                     <div class="col-auto">
                       <i class="bn ti-bag ">
-                        {{$Parameters->volts}}
+                        
                       </i>
                     </div>
                   </div>
@@ -105,8 +106,7 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">PACK STATUS </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
-                      {{$Parameters->power}}
-                  
+                     {{$controlStatus->relay_1}}
                     </div>
                     <div class="col-auto">
                       <i class="bn ti-bag "></i>
@@ -123,8 +123,8 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE STATUS </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
-                      {{$controlStatus->relay_1}}
-                  
+                      
+                  {{$controlStatus->relay_2}}
                     </div>
                     <div class="col-auto">
                       <i class="bn ti-bag "></i>
