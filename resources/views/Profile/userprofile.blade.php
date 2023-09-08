@@ -10,7 +10,7 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">{{$Parameters->created_at}}</h5>
+                <h5 class="title">{{date("d/m/Y")}}</h5>
 
               </div>
               <div class="card-body">
