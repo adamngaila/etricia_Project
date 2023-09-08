@@ -62,12 +62,7 @@
             border-radius: 0px;
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin=""></script>
+
 </head>
 
 <body class="user-profile">
@@ -162,6 +157,27 @@
     .setContent('ETRC-0500536324')
     .openPopup(map);
    
+   /*==============================================
+                    LAYER CONTROL
+    ================================================*/
+    var baseMaps = {
+        "OSM": osm,
+        "Water color map": watercolor,
+        'Dark': dark,
+        'Google Street': googleStreets,
+        "Google Satellite": googleSat,
+    };
+    var overlayMaps = {
+        "First Marker": singleMarker,
+        'Second Marker': secondMarker,
+        'Point Data': pointData,
+        'Line Data': lineData,
+        'Polygon Data': polygonData,
+        'wms': wms
+    };
+    // map.removeLayer(singleMarker)
+
+    L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(map);
 
 
 </script>
