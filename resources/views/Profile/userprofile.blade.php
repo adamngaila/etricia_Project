@@ -14,6 +14,7 @@ Blackscience | {{ Auth::user()->name }}
               </div>
               <div class="card-body">
                 <form>
+                  <div class="row">
                     <div class="col-xl-3 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
@@ -70,7 +71,7 @@ Blackscience | {{ Auth::user()->name }}
                 </div>
               </div>
             </div>
-             
+             </div>
                 </form>
               </div>
             </div>
