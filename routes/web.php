@@ -19,7 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware'=>['auth','profile']],function(){
-    Route::any('/profile','profileController@index');
+    Route::get('/profile','profileController@index')->name('profile');
 });
 
 
