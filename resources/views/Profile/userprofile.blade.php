@@ -42,10 +42,11 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE LEVEL </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                      <p>{{$batery[0]}}%</p>
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag ">{{$batery}}%</i>
+                      <i class="bn ti-bag "></i>
                     </div>
                   </div>
                 </div>
@@ -87,11 +88,11 @@ Blackscience | {{ Auth::user()->name }}
                         <div class="h5 mb-0 font-weight-bold text-gray-800"> 
                        </div>
                      
-                      
+                      {{$Parameters->power}}
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  ">{{$Parameters->power}}</i>
+                      <i class=" bn ti-headphone-alt  "></i>
                     </div>
                   </div>
                 </div>
@@ -104,10 +105,11 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">PACK STATUS </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                      {{$Parameters->power}}
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag ">{{$Parameters->power}}</i>
+                      <i class="bn ti-bag "></i>
                     </div>
                   </div>
                 </div>
@@ -121,10 +123,11 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE STATUS </div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
+                      {{$controlStatus->relay_1}}
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag ">{{$controlStatus->relay_1}}</i>
+                      <i class="bn ti-bag "></i>
                     </div>
                   </div>
                 </div>
@@ -143,11 +146,11 @@ Blackscience | {{ Auth::user()->name }}
                         <div class="h5 mb-0 font-weight-bold text-gray-800"> 
                        </div>
                      
-                      
+                      {{$controlStatus->Lock}}
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  "> {{$controlStatus->Lock}}</i>
+                      <i class=" bn ti-headphone-alt  "> </i>
                     </div>
                   </div>
                 </div>
@@ -161,17 +164,17 @@ Blackscience | {{ Auth::user()->name }}
                     <div class="col mr-2">
                     
                       <div class="text-xs font-weight-bold text-uppercase mb-1"> TEMPERATURE</div>
-                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">C</div>
+                      <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Celcius</div>
                       <div class="mt-2 mb-0  text-xs">
                         <div class="h5 mb-0 font-weight-bold text-gray-800"> 
                        </div>
                      
-                      
+                       {{$Parameters->Temperature}}
                       </div>
                     </div>
                     <div class="col-auto">
                       <i class=" bn ti-headphone-alt  ">
-                        {{$Parameters->Temperature}}
+                       
                       </i>
                     </div>
                   </div>
