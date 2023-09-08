@@ -45,8 +45,8 @@
         }
 
         #map {
-            width: 100%;
-            height: 100vh;
+            width: 60%;
+            height: 60vh;
         }
 
         .coordinate {
