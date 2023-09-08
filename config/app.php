@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'Africa/Dar_es_Salaam',
+    'timezone' => env('APP_TIMEZONE', 'UTC'),
 
     /*
     |--------------------------------------------------------------------------
