@@ -10,7 +10,8 @@ Blackscience | {{ Auth::user()->name }}
           <div class="col-md-8">
             <div class="card">
               <div class="card-header">
-                <h5 class="title">{{ Auth::user()->name }}</h5>
+                <h5 class="title">{{$Parameters->created_at}}</h5>
+
               </div>
               <div class="card-body">
                 <form>
@@ -25,7 +26,9 @@ Blackscience | {{ Auth::user()->name }}
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag "></i>
+                      <i class="bn ti-bag ">
+                        {{$Parameters->volts}}
+                      </i>
                     </div>
                   </div>
                 </div>
@@ -37,12 +40,12 @@ Blackscience | {{ Auth::user()->name }}
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">%</div>
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">CHARGE LEVEL </div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag "></i>
+                      <i class="bn ti-bag ">{{$batery}}%</i>
                     </div>
                   </div>
                 </div>
@@ -88,7 +91,7 @@ Blackscience | {{ Auth::user()->name }}
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  "></i>
+                      <i class=" bn ti-headphone-alt  ">{{$Parameters->power}}</i>
                     </div>
                   </div>
                 </div>
@@ -104,7 +107,7 @@ Blackscience | {{ Auth::user()->name }}
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag "></i>
+                      <i class="bn ti-bag ">{{$Parameters->power}}</i>
                     </div>
                   </div>
                 </div>
@@ -121,7 +124,7 @@ Blackscience | {{ Auth::user()->name }}
                   
                     </div>
                     <div class="col-auto">
-                      <i class="bn ti-bag "></i>
+                      <i class="bn ti-bag ">{{$controlStatus->relay_1}}</i>
                     </div>
                   </div>
                 </div>
@@ -144,7 +147,7 @@ Blackscience | {{ Auth::user()->name }}
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  "></i>
+                      <i class=" bn ti-headphone-alt  "> {{$controlStatus->Lock}}</i>
                     </div>
                   </div>
                 </div>
@@ -167,7 +170,9 @@ Blackscience | {{ Auth::user()->name }}
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class=" bn ti-headphone-alt  "></i>
+                      <i class=" bn ti-headphone-alt  ">
+                        {{$Parameters->Temperature}}
+                      </i>
                     </div>
                   </div>
                 </div>

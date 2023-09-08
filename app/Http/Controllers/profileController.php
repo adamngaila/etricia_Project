@@ -13,6 +13,14 @@ class profileController extends Controller
      */
     public function index()
     {
+        $code = Auth::user()->serverip;
+        $Parameters = LiveMonitering::where('packagecode', $code)->latest()->first();
+
+        $controlStatus = PowerpackControlls::where('packagecode', $code)->first();;
+
+        $batery = powerpackPackage::where('packagecode', $code)->orderBy('id','desc')->limit(1)->pluck('ChargeLevel');
+
+         return view('Profile.userprofile',compact('Parameters','controlStatus','batery'));
     }
 
     /**
