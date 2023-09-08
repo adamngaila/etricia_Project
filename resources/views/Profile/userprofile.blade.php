@@ -181,7 +181,12 @@ Blackscience | {{ Auth::user()->name }}
           </div>
           <div class="row">
           <div class="col-md-8">
-            
+              <div class="card">
+             <div class="card-header">
+                <h5 class="title">LOCATION</h5>
+              </div>
+              <div class="card-body"></div>
+            </div>
           </div>
         </div>
           <div class="col-md-4">
