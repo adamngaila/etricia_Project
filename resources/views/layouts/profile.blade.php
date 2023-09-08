@@ -110,7 +110,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 var marker = L.marker([-6.8366,39.2164]).addTo(map);
-marker.bindPopup("<b>Etricia</b><br>ETRC-0500536324").openPopup();
+marker.bindPopup("<b>{{ Auth::user()->serverip }}</b><br> {{$controlStatus->relay_1}}").openPopup();
 
 </script>
 
