@@ -182,7 +182,11 @@ Blackscience | {{ Auth::user()->name }}
              <div class="card-header">
                 <h5 class="title">LOCATION</h5>
               </div>
-              <div class="card-body"></div>
+              <div class="card-body">
+                <div id="map">
+        <div class="leaflet-control coordinate"></div>
+    </div>
+              </div>
             </div>
           </div>
           <div class="col-md-4">
