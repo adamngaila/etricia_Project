@@ -119,4 +119,12 @@ class PackDriver extends Controller
 
              return response($jibu[0],201);
     }
+    public function RequestDiagnosis(Request $request){
+
+        $request_diagnosis = PowerpackControlls::where('packagecode',$request->input("packagecode"))->pluck('Diagnosis');
+              $jibu = json_decode($request_diagnosis);
+
+                return response($jibu[0],201);
+
+    }
 }

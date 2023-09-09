@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEtriciaGeoserversTable extends Migration
+class AddDiagnosisToPowerpackController extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateEtriciaGeoserversTable extends Migration
      */
     public function up()
     {
-        Schema::create('etricia_geoservers', function (Blueprint $table) {
-            $table->id();
-           $table->string('packagecode');
-           $table->string('longitude');
-           $table->string('latitude');
-            $table->timestamps();
+        Schema::table('powerpack_controlls', function (Blueprint $table) {
+            $table->string('Diagnosis')->nullable();
         });
     }
 
@@ -29,6 +25,8 @@ class CreateEtriciaGeoserversTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('etricia_geoservers');
+        Schema::table('powerpack_controlls', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -64,9 +64,11 @@ class PowerpackAPI extends Controller
         $volts = $request->input("volts");
         $current = $request->input("current");
         $Temperature = $request->input("Temperature");
-         $power = $request->input("power");
-          $consumption = $request->input("consumption");
-          $ChargeLevel = $request->input("ChargeLevel");
+        $power = $request->input("power");
+        $consumption = $request->input("consumption");
+        $ChargeLevel = $request->input("ChargeLevel");
+        $Grid = $request->input("GridStatus");
+       
        
         LiveMonitering::where('packagecode',$packagecode)->update([
             'volts' => $volts,

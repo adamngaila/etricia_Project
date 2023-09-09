@@ -8,6 +8,6 @@ class PowerpackControlls extends Model
 {
     //
     protected $fillable = [
-        'packagecode', 'Lock','relay_1','relay_2','MasterControl'
+        'packagecode', 'Lock','relay_1','relay_2','MasterControl','Diagnosis',
     ];
 }

@@ -332,6 +332,10 @@ Etricia | Monitoring
          </div>
          <div id="Diagnosis" class="tabcontent">
             <h5 class="title">Diagnosis</h5>
+
+<button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
+<button class="btn btn-success  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
+
             <table class="table table-striped table-bordered" style="font-size: 11px;">
                <thead>
                   <tr>
@@ -516,6 +520,45 @@ Etricia | Monitoring
       },
       success: function(response) {
         alert(packcode_value + ' is unlocked by user');
+        console.log(response);
+      }
+    });
+   });
+
+    $("#request_diagnosis").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/diagnosis/request_diagnosis',
+      type: 'post',
+      data: {
+        code: packcode_value,
+        command: "Request_start"
+      },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+        alert(packcode_value + ' start diagnosisr');
+        console.log(response);
+      }
+    });
+   });
+     $("#stop_request").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/diagnosis/request_diagnosis',
+      type: 'post',
+      data: {
+        code: packcode_value,
+        command: "Request_stop"
+      },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+        alert(packcode_value + ' stop diagnosis');
         console.log(response);
       }
     });

@@ -96,6 +96,22 @@ class PowerpackController extends Controller
        return redirect("/etricia_Monitor/diagnosis",['diagnosis'=>$diagnosis]);
     }
 
+    public function diagnosis_request (Request $request){
+
+        if($request->command == 'Request_start'){
+        PowerpackControlls::where('packagecode',$request->code)->update([
+            'Diagnosis'=>'ON',
+          
+         ]);  
+         }      
+     elseif($request->command =='Request_stop'){
+       PowerpackControlls::where('packagecode',$request->code)->update([
+            'Diagnosis'=>'OFF',
+            
+         ]); 
+     }
+    }
+
  
 
 }
