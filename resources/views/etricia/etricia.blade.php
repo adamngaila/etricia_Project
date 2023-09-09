@@ -331,10 +331,15 @@ Etricia | Monitoring
             </div>
          </div>
          <div id="Diagnosis" class="tabcontent">
+            <div class="card">
+             <div class="card-header">
             <h5 class="title">Diagnosis</h5>
+
 
 <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
 <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
+</div>
+              <div class="card-body">
 
             <table class="table table-striped table-bordered" style="font-size: 11px;">
                <thead>
@@ -360,6 +365,7 @@ Etricia | Monitoring
             </table>
             {{$diagnosis-> links()}}
          </div>
+      </div>
       </div>
    </div>
 </div>
