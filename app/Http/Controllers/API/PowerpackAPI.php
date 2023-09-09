@@ -77,6 +77,7 @@ class PowerpackAPI extends Controller
             'power' => $power,
             'consumption' => $consumption,
             'ChargeLevel' => $ChargeLevel,
+            'Grid' => $Grid,
         ]);
     }
     public function saveParams(Request $request)

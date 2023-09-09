@@ -8,6 +8,6 @@ class LiveMonitering extends Model
 {
     //
         protected $fillable = [
-        'packagecode','volts','current','Temperature','power','consumption','ChargeLevel'
+        'packagecode','volts','current','Temperature','power','consumption','ChargeLevel','Grid'
     ];
 }

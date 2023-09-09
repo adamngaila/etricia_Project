@@ -348,7 +348,7 @@ Etricia | Monitoring
                      <th> Temperature Sensor </th>
                      <th> Current Sensor</th>
                      <th> Voltage Sensor </th>
-                     <th> Memory </th>
+                     <th> Grid </th>
                   </tr>
                </thead>
                <tbody>
@@ -358,7 +358,7 @@ Etricia | Monitoring
                      <td>{{$result->TempSensor}}</td>
                      <td>{{$result->CurrentSensor}}</td>
                      <td>{{$result->VoltageSensor}}</td>
-                     <td>{{$result->MemoryShield}}</td>
+                     <td>{{$result->RTC}}</td>
                   </tr>
                   @endforeach
                </tbody>
