@@ -79,6 +79,7 @@ class PowerpackAPI extends Controller
             'ChargeLevel' => $ChargeLevel,
             'Grid' => $Grid,
         ]);
+         return response('liveupdate ok',201);
     }
     public function saveParams(Request $request)
     {
