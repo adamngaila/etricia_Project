@@ -42,7 +42,7 @@ Etricia | Monitoring
                                           <img src="../images/tree/monitor.jpg" alt="Member">
                                           <div class="member-details">
                                              <h4>Monitor</h4>
-                                             <p> {{$Parameters->created_at}} </p>
+                                             <p> {{$Parameters->updated_at}} </p>
                                           </div>
                                        </div>
                                     </div>
