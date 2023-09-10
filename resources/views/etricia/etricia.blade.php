@@ -11,6 +11,7 @@ Etricia | Monitoring
             <div class="tab">
                <button class="tablinks" onclick="openCity(event, 'MonitorControl')" id="defaultOpen">Monitor/Control</button>
                <button class="tablinks" onclick="openCity(event, 'Charts')">Charts</button>
+               <button class="tablinks" onclick="openCity(event, 'Records')">Records</button>
                <button class="tablinks" onclick="openCity(event, 'Diagnosis')">Diagnosis</button>
             </div>
          </div>
@@ -300,7 +301,7 @@ Etricia | Monitoring
             </div>
         
           <div id="Charts" class="tabcontent">
-            <h5 class="title">Charts</h5>
+            <h5 class="title">Analysis</h5>
             <div class="row">
                <div class="col-md-6">
                   <div class="card card-chart" background="dark";>
@@ -330,17 +331,52 @@ Etricia | Monitoring
                </div>
             </div>
          </div>
+         <div id="Records" class="tabcontent">
+            <div class="card">
+             <div class="card-header">
+               <h5 class="title">Records</h5>
+               <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_reocrd"> <i class="fas fa-print"></i></button>
+               <button class="btn btn-warning  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-file-pdf"></i></button>
+               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel"> <i class='fas fa-file-excel'></i></button>
+            </div>
+            <div class="card-body">
+
+            <table class="table table-bordered" style="font-size: 9px;">
+               <thead>
+                  <tr>
+                     <th> DATE</th>
+                     <th> Voltage</th>
+                     <th> Current</th>
+                     <th> Power </th>
+                     <th>Consumption </th>
+                     <th> Grid </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  @foreach($diagnosis as $result)
+                  <tr>
+                     <td>{{$result->created_at}}</td>
+                     <td>{{$result->TempSensor}}</td>
+                     <td>{{$result->CurrentSensor}}</td>
+                     <td>{{$result->VoltageSensor}}</td>
+                     <td>{{$result->RTC}}</td>
+                  </tr>
+                  @endforeach
+               </tbody>
+            </table>
+            {{$diagnosis-> links()}}
+         </div>
+      </div>
+    </div>
          <div id="Diagnosis" class="tabcontent">
             <div class="card">
              <div class="card-header">
-            <h5 class="title">Diagnosis</h5>
-
-
-<button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
-<button class="btn btn-danger  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
-<button class="btn btn-info  btn-rounded pull-right "  type="submit" id="stop_request"> <i class='fas fa-file-excel'></i></button>
-</div>
-              <div class="card-body">
+               <h5 class="title">Diagnosis</h5>
+               <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
+               <button class="btn btn-danger  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
+               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="stop_request"> <i class='fas fa-file-excel'></i></button>
+            </div>
+            <div class="card-body">
 
             <table class="table table-bordered" style="font-size: 9px;">
                <thead>
@@ -368,7 +404,7 @@ Etricia | Monitoring
             {{$diagnosis-> links()}}
          </div>
       </div>
-      </div>
+    </div>
    </div>
 </div>
 </div>
