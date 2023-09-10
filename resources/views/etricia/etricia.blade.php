@@ -298,8 +298,8 @@ Etricia | Monitoring
                   </ul>
                </div>
             </div>
-         </div>
-         <div id="Charts" class="tabcontent">
+        
+          <div id="Charts" class="tabcontent">
             <h5 class="title">Charts</h5>
             <div class="row">
                <div class="col-md-6">
@@ -338,6 +338,7 @@ Etricia | Monitoring
 
 <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
 <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
+<button class="btn btn-success  btn-rounded pull-right "  type="submit" id="stop_request"> <i class='fas fa-file-excel'></i></button>
 </div>
               <div class="card-body">
 
@@ -368,6 +369,7 @@ Etricia | Monitoring
       </div>
       </div>
    </div>
+</div>
 </div>
 </div>
 <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
