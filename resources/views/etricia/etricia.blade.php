@@ -342,13 +342,14 @@ Etricia | Monitoring
 </div>
               <div class="card-body">
 
-            <table class="table table-striped table-bordered" style="font-size: 11px;">
+            <table class="table table-bordered" style="font-size: 9px;">
                <thead>
                   <tr>
                      <th> DATE</th>
-                     <th> Temperature Sensor </th>
+                     <th> Temperature Sensor</th>
                      <th> Current Sensor</th>
                      <th> Voltage Sensor </th>
+                     <th>Inveter </th>
                      <th> Grid </th>
                   </tr>
                </thead>
