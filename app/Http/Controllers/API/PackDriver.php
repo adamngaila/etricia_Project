@@ -50,9 +50,9 @@ class PackDriver extends Controller
         $emails = array("adamngaila@gmail.com", "tino.chami@gmail.com");
         $maildata = array('name'=>$request->input("packagecode"));
 
-        $new_grid_status = $request->input("status");
+       /* $new_grid_status = $request->input("status");
         $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
-       
+       */
           
                 Mail::to("adamngaila@gmail.com")->send(new GridStatus());
             
