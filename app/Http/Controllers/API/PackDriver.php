@@ -12,6 +12,7 @@ use App\powerpackPackage;
 use App\Notifications;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Mail;
 
 class PackDriver extends Controller
 {
@@ -44,11 +45,38 @@ class PackDriver extends Controller
     }
     public function StatusCheck(Request $request)
     {
+        $emails = array("adamngaila@gmail.com", "tino.chami@gmail.com");
+        $maildata = array('name'=>$request->input("packagecode"));
+
+        $new_grid_status = $request->input("status");
+        $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
+        if($new_grid_status != $old_grid_status)
+        {
+            if($new_grid_status == "inactive")
+            {
+                Mail::send('mail', $maildata, function($message){
+                    $message->to($emails)->subject('GRID POWER OFFLINE');
+                    $message->from('etriciatz@gmail.com',$maildata['name']);
+                });
+            }
+            if($new_grid_status == "active")
+            {
+                Mail::send('mail', $maildata, function($message){
+                    $message->to($emails)->subject('GRID POWER ONLINE');
+                    $message->from('etriciatz@gmail.com',$maildata['name']);
+                });
+            }
+        }
+
         powerpackPackage::where('packagecode',$request->input("packagecode"))->update([
             'ChargeLevel'=>$request->input("ChargeLevel"),
             'PackageStatus'=>$request->input("PackageStatus"),
             'Temperature'=>$request->input("Temperature"),
+            'GridStatus'=>$request->input("status"),
          ]); 
+
+
+
         return response('statusUpdatesOk',201);
 
     }
