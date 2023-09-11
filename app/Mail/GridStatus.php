@@ -19,7 +19,7 @@ class GridStatus extends Mailable
      */
     public function __construct()
     {
-     $this->Auth = $auth;
+     
     }
 
     /**
