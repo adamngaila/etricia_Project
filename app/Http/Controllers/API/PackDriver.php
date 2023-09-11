@@ -51,7 +51,7 @@ class PackDriver extends Controller
         $new_grid_status = $request->input("status");
         $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
        
-            if($new_grid_status == "inactive")
+         /*   if($new_grid_status == "inactive")
             {
                 Mail::send('mail', $maildata, function($message){
                     $message->to($emails)->subject('GRID POWER OFFLINE');
@@ -64,7 +64,7 @@ class PackDriver extends Controller
                     $message->to($emails)->subject('GRID POWER ONLINE');
                     $message->from('etriciatz@gmail.com',$maildata['name']);
                 });
-            }
+            }*/
     
 
         powerpackPackage::where('packagecode',$request->input("packagecode"))->update([
