@@ -396,6 +396,7 @@ Etricia | Monitoring
                      <td>{{$result->TempSensor}}</td>
                      <td>{{$result->CurrentSensor}}</td>
                      <td>{{$result->VoltageSensor}}</td>
+                     <td></td>
                      <td>{{$result->RTC}}</td>
                   </tr>
                   @endforeach
