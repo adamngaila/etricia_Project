@@ -13,6 +13,8 @@ use App\Notifications;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\GridStatus;
+
 
 class PackDriver extends Controller
 {
@@ -53,18 +55,9 @@ class PackDriver extends Controller
        
           if($new_grid_status == "inactive")
             {
-                Mail::send('mail', $maildata, function($message){
-                    $message->to($emails)->subject('GRID POWER OFFLINE');
-                    $message->from('etriciatz@gmail.com',$maildata['name']);
-                });
+                Mail::to($emails)->send(new GridStatus());
             }
-            if($new_grid_status == "active")
-            {
-                Mail::send('mail', $maildata, function($message){
-                    $message->to($emails)->subject('GRID POWER ONLINE');
-                    $message->from('etriciatz@gmail.com',$maildata['name']);
-                });
-            }
+          
     
 
         powerpackPackage::where('packagecode',$request->input("packagecode"))->update([
