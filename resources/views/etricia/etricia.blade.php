@@ -336,8 +336,8 @@ Etricia | Monitoring
              <div class="card-header">
                <h5 class="title">Records</h5>
                <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_reocrd"> <i class="fas fa-print"></i></button>
-               <button class="btn btn-warning  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-file-pdf"></i></button>
-               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel"> <i class='fas fa-file-excel'></i></button>
+               <button class="btn btn-warning  btn-rounded pull-right "  type="submit" id="pdf_records"> <i class="fas fa-file-pdf"></i></button>
+               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel_records"> <i class='fas fa-file-excel'></i></button>
             </div>
             <div class="card-body">
 
@@ -374,7 +374,7 @@ Etricia | Monitoring
                <h5 class="title">Diagnosis</h5>
                <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
                <button class="btn btn-danger  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
-               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="stop_request"> <i class='fas fa-file-excel'></i></button>
+               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel_diagnosis"> <i class='fas fa-file-excel'></i></button>
             </div>
             <div class="card-body">
 
