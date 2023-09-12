@@ -86,7 +86,7 @@ return [
 
     'username' => "etriciatz@gmail.com",
 
-    'password' => "ylof pgwf onkw ckye",
+    'password' => "ylofpgwfonkwckye",
 
     /*
     |--------------------------------------------------------------------------
