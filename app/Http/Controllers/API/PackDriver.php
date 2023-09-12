@@ -12,9 +12,8 @@ use App\powerpackPackage;
 use App\Notifications;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\GridStatus;
-
+use Illuminate\Support\Facades\Mail;
 
 class PackDriver extends Controller
 {
@@ -53,9 +52,11 @@ class PackDriver extends Controller
        $new_grid_status = $request->input("status");
         /* $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
        */
-          
-            Mail::to("adamngaila@gmail.com")->send('umeme umekata');
-           
+          if($new_grid_status == "active")
+           { 
+            Mail::to("adamngaila@gmail.com")->queue(new GridStatus($new_grid_status));
+
+           }
           
     
 
