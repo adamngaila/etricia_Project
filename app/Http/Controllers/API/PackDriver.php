@@ -54,7 +54,7 @@ class PackDriver extends Controller
         $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
        */
           
-        Mail::to("adamngaila@gmail.com")->send(new GridStatus());
+        // Mail::to("adamngaila@gmail.com")->send(new GridStatus());
             
           
     
