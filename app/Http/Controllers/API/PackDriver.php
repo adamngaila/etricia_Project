@@ -54,7 +54,7 @@ class PackDriver extends Controller
        */
           if($new_grid_status == "inactive")
            { 
-            Mail::to("adamngaila@gmail.com")->queue(new GridStatus($new_grid_status));
+            Mail::to("adamngaila@gmail.com")->send(new GridStatus());
 
            }
           
