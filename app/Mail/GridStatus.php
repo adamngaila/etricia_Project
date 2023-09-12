@@ -29,6 +29,6 @@ class GridStatus extends Mailable
      */
     public function build()
     {
-        return $this->text('mails.email');
+        return $this->view('mails.gridmail');
     }
 }

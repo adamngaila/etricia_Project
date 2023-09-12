@@ -52,9 +52,9 @@ class PackDriver extends Controller
        $new_grid_status = $request->input("status");
         /* $old_grid_status = json_decode(powerpackPackage::where('packagecode',$request->input("packagecode"))->pluck('GridStatus'));
        */
-          if($new_grid_status == "inactivee")
+          if($new_grid_status == "inactive")
            { 
-            Mail::to("adamngaila@gmail.com")->send(new GridStatus());
+            Mail::to("etriciatz@gmail.com")->send(new GridStatus());
 
            }
           
