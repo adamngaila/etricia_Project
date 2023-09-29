@@ -11,6 +11,8 @@ use Carbon\Carbon;
 use App\PackDiagnosisLogs;
 use App\LiveMonitering;
 use App\Exports\DiagnosisExport;
+use Maatwebsite\Excel\Facades\Excel;
+
 class PowerpackController extends Controller
 {
     public function index()
@@ -113,7 +115,7 @@ class PowerpackController extends Controller
     }
 
     public function export_diagnosis(){
-         Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
+        return Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
 
     }
 
