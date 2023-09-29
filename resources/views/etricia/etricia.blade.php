@@ -616,9 +616,9 @@ Etricia | Monitoring
     console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/diagnosis/export_excel',
-      type: 'get',
+      type: 'post',
       data: {
-        code: packcode_value,
+        code: packcode_value
       },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
