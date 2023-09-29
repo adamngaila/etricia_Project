@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Exports;
-
+use App\User;
+use Auth;
 use App\Models\PackDiagnosisLogs;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
@@ -12,6 +13,7 @@ class DiagnosisExport implements FromCollection
     */
     public function collection()
     {
-        return PackDiagnosisLogs::all();
+        $code = Auth::user()->serverip;
+        return PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
     }
 }
