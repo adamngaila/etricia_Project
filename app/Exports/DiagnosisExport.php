@@ -3,7 +3,7 @@
 namespace App\Exports;
 
 use App\Models\PackDiagnosisLogs;
-use Illuminate\Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\FromCollection;
 
 class DiagnosisExport implements FromCollection
 {

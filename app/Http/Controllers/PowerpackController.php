@@ -11,7 +11,7 @@ use Carbon\Carbon;
 use App\PackDiagnosisLogs;
 use App\LiveMonitering;
 use App\Exports\DiagnosisExport;
-use Illuminate\Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Facades\Excel;
 
 class PowerpackController extends Controller
 {
