@@ -113,7 +113,7 @@ class PowerpackController extends Controller
     }
 
     public function export_diagnosis(){
-        return Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
+         Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
 
     }
 
