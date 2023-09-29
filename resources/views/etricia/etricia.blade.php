@@ -615,10 +615,12 @@ Etricia | Monitoring
     var packcode_value = document.getElementById('packcode').value;
     console.log(packcode_value);
     $.ajax({
-      url: '/etricia_Monitor/diagnosis/export_excel',
+      url: '/etricia_Monitor/diagnosis/request_diagnosis',
       type: 'post',
       data: {
-        code: packcode_value
+           code: packcode_value,
+        command: "export_excel"
+
       },
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
