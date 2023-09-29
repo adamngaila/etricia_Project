@@ -617,12 +617,7 @@ Etricia | Monitoring
     console.log(packcode_value);
     $.ajax({
       url: '/etricia_Monitor/diagnosis/excel_export',
-      type: 'post',
-      data: {
-           code: packcode_value,
-        command: "export_excel"
-
-      },
+      type: 'get',
     
       success: function(response) {
         alert(packcode_value + ' Export excel data');
