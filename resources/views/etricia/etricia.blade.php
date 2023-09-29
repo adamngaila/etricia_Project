@@ -375,6 +375,10 @@ Etricia | Monitoring
                <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
                <button class="btn btn-danger  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
                <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel_diagnosis"> <i class='fas fa-file-excel'></i></button>
+                <a class="btn btn-warning"
+                       href="{{ route('user_export_diagnosis') }}">
+                              Export  Data
+                      </a>
             </div>
             <div class="card-body">
 
