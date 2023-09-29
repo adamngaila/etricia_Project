@@ -609,6 +609,27 @@ Etricia | Monitoring
       }
     });
    });
+
+//--------excel export diagnosis--------------------------
+     $("#excel_diagnosis").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Monitor/diagnosis/export_excel',
+      type: 'get',
+      data: {
+        code: packcode_value,
+      },
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      success: function(response) {
+        alert(packcode_value + ' Export excel data');
+        console.log(response);
+      }
+    });
+   });
+
    setInterval(function() {
     $("#switch_status").load(window.location.href + " #switch_status");
     $("#charge_status").load(window.location.href + " #charge_status");

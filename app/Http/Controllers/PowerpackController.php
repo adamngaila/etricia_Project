@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\PackDiagnosisLogs;
 use App\LiveMonitering;
-
+use App\Exports\DiagnosisExport;
 class PowerpackController extends Controller
 {
     public function index()
@@ -110,6 +110,12 @@ class PowerpackController extends Controller
             
          ]); 
      }
+    }
+
+    public function export_diagnosis (){
+        return Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
+
+
     }
 
  
