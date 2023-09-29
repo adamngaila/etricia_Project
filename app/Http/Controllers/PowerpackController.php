@@ -112,13 +112,10 @@ class PowerpackController extends Controller
             
          ]); 
      }
-     elseif($request->command =='export_excel'){
-        Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
-
-     }
+     
     }
 
-    public function excel_export(){
+    public function excel_export(Request $request){
         return  Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
     }
 
