@@ -374,7 +374,7 @@ Etricia | Monitoring
                <h5 class="title">Diagnosis</h5>
                <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="request_diagnosis"> <i class="fas fa-bug"></i>Request Diagnosis</button>
                <button class="btn btn-danger  btn-rounded pull-right "  type="submit" id="stop_request"> <i class="fas fa-times"></i></button>
-               <button class="btn btn-info  btn-rounded pull-right "  type="submit" id="excel_diagnosis"> <i class='fas fa-file-excel'></i></button>
+               <a href="{{ route('user_export_diagnosis') }}"><button class="btn btn-info  btn-rounded pull-right "   id="excel_diagnosis" ><i class='fas fa-file-excel' style="size: 34px"></i></button></a>
               
             </div>
             <div class="card-body">
@@ -616,14 +616,14 @@ Etricia | Monitoring
     var packcode_value = document.getElementById('packcode').value;
     console.log(packcode_value);
     $.ajax({
-      url: '/etricia_Monitor/diagnosis/excel_export',
+      url: '/etricia_Monitor/excel_export',
       type: 'get',
      data: {
         code: packcode_value,
         command: "export_diagnosis"
       },
       success: function(response) {
-        alert(packcode_value + ' Export excel data');
+        alert(packcode_value + ' Export diagnosis excel data');
         console.log(response);
       }
     });

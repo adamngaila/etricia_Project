@@ -38,7 +38,7 @@ Route::get('/voltcharts', 'PowerpackController@DrawCharts')->name('voltcharts');
 Route::any('/etricia_Monitor/diagnosis','PowerpackController@diagnosis_results');
 Route::any('/etricia_Monitor/diagnosis/request_diagnosis','PowerpackController@diagnosis_request');
 Route::any('/etricia_Monitor/control','PowerpackController@control_pack');
-Route::get('/etricia_Monitor/diagnosis/excel_export','PowerpackController@excel_export')->name('user_export_diagnosis');
+Route::get('/etricia_Monitor/excel_export','PowerpackController@excel_export')->name('user_export_diagnosis');
 
 //bills
 Route::any('/etricia_Bills', 'Bills\BillingController@index')->name('etricia_Bills');
