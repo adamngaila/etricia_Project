@@ -15,6 +15,6 @@ class DiagnosisExport implements FromCollection
     public function collection()
     {
         $code = Auth::user()->serverip;
-        return PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
+        return PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(30));
     }
 }
