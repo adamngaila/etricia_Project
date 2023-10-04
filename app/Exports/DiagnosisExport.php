@@ -8,7 +8,7 @@ use Carbon\Carbon;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class DiagnosisExport implements FromCollection
+class DiagnosisExport implements FromCollection, WithHeadings
 {
     /**
     * @return \Illuminate\Support\Collection
