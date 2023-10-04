@@ -87,7 +87,7 @@ class PowerpackController extends Controller
          ]); 
      }
       
-     return redirect('/etricia_Monitor');
+    // return redirect('/etricia_Monitor');
 
 
      }
