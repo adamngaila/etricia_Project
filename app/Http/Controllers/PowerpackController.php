@@ -94,7 +94,7 @@ class PowerpackController extends Controller
     
     public function diagnosis_results(){
         $code = Auth::user()->serverip;
-        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>', Carbon::now()->subDays(40))->paginate(15);
+        $diagnosis = PackDiagnosisLogs::where('packagecode',$code)->where( 'created_at', '>=', Carbon::now()->subDays(40))->paginate(15);
        return redirect("/etricia_Monitor/diagnosis",['diagnosis'=>$diagnosis]);
     }
 
