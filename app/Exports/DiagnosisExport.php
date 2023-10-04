@@ -3,7 +3,8 @@
 namespace App\Exports;
 use App\User;
 use Auth;
-use App\Models\PackDiagnosisLogs;
+use App\PackDiagnosisLogs;
+use Carbon\Carbon;
 use Maatwebsite\Excel\Concerns\FromCollection;
 
 class DiagnosisExport implements FromCollection
