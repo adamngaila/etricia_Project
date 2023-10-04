@@ -116,7 +116,8 @@ class PowerpackController extends Controller
     }
 
     public function excel_export(Request $request){
-        return  Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
+        Excel::download(new DiagnosisExport, 'Diagnosis.xlsx');
+         return redirect('/etricia_Monitor');
     }
 
  
