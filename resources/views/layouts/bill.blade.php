@@ -86,8 +86,26 @@
   evt.currentTarget.className += " active";
 }
 
-// Get the element with id="defaultOpen" and click on it
+// Get the element with id="defaultOpen" and click on it print_invoice
 document.getElementById("defaultOpen").click();
+
+$("#print_invoice").click(function() {
+    var packcode_value = document.getElementById('packcode').value;
+    console.log(packcode_value);
+    $.ajax({
+      url: '/etricia_Bills/print_invoice',
+      type: 'get',
+     data: {
+        code: packcode_value,
+        command: "printing_invoice"
+      },
+      success: function(response) {
+        alert(packcode_value + ' printing  invoice');
+        console.log(response);
+      }
+    });
+   });
+
   </script>
 
 @yield('scripts')

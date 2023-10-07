@@ -67,14 +67,16 @@ Etricia | Bills
 {{$billl_list-> links()}}
             </div>
              <div id="statement" class="tabcontent">
+
               <h5 class ="title">Statement</h5>
+              <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="print_invoice"> <i class="fas fa-print"></i>PDF</button>
       <address  disabled>
         <p>{{ Auth::user()->name }}</p>
         <p>{{ Auth::user()->region }}<br>{{ Auth::user()->location}}</p>
         <p>{{ Auth::user()->phone }}</p>
         <p>{{ Auth::user()->email }}</p>
       </address>
-      <span><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.herokuapp.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150"></span>
+      <span><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.mauzosheet.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150"></span>
    
     <article>
       <h1>Recipient</h1>
@@ -137,6 +139,7 @@ Etricia | Bills
             </div>
           </div>
         </div>
+        <input type="hidden" id="packcode" name="packcode" value= "{{ Auth::user()->serverip }}">
 @endsection
 @section('scripts')
 

@@ -15,6 +15,7 @@ use Auth;
 use App\powerpackPackage;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use PDF;
 
 class BillingController extends Controller
 {
@@ -34,6 +35,17 @@ class BillingController extends Controller
     }
     Public function showStatement(){
         
+    }
+    public funcgtion Generate_pdf(Request  $request){
+        $code = Auth::user()->serverip;
+
+        $statement = CustomerAccount::where('PackCode',$code)->first();
+
+        $pdf = PDF::loadView('bill.invoice', $statement);
+
+  
+
+        return $pdf->download('invoice.pdf');
     }
 
 }
