@@ -1,73 +1,188 @@
-@extends('layouts.bill')
-@section('content')
-  <h5 class ="title">Statement</h5>
-      <address  disabled>
-        <p>{{ Auth::user()->name }}</p>
-        <p>{{ Auth::user()->region }}<br>{{ Auth::user()->location}}</p>
-        <p>{{ Auth::user()->phone }}</p>
-        <p>{{ Auth::user()->email }}</p>
-      </address>
-      <span><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.mauzosheet.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150"></span>
-   
-    <article>
-      <h1>Recipient</h1>
-      <address >
-        <p>{{ Auth::user()->serveip }}</p>
-      </address>
-      <table class="meta">
-        <tr>
-          <th><span >Statement #</span></th>
-          <td><span >101138</span></td>
-        </tr>
-        <tr>
-          <th><span >Date</span></th>
-          <td><span >{{ date("Y/m/d")}}</span></td>
-        </tr>
-        <tr>
-          <th><span >Amount Due</span></th>
-          <td><span id="prefix" >Tzs</span><span>{{$statement->Balance}}</span></td>
-        </tr>
-      </table>
-      <table class="inventory">
-        <thead>
-          <tr>
-            <th><span >Item</span></th>
-            <th><span >Description</span></th>
-            <th><span >Rate</span></th>
-            <th><span >Quantity</span></th>
-            <th><span >Price</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span >Huduma ya Etricia</span></td>
-            <td><span >Matumizi wh</span></td>
-            <td><span data-prefix>Tzs</span><span >500.00</span></td>
-            <td><span >{{$statement->TotalConsumption}}</span></td>
-            <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
-          </tr>
-        </tbody>
-      </table>
-     
-      <table class="balance">
-        <tr>
-          <th><span>Total</span></th>
-          <td><span data-prefix>Tzs</span><span>{{$statement->TotalCost}}</span></td>
-        </tr>
-        <tr>
-          <th><span >Amount Paid</span></th>
-          <td><span data-prefix>Tzs</span><span >{{$statement->ToatlPayment}}</span></td>
-        </tr>
-        <tr>
-          <th><span >Balance Due</span></th>
-          <td><span data-prefix>Tzs</span><span>{{$statement->Balance}}</span></td>
-        </tr>
-      </table>
-    </article>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>A simple, clean, and responsive HTML invoice template</title>
 
-            </div>
-              </div>
-            </div>
-          </div>
-        </div>
-@endsection
+		<style>
+			.invoice-box {
+				max-width: 800px;
+				margin: auto;
+				padding: 30px;
+				border: 1px solid #eee;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+				font-size: 16px;
+				line-height: 24px;
+				font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+				color: #555;
+			}
+
+			.invoice-box table {
+				width: 100%;
+				line-height: inherit;
+				text-align: left;
+			}
+
+			.invoice-box table td {
+				padding: 5px;
+				vertical-align: top;
+			}
+
+			.invoice-box table tr td:nth-child(2) {
+				text-align: right;
+			}
+
+			.invoice-box table tr.top table td {
+				padding-bottom: 20px;
+			}
+
+			.invoice-box table tr.top table td.title {
+				font-size: 45px;
+				line-height: 45px;
+				color: #333;
+			}
+
+			.invoice-box table tr.information table td {
+				padding-bottom: 40px;
+			}
+
+			.invoice-box table tr.heading td {
+				background: #eee;
+				border-bottom: 1px solid #ddd;
+				font-weight: bold;
+			}
+
+			.invoice-box table tr.details td {
+				padding-bottom: 20px;
+			}
+
+			.invoice-box table tr.item td {
+				border-bottom: 1px solid #eee;
+			}
+
+			.invoice-box table tr.item.last td {
+				border-bottom: none;
+			}
+
+			.invoice-box table tr.total td:nth-child(2) {
+				border-top: 2px solid #eee;
+				font-weight: bold;
+			}
+
+			@media only screen and (max-width: 600px) {
+				.invoice-box table tr.top table td {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+
+				.invoice-box table tr.information table td {
+					width: 100%;
+					display: block;
+					text-align: center;
+				}
+			}
+
+			/** RTL **/
+			.invoice-box.rtl {
+				direction: rtl;
+				font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+			}
+
+			.invoice-box.rtl table {
+				text-align: right;
+			}
+
+			.invoice-box.rtl table tr td:nth-child(2) {
+				text-align: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="invoice-box">
+			<table cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="title">
+									<span><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=https://etricia.mauzosheet.com/api/qrcode_user?code={{Auth::user()->serverip}}" alt="..." size="150"></span>
+   
+								</td>
+
+								<td>
+									Invoice #: 123<br />
+									Created: January 1, 2023<br />
+									Due: February 1, 2023
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="information">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td>
+									Sparksuite, Inc.<br />
+									12345 Sunny Road<br />
+									Sunnyville, CA 12345
+								</td>
+
+								<td>
+									Acme Corp.<br />
+									John Doe<br />
+									john@example.com
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="heading">
+					<td>Payment Method</td>
+
+					<td>Check #</td>
+				</tr>
+
+				<tr class="details">
+					<td>Check</td>
+
+					<td>1000</td>
+				</tr>
+
+				<tr class="heading">
+					<td>Item</td>
+
+					<td>Price</td>
+				</tr>
+
+				<tr class="item">
+					<td>Website design</td>
+
+					<td>$300.00</td>
+				</tr>
+
+				<tr class="item">
+					<td>Hosting (3 months)</td>
+
+					<td>$75.00</td>
+				</tr>
+
+				<tr class="item last">
+					<td>Domain name (1 year)</td>
+
+					<td>$10.00</td>
+				</tr>
+
+				<tr class="total">
+					<td></td>
+
+					<td>Total: $385.00</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

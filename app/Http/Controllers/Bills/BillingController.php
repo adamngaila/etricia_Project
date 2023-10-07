@@ -36,15 +36,14 @@ class BillingController extends Controller
     Public function showStatement(){
         
     }
-    public funcgtion Generate_pdf(Request  $request){
+    public function Generate_pdf(Request  $request){
         $code = Auth::user()->serverip;
 
-        $statement = CustomerAccount::where('PackCode',$code)->first();
+        $statement = CustomerAccount::where('PackCode',$code)->first()->toArray();
 
-        $pdf = PDF::loadView('bill.invoice', $statement);
-
+      $data = ['title' => 'Laravel 7 Generate PDF From View Example Tutorial'];
+        $pdf = PDF::loadView('bill\invoice',$data);
   
-
         return $pdf->download('invoice.pdf');
     }
 

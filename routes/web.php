@@ -43,7 +43,7 @@ Route::get('/etricia_Monitor/excel_export','PowerpackController@excel_export')->
 //bills
 Route::any('/etricia_Bills', 'Bills\BillingController@index')->name('etricia_Bills');
 Route::any('/etricia_Bills/show', 'Bills\BillingController@show');  
-Route::any('/etricia_Bills/print_invoice', 'Bills\BillingController@Generate_pdf');  
+Route::get('/etricia_Bills/print_invoice', 'Bills\BillingController@Generate_pdf');  
 
     });
 
