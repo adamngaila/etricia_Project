@@ -98,7 +98,7 @@ $("#print_invoice").click(function() {
       type: 'get',
      data: {
         code: packcode_value,
-        command: "printing_invoice"
+        command: "printing_invoice",
       },
       success: function(response) {
         alert(packcode_value + ' printing  invoice');

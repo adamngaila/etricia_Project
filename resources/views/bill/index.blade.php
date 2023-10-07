@@ -69,7 +69,8 @@ Etricia | Bills
              <div id="statement" class="tabcontent">
 
               <h5 class ="title">Statement</h5>
-              <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="print_invoice"> <i class="fas fa-print"></i>PDF</button>
+              <a href="{{ route('statement_pdf') }}">
+              <button class="btn btn-success  btn-rounded pull-right "  type="submit" id="print_invoice"> <i class="fas fa-print"></i>PDF</button></a>
       <address  disabled>
         <p>{{ Auth::user()->name }}</p>
         <p>{{ Auth::user()->region }}<br>{{ Auth::user()->location}}</p>
