@@ -110,24 +110,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 var marker = L.marker([-6.832747, 39.248628]).addTo(map);
-marker.bindPopup("<b>{{ Auth::user()->serverip }}</b><br>Status : {{$controlStatus->relay_1}} <br>Charge:{{$batery[0]}} % <br>Grid Power : {{$Parameters->Grid}}<br>{{$Parameters->updated_at}} <table class="table">
-                                                <tbody>
-                                                   <tr>
-                                                      <td>
-                                                         <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                                            <label class="btn btn-primary active">
-                                                            <input type="radio" name="options" id="power_on" autocomplete="off"> 
-                                                            ON
-                                                            </label>
-                                                            <label class="btn btn-primary">
-                                                            <input   type="radio" name="options" id="power_off" autocomplete="off"> 
-                                                            OFF
-                                                            </label>
-                                                         </div>
-                                                      </td>
-                                                   </tr>
-                                                </tbody>
-                                             </table> ").openPopup();
+marker.bindPopup("<b>{{ Auth::user()->serverip }}</b><br>Status : {{$controlStatus->relay_1}} <br>Charge:{{$batery[0]}} % <br>Grid Power : {{$Parameters->Grid}}<br>{{$Parameters->updated_at}} <input type="radio" name="options" id="power_on" autocomplete="off"> ").openPopup();
 
 </script>
 
