@@ -34,6 +34,7 @@
   <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
   <link href="../assets/css/treestyle.css" rel="stylesheet" />
 <link href="../assets/css/battery_level_style.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
 </head>
 
 <body class="">
@@ -84,7 +85,7 @@
 
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -117,6 +118,10 @@
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+$(document).ready( function () {
+    $('#table-diagnosis').DataTable();
+    $('#table-diagnosis').addClass("compact nowrap w-100");
+    });
 </script>
     @yield('scripts')
 </body>

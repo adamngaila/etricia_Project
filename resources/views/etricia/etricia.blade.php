@@ -379,7 +379,7 @@ Etricia | Monitoring
             </div>
             <div class="card-body">
 
-            <table class="table table-bordered" style="font-size: 9px;">
+            <table class="table table-bordered" style="font-size: 9px;" id="table-diagnosis">
                <thead>
                   <tr>
                      <th> DATE</th>
